@@ -36,13 +36,13 @@
   <!-- 页面元数据 -->
   <title>Anaconda 安裝與設定 - Wayne's Snippets Note</title>
   <meta name="keywords" content="django,Tutorial,code snippets">
-  <meta desc name="description" content="Recording the daily code snippets produced from work and research. - Wayne Chang - Wayne's Snippets Note">
+  <meta desc name="description" content="Django 主要的開發程式語言為 Python，因此採用 Ananconda 做為主要 Python 發行版。這邊紀錄安裝過程與設定的注意事項。 - Wayne Chang - Wayne's Snippets Note">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="【人工智慧雲端系統實務】 00.開發環境安裝-Anaconda">
 <meta property="og:url" content="https://keoinn.github.io/posts/1864811267/index.html">
 <meta property="og:site_name" content="Wayne&#39;s Snippets Note">
-<meta property="og:description" content="Django 主要的開發程式語言為 Python，因此採用 Ananconda 做為主要 Python 發行版。這邊紀錄安裝過程與設定的注意事項。   Anaconda 官方的下載處   1. 安裝步驟小提示過程較為簡單，沒有特殊需求的話就直接以預設值進行安裝即可 (一直按下一步)。   Anaconda 安裝過程                               第 1&#x2F;11">
+<meta property="og:description" content="Django 主要的開發程式語言為 Python，因此採用 Ananconda 做為主要 Python 發行版。這邊紀錄安裝過程與設定的注意事項。">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-04-30T21:59:42.000Z">
@@ -2277,7 +2277,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1749222410160),
+    lastupdate: new Date(1749419957127),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2384,6 +2384,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="歸檔"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>歸檔
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/course/2025cloud/" title="課程"
+                  
+                  
+                  
+                    active-action="action-course2025cloud"
+                  >
+                  <i class='fa-solid fa-book fa-fw'></i>課程
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/categories/" title="分類"
                   
                   
@@ -2408,23 +2442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-tags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>標籤
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="歸檔"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>歸檔
                 </a>
                 
               </li>
@@ -2488,6 +2505,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="歸檔"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>歸檔
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/course/2025cloud/" title="課程"
+                  
+                  
+                  
+                    active-action="action-course2025cloud"
+                  >
+                  <i class='fa-solid fa-book fa-fw'></i>課程
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/categories/" title="分類"
                   
                   
@@ -2512,23 +2563,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-tags"
                   >
                   <i class='fa-solid fa-tags fa-fw'></i>標籤
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="歸檔"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>歸檔
                 </a>
                 
               </li>
@@ -2672,6 +2706,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p>Django 主要的開發程式語言為 Python，因此採用 Ananconda 做為主要 Python 發行版。<br>這邊紀錄安裝過程與設定的注意事項。</p>
+<span id="more"></span>
 <blockquote>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.anaconda.com/download/success">Anaconda 官方的下載處</a></li>
@@ -2685,10 +2720,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
             </details>
 
-
 <h2 id="2-Anaconda-路徑加入環境變數中"><a href="#2-Anaconda-路徑加入環境變數中" class="headerlink" title="2. Anaconda 路徑加入環境變數中"></a>2. Anaconda 路徑加入環境變數中</h2><p>後面的教學會使用到 Anaconda Scripts 中的程式進行更新套件步驟，如果沒有設定好環境變數的話會遇到下圖一樣的錯誤訊息。</p>
 <p><img src="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path01.png" class="lazyload" data-srcset="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path01.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Anaconda Path Error 1"></p>
-<div class="note idea info"><p><strong>小提示</strong><br>如果沒有加入環境變數時，後續每次需要執行 <code>conda</code> 指令時，需要使用絕對路徑定位 conda.exe 的位置<br>即: <code>C:\Users\您的使用者名稱\anaconda3\Scripts\conda.exe -V</code> </p></div>
+<div class="note idea info"><p><strong>小提示</strong><br>如果沒有加入環境變數時，後續每次需要執行 <code>conda</code> 指令時，需要使用絕對路徑定位 conda.exe 的位置<br>即: <code>C:\Users\您的使用者名稱\anaconda3\Scripts\conda.exe -V</code></p></div>
 
 <p>設定方法如下:</p>
 <div class="timeline">
@@ -2707,15 +2741,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div class="timenode"><div class="meta"><p><p>第 5&#x2F;6 步：將 Anaconda 路徑加入 PATH 變數之中</p>
 </p></div><div class="body"><p>按下【新增】輸入變數值，後按下【確定】。</p><p>變數內容</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%USERPROFILE%\anaconda3\Scripts</span><br></pre></td></tr></table></figure><p><img src="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path08.png" class="lazyload" data-srcset="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path08.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Anaconda Path Error 6"></p><div class="note idea info"><p><strong>小提示</strong><br>如果您的 Anaconda 並非安裝在預設路徑時請將便數值 <code>(替換您的 Anaconda)</code> 替換成您的安裝路徑，並且要加上 <code>\Scripts</code> 即:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(替換您的 Anaconda)\Scripts</span><br></pre></td></tr></table></figure></div><p>其餘視窗(系統內容、環境變數)設定介面按下【確定】儲存設定。</p></div></div>
 
-
 <div class="timenode"><div class="meta"><p><p>第 6&#x2F;6 步：開啟命令提示字元測試指令</p>
-</p></div><div class="body"><div class="note warning"><p><strong>注意</strong><br>接下來的語法將會在【命令提示字元】操作。<br>如果您的視窗上面顯示【PowerShell】執行以下指令將無法順利地設定環境變數。<br><img src="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path03.png" class="lazyload" data-srcset="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path03.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Anaconda Path Error 3"></p></div><p>測試指令: </p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda -V</span><br></pre></td></tr></table></figure><p>結果:<br><img src="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path04.png" class="lazyload" data-srcset="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path04.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Anaconda Path Error 3"></p></div></div>
+</p></div><div class="body"><div class="note warning"><p><strong>注意</strong><br>接下來的語法將會在【命令提示字元】操作。<br>如果您的視窗上面顯示【PowerShell】執行以下指令將無法順利地設定環境變數。<br><img src="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path03.png" class="lazyload" data-srcset="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path03.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Anaconda Path Error 3"></p></div><p>測試指令:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda -V</span><br></pre></td></tr></table></figure><p>結果:<br><img src="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path04.png" class="lazyload" data-srcset="https://cdn.synet-app.com/assets/images/post/DjangoCourse/django01-anaconda-path04.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Anaconda Path Error 3"></p></div></div>
 </div>
 
 <div class="note info"><p><strong>您需要知道</strong><br>另外一種設定環境變數的方法，開啟命令提示字元並輸入以下指令。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> PATH=%PATH%;%USERPROFILE%\anaconda3\Scripts</span><br></pre></td></tr></table></figure><p>看似簡單，但這種方法設定環境變數的作用範圍僅限於命令提示字元存在時，無法永久記錄於系統內。</p></div>
 
 <h2 id="3-更新-Default-Packages"><a href="#3-更新-Default-Packages" class="headerlink" title="3. 更新 Default Packages"></a>3. 更新 Default Packages</h2><p>安裝 Anaconda 完後需要進行套件更新，開啟命令字元提示視窗，並輸入以下指令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda update --all</span><br></pre></td></tr></table></figure>
+
 <p>出現 <code>Proceed ([y]/n)?</code> 輸入 <code>Y</code> 並按下 <kbd>Enter</kbd> 進行下載與更新。</p>
 <p>重複上述動作直到出現，完整更新完所有套件。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># All requested packages already installed.</span></span><br></pre></td></tr></table></figure>
@@ -2724,8 +2758,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda init</span><br></pre></td></tr></table></figure>
 
 <div class="note warning"><p><strong>注意</strong><br>執行完畢後需要關閉 Terminal 再開啟，Terminal 才會載入新的設定參數。</p></div>
-
-
 
   </div>
   
@@ -2832,7 +2864,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/3905719239/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>【人工智慧雲端系統實務】 00.開發環境安裝-VSCode</p>
-          <p class='content'>Visual Studio Code (後面以 VSCode 代稱) 是 [2023][1] 年最受程式設計師歡迎的編輯器，受惠於它的多樣化的套件，內建 Git 版本控制、 IntelliSen...</p>
+          <p class='content'>Visual Studio Code (後面以 VSCode 代稱) 是 2023 年[1] 最受程式設計師歡迎的編輯器，受惠於它的多樣化的套件，內建 Git 版本控制、 IntelliSens...</p>
         </a>
       
       
@@ -3476,7 +3508,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/","name":"學習筆記"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/","name":"人工智慧雲端系統實務"}},{"@type":"ListItem","position":3,"item":{"@id":"https://keoinn.github.io/posts/1864811267/","name":"【人工智慧雲端系統實務】 00.開發環境安裝-Anaconda"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"【人工智慧雲端系統實務】 00.開發環境安裝-Anaconda","description":"Recording the daily code snippets produced from work and research.","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/posts/1864811267/"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/posts/1864811267/","wordCount":0,"datePublished":"2024-04-30T21:59:42.000Z","dateModified":"2025-06-04T20:50:00.000Z","articleSection":"學習筆記","keywords":"django,Tutorial","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/","name":"學習筆記"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/","name":"人工智慧雲端系統實務"}},{"@type":"ListItem","position":3,"item":{"@id":"https://keoinn.github.io/posts/1864811267/","name":"【人工智慧雲端系統實務】 00.開發環境安裝-Anaconda"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"【人工智慧雲端系統實務】 00.開發環境安裝-Anaconda","description":"Django 主要的開發程式語言為 Python，因此採用 Ananconda 做為主要 Python 發行版。這邊紀錄安裝過程與設定的注意事項。","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/posts/1864811267/"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/posts/1864811267/","wordCount":73,"datePublished":"2024-04-30T21:59:42.000Z","dateModified":"2025-06-04T20:50:00.000Z","articleSection":"學習筆記","keywords":"django,Tutorial","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
