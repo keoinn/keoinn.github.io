@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://keoinn.github.io/course/2025cloud/20250604t2032930554.html"/>
+  <link rel="canonical" href="https://keoinn.github.io/posts/1017719319/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,21 +34,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>2025 人工智慧雲端系統實務 Day01 (6 Hours) - Wayne's Snippets Note</title>
-  <meta name="keywords" content="code snippets">
+  <title>【人工智慧雲端系統實務】 06. Django Views 解析與應用 - Wayne's Snippets Note</title>
+  <meta name="keywords" content="Tutorial,Django,code snippets">
   <meta desc name="description" content="Recording the daily code snippets produced from work and research. - Wayne Chang - Wayne's Snippets Note">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="2025 人工智慧雲端系統實務 Day01 (6 Hours)">
-<meta property="og:url" content="https://keoinn.github.io/course/2025cloud/20250604T2032930554.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【人工智慧雲端系統實務】 06. Django Views 解析與應用">
+<meta property="og:url" content="https://keoinn.github.io/posts/1017719319/index.html">
 <meta property="og:site_name" content="Wayne&#39;s Snippets Note">
-<meta property="og:description" content="連結與資源 HuggingFace SpacesHuggingFace Spaces: Stable Diffusion 3.5 Large OnlineHuggingFace Spaces: Stable Diffusion 3.5 Medium OnlineHuggingFace Spaces: Text to SpeechHuggingFace Spaces: Comic Factory自學">
+<meta property="og:description" content="在 Django 架構中，View 是負責處理使用者請求並回傳對應回應的核心元件。它連接資料（Model）與畫面（Template），決定要顯示什麼內容、如何處理邏輯，以及將資料呈現給使用者的方式。 1. 什麼是 View？Django 中的 View 負責：  接收瀏覽器傳來的 HTTP Request。 處理業務邏輯（如資料查詢、表單驗證、條件分支等）。 回傳適當的 HTTP Response">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2025-06-05T11:01:15.000Z">
-<meta property="article:modified_time" content="2025-06-19T11:04:13.632Z">
+<meta property="article:published_time" content="2025-06-22T16:00:56.000Z">
+<meta property="article:modified_time" content="2025-06-24T15:59:32.568Z">
 <meta property="article:author" content="Wayne Chang">
-<meta property="article:tag" content="code snippets">
+<meta property="article:tag" content="Tutorial">
+<meta property="article:tag" content="Django">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2268,7 +2269,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2606,8 +2607,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="https://schema.org.cn/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/course/2025cloud/20250604T2032930554.html">
+  <article itemscope itemtype="https://schema.org.cn/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/1017719319/">
   <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
     <meta itemprop="name" content="Wayne's Snippets Note">
   </span>
@@ -2628,7 +2629,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        2025 人工智慧雲端系統實務 Day01 (6 Hours)
+        【人工智慧雲端系統實務】 06. Django Views 解析與應用
       </h1>
       <div class='new-meta-box'>
         
@@ -2645,25 +2646,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
+      </span>
+    
+  </div>
+  
+
 
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-05T19:01:15+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-23T00:00:56+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>發表於：2025年6月5日</p>
+    <p>發表於：2025年6月23日</p>
   </a>
 </div>
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-19T19:04:13+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-24T23:59:32+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新於：2025年6月19日</p>
+    <p>更新於：2025年6月24日</p>
   </a>
 </div>
 
@@ -2686,25 +2701,164 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="連結與資源"><a href="#連結與資源" class="headerlink" title="連結與資源"></a>連結與資源</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://huggingface.co/spaces">HuggingFace Spaces</a><br><a target="_blank" rel="noopener" href="https://huggingface.co/spaces/stabilityai/stable-diffusion-3.5-large">HuggingFace Spaces: Stable Diffusion 3.5 Large Online</a><br><a target="_blank" rel="noopener" href="https://huggingface.co/spaces/stabilityai/stable-diffusion-3-medium">HuggingFace Spaces: Stable Diffusion 3.5 Medium Online</a><br><a target="_blank" rel="noopener" href="https://huggingface.co/spaces/nfsn/tts">HuggingFace Spaces: Text to Speech</a><br><a target="_blank" rel="noopener" href="https://huggingface.co/spaces/jbilcke-hf/ai-comic-factory">HuggingFace Spaces: Comic Factory</a><br><a target="_blank" rel="noopener" href="https://www.runoob.com/">自學網站: 菜鳥編程</a></p>
-</blockquote>
-<h2 id="Assignment"><a href="#Assignment" class="headerlink" title="Assignment"></a>Assignment</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://forms.gle/pVFrMgUaQA3Q4Jj27">Google 表單: 填寫您的 Github 帳號資訊</a></p>
-</blockquote>
-<h2 id="EP01"><a href="#EP01" class="headerlink" title="EP01"></a>EP01</h2><iframe src="https://www.youtube.com/embed/7UeKdsYDkxo?si=C-khR9uxz49Hpvpb" width="720" height="405" frameborder="0" loading="lazy" allowfullscreen></iframe>
+    <p>在 Django 架構中，View 是負責處理使用者請求並回傳對應回應的核心元件。它連接資料（Model）與畫面（Template），決定要顯示什麼內容、如何處理邏輯，以及將資料呈現給使用者的方式。</p>
+<h2 id="1-什麼是-View？"><a href="#1-什麼是-View？" class="headerlink" title="1. 什麼是 View？"></a>1. 什麼是 View？</h2><p>Django 中的 View 負責：</p>
+<ul>
+<li>接收瀏覽器傳來的 HTTP Request。</li>
+<li>處理業務邏輯（如資料查詢、表單驗證、條件分支等）。</li>
+<li>回傳適當的 HTTP Response（如 HTML、JSON、重導向等）。</li>
+</ul>
+<p>View 就像一個「交通指揮員」，負責決定如何處理每一個網址請求。</p>
+<h2 id="2-View-的兩種寫法"><a href="#2-View-的兩種寫法" class="headerlink" title="2. View 的兩種寫法"></a>2. View 的兩種寫法</h2><h3 id="2-1-函式型-View-Function-Based-View-FBV"><a href="#2-1-函式型-View-Function-Based-View-FBV" class="headerlink" title="2.1 函式型 View (Function-Based View, FBV)"></a>2.1 函式型 View (Function-Based View, FBV)</h3><p>使用最直觀的函式撰寫邏輯。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">hello_view</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">&quot;Hello Django!&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<h2 id="EP02"><a href="#EP02" class="headerlink" title="EP02"></a>EP02</h2><iframe src="https://www.youtube.com/embed/uCg8ScOHLkk?si=t541Y81sAjHyZAED" width="720" height="405" frameborder="0" loading="lazy" allowfullscreen></iframe>
+<h3 id="2-2-類別型-View-Class-Based-View-CBV"><a href="#2-2-類別型-View-Class-Based-View-CBV" class="headerlink" title="2.2 類別型 View (Class-Based View, CBV)"></a>2.2 類別型 View (Class-Based View, CBV)</h3><p>使用類別封裝邏輯，適合複用與擴充。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.views <span class="keyword">import</span> View</span><br><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">HelloView</span>(<span class="title class_ inherited__">View</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get</span>(<span class="params">self, request</span>):</span><br><span class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">&quot;Hello from class-based view!&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<h2 id="EP03"><a href="#EP03" class="headerlink" title="EP03"></a>EP03</h2><iframe src="https://www.youtube.com/embed/RaAaOW6l8rw?si=57KXJHU4YT2KVkB1" width="720" height="405" frameborder="0" loading="lazy" allowfullscreen></iframe>
+<p>建議：簡單頁面可用 FBV，複雜頁面建議使用 CBV。</p>
+<h2 id="3-設定-URL-與-View-的對應"><a href="#3-設定-URL-與-View-的對應" class="headerlink" title="3. 設定 URL 與 View 的對應"></a>3. 設定 URL 與 View 的對應</h2><p>你必須在 <code>urls.py</code> 中將 View 綁定對應的網址：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># urls.py</span></span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> .views <span class="keyword">import</span> hello_view, HelloView</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">&#x27;hello/&#x27;</span>, hello_view),</span><br><span class="line">    path(<span class="string">&#x27;hello-class/&#x27;</span>, HelloView.as_view()),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 
-<h2 id="EP04"><a href="#EP04" class="headerlink" title="EP04"></a>EP04</h2><iframe src="https://www.youtube.com/embed/ywtR1qlZaNY?si=LHWVFRFa0BlAu_qS" width="720" height="405" frameborder="0" loading="lazy" allowfullscreen></iframe>
+<ul>
+<li>函式型 View 直接使用函式名稱。</li>
+<li>類別型 View 必須使用 .as_view()。</li>
+</ul>
+<h2 id="4-回傳-HTML-頁面-使用-Template"><a href="#4-回傳-HTML-頁面-使用-Template" class="headerlink" title="4. 回傳 HTML 頁面 (使用 Template)"></a>4. 回傳 HTML 頁面 (使用 Template)</h2><p>使用 <code>render()</code> 函式，將資料與 HTML 模版結合輸出:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">home_view</span>(<span class="params">request</span>):</span><br><span class="line">    context = &#123;<span class="string">&#x27;username&#x27;</span>: <span class="string">&#x27;Django 使用者&#x27;</span>&#125;</span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">&#x27;home.html&#x27;</span>, context)</span><br></pre></td></tr></table></figure>
 
-<h2 id="EP05"><a href="#EP05" class="headerlink" title="EP05"></a>EP05</h2><iframe src="https://www.youtube.com/embed/_fso_Mu_uQs?si=-j8NHOsZdEPjsKQa" width="720" height="405" frameborder="0" loading="lazy" allowfullscreen></iframe>
+<p>對應的模版檔案 <code>home.html</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>歡迎，&#123;&#123; username &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="EP06"><a href="#EP06" class="headerlink" title="EP06"></a>EP06</h2><iframe src="https://www.youtube.com/embed/5iA_Mn4Rclc?si=he3oqHRbLVbCrKWR" width="720" height="405" frameborder="0" loading="lazy" allowfullscreen></iframe>
+<ul>
+<li>預設會從 <code>templates/</code> 資料夾中尋找 HTML 模版，也可在 <code>settings.py</code> 修改 templates 對應資料夾。</li>
+</ul>
+<h2 id="5-常見的回應類型-Response-Types"><a href="#5-常見的回應類型-Response-Types" class="headerlink" title="5. 常見的回應類型 (Response Types)"></a>5. 常見的回應類型 (Response Types)</h2><table>
+<thead>
+<tr>
+<th align="left">回應類型</th>
+<th align="left">說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>HttpResponse</code></td>
+<td align="left">傳純文字、HTML</td>
+</tr>
+<tr>
+<td align="left"><code>render()</code></td>
+<td align="left">渲染 HTML 頁面</td>
+</tr>
+<tr>
+<td align="left"><code>redirect()</code></td>
+<td align="left">導向其他 URL</td>
+</tr>
+<tr>
+<td align="left"><code>JsonResponse</code></td>
+<td align="left">回傳 JSON 格式（API、AJAX 用）</td>
+</tr>
+</tbody></table>
+<p>範例:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> JsonResponse, HttpResponseRedirect</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">json_view</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="keyword">return</span> JsonResponse(&#123;<span class="string">&#x27;status&#x27;</span>: <span class="string">&#x27;ok&#x27;</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">redirect_view</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="keyword">return</span> HttpResponseRedirect(<span class="string">&#x27;/home/&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-類別型-View-的常用範例-CBV"><a href="#6-類別型-View-的常用範例-CBV" class="headerlink" title="6. 類別型 View 的常用範例 (CBV)"></a>6. 類別型 View 的常用範例 (CBV)</h2><p>Django 提供許多內建的泛型 View，可用於 CRUD 操作：</p>
+<table>
+<thead>
+<tr>
+<th align="left">類型</th>
+<th align="left">說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>TemplateView</code></td>
+<td align="left">顯示靜態頁面</td>
+</tr>
+<tr>
+<td align="left"><code>ListView</code></td>
+<td align="left">顯示多筆資料 (列表)</td>
+</tr>
+<tr>
+<td align="left"><code>DetailView</code></td>
+<td align="left">顯示單筆資料(詳情)</td>
+</tr>
+<tr>
+<td align="left"><code>CreateView</code></td>
+<td align="left">建立資料</td>
+</tr>
+<tr>
+<td align="left"><code>UpdateView</code></td>
+<td align="left">更新資料</td>
+</tr>
+<tr>
+<td align="left"><code>DeleteView</code></td>
+<td align="left">刪除資料</td>
+</tr>
+</tbody></table>
+<p>範例:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.views.generic <span class="keyword">import</span> ListView</span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Article</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ArticleListView</span>(<span class="title class_ inherited__">ListView</span>):</span><br><span class="line">    model = Article</span><br><span class="line">    template_name = <span class="string">&#x27;article_list.html&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="7-表單處理-Form-處理基礎"><a href="#7-表單處理-Form-處理基礎" class="headerlink" title="7. 表單處理 (Form 處理基礎)"></a>7. 表單處理 (Form 處理基礎)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"><span class="keyword">from</span> .forms <span class="keyword">import</span> ContactForm</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">contact_view</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">&#x27;POST&#x27;</span>:</span><br><span class="line">        form = ContactForm(request.POST)</span><br><span class="line">        <span class="keyword">if</span> form.is_valid():</span><br><span class="line">            <span class="comment"># 處理資料</span></span><br><span class="line">            <span class="keyword">return</span> render(request, <span class="string">&#x27;thanks.html&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        form = ContactForm()</span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">&#x27;contact.html&#x27;</span>, &#123;<span class="string">&#x27;form&#x27;</span>: form&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-View-的最佳實踐"><a href="#8-View-的最佳實踐" class="headerlink" title="8. View 的最佳實踐"></a>8. View 的最佳實踐</h2><table>
+<thead>
+<tr>
+<th align="left">建議做法</th>
+<th align="left">原因與好處</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">使用 CBV 處理重複模式</td>
+<td align="left">方便擴充、維護與重用</td>
+</tr>
+<tr>
+<td align="left">小型邏輯使用 FBV</td>
+<td align="left">更清楚直觀，適合快速開發</td>
+</tr>
+<tr>
+<td align="left">加入適當的註解與區分功能</td>
+<td align="left">提升團隊協作與可讀性</td>
+</tr>
+<tr>
+<td align="left">運用 LoginRequiredMixin</td>
+<td align="left">控制存取權限與安全性</td>
+</tr>
+</tbody></table>
+<!-- 使用 @login_required 或權限裝飾器
+
+使用 Mixin 進行權限與條件處理
+
+處理多種 HTTP 方法（如 get(), post()）
+
+撰寫 API View（Django REST Framework） -->
   </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  <p>文章内容遵循 姓名標示-非商業性-相同方式分享 4.0 國際 (CC BY-NC-SA 4.0) 協議</p>
+
+                
+              
+                
+                  <p>本文章永久網址為：<a href="https://keoinn.github.io/posts/1017719319/">https://keoinn.github.io/posts/1017719319/</a></p>
+                
+              
+            </blockquote>
+          </div>
+        
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
@@ -2715,6 +2869,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Tutorial/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Tutorial</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Django/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Django</p></a></div>
+  <span hidden itemprop="keywords">Tutorial Django</span>
+  
+
 
         
       
@@ -2768,6 +2929,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/2524955884/'>
+          <p class='title'>【人工智慧雲端系統實務】 05. Django Models 解析與應用<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>在 Django 框架中，Model 是用來表示資料庫資料的 Python 類別，透過 ORM（物件關聯對應）技術，讓開發者可以用 Python 語法操作資料表。每個 Model 對應一張資料表...</p>
+        </a>
+      
+    </div>
+  
   <!-- 文章推荐 -->
   
   
@@ -2782,7 +2953,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/course/2025cloud/20250604T2032930554.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/1017719319/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comment'></i> 留言</p>
     
@@ -2824,7 +2995,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%A3%E7%B5%90%E8%88%87%E8%B3%87%E6%BA%90"><span class="toc-text">連結與資源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Assignment"><span class="toc-text">Assignment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EP01"><span class="toc-text">EP01</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EP02"><span class="toc-text">EP02</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EP03"><span class="toc-text">EP03</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EP04"><span class="toc-text">EP04</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EP05"><span class="toc-text">EP05</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EP06"><span class="toc-text">EP06</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BB%80%E9%BA%BC%E6%98%AF-View%EF%BC%9F"><span class="toc-text">1. 什麼是 View？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-View-%E7%9A%84%E5%85%A9%E7%A8%AE%E5%AF%AB%E6%B3%95"><span class="toc-text">2. View 的兩種寫法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%87%BD%E5%BC%8F%E5%9E%8B-View-Function-Based-View-FBV"><span class="toc-text">2.1 函式型 View (Function-Based View, FBV)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E9%A1%9E%E5%88%A5%E5%9E%8B-View-Class-Based-View-CBV"><span class="toc-text">2.2 類別型 View (Class-Based View, CBV)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%A8%AD%E5%AE%9A-URL-%E8%88%87-View-%E7%9A%84%E5%B0%8D%E6%87%89"><span class="toc-text">3. 設定 URL 與 View 的對應</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%9B%9E%E5%82%B3-HTML-%E9%A0%81%E9%9D%A2-%E4%BD%BF%E7%94%A8-Template"><span class="toc-text">4. 回傳 HTML 頁面 (使用 Template)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%B8%B8%E8%A6%8B%E7%9A%84%E5%9B%9E%E6%87%89%E9%A1%9E%E5%9E%8B-Response-Types"><span class="toc-text">5. 常見的回應類型 (Response Types)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%A1%9E%E5%88%A5%E5%9E%8B-View-%E7%9A%84%E5%B8%B8%E7%94%A8%E7%AF%84%E4%BE%8B-CBV"><span class="toc-text">6. 類別型 View 的常用範例 (CBV)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%A1%A8%E5%96%AE%E8%99%95%E7%90%86-Form-%E8%99%95%E7%90%86%E5%9F%BA%E7%A4%8E"><span class="toc-text">7. 表單處理 (Form 處理基礎)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-View-%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AF%A6%E8%B8%90"><span class="toc-text">8. View 的最佳實踐</span></a></li></ol>
   </div>
 </section>
 
@@ -3401,7 +3572,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"2025 人工智慧雲端系統實務 Day01 (6 Hours)","description":"Recording the daily code snippets produced from work and research.","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/course/2025cloud/20250604T2032930554.html"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/course/2025cloud/20250604T2032930554.html","wordCount":0,"datePublished":"2025-06-05T11:01:15.000Z","dateModified":"2025-06-19T11:04:13.632Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/","name":"學習筆記"}},{"@type":"ListItem","position":3,"item":{"@id":"https://keoinn.github.io/posts/1017719319/","name":"【人工智慧雲端系統實務】 06. Django Views 解析與應用"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"【人工智慧雲端系統實務】 06. Django Views 解析與應用","description":"Recording the daily code snippets produced from work and research.","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/posts/1017719319/"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/posts/1017719319/","wordCount":0,"datePublished":"2025-06-22T16:00:56.000Z","dateModified":"2025-06-24T15:59:32.568Z","articleSection":"學習筆記","keywords":"Tutorial,Django","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
