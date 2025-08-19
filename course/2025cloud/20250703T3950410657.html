@@ -42,11 +42,11 @@
 <meta property="og:title" content="2025 人工智慧雲端系統實務 Day08 (3 Hours)">
 <meta property="og:url" content="https://keoinn.github.io/course/2025cloud/20250703T3950410657.html">
 <meta property="og:site_name" content="Wayne&#39;s Snippets Note">
-<meta property="og:description" content="課程筆記本內容 課程完整筆記：點擊此處展開筆記                               前置作業將 GCP 主機進行開機SSH Key 放置於桌面並用 MobaXTerm 測試登入把 DjangoBlog 專案從 Github Clone 至本地端將 GCP 主機的 IP 登錄於 GoDaddy 域名服務修改 DjangoBlog 程式碼把 db.sqlite 檔案存放至 Go">
+<meta property="og:description" content="課程筆記本內容 前置作業  將 GCP 主機進行開機 SSH Key 放置於桌面並用 MobaXTerm 測試登入 把 DjangoBlog 專案從 Github Clone 至本地端 將 GCP 主機的 IP 登錄於 GoDaddy 域名服務   建立下載db.sqlite3 下載程式  把 db.sqlite3 檔案存放至 Google Drive 設定共用：選擇「知道連結的任何人」→「檢視者">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-07-03T13:01:20.000Z">
-<meta property="article:modified_time" content="2025-08-10T00:54:22.461Z">
+<meta property="article:modified_time" content="2025-08-19T15:25:35.678Z">
 <meta property="article:author" content="Wayne Chang">
 <meta property="article:tag" content="code snippets">
 <meta name="twitter:card" content="summary">
@@ -2276,7 +2276,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1754787986892),
+    lastupdate: new Date(1755617204239),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2660,10 +2660,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2025-08-10T08:54:22+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2025-08-19T23:25:35+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新於：2025年8月10日</p>
+    <p>更新於：2025年8月19日</p>
   </a>
 </div>
 
@@ -2686,9 +2686,51 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="課程筆記本內容"><a href="#課程筆記本內容" class="headerlink" title="課程筆記本內容"></a>課程筆記本內容</h2><details yellow><summary> 課程完整筆記：點擊此處展開筆記 </summary>
+    <h2 id="課程筆記本內容"><a href="#課程筆記本內容" class="headerlink" title="課程筆記本內容"></a>課程筆記本內容</h2><ul>
+<li><p>前置作業</p>
+<ol>
+<li>將 GCP 主機進行開機</li>
+<li>SSH Key 放置於桌面並用 MobaXTerm 測試登入</li>
+<li>把 DjangoBlog 專案從 Github Clone 至本地端</li>
+<li>將 GCP 主機的 IP 登錄於 GoDaddy 域名服務</li>
+</ol>
+</li>
+<li><p>建立下載<code>db.sqlite3</code> 下載程式</p>
+<ol>
+<li><p>把 <code>db.sqlite3</code> 檔案存放至 Google Drive 設定共用：選擇「知道連結的任何人」→「檢視者」並按下「複製連結」。</p>
+  <div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/20250703001.png' data-fancybox='default' data-caption='image'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/20250703001.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/20250703001.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:300px;"/></a><span></span></div></div></div></div>
+</li>
+<li><p>將複製超連結貼到記事本上擷取檔案 ID (檔案的ID可以從超連結的字段中取得，超連結字段說明如下)。</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 檔案的分享連結如下：</span></span><br><span class="line">https://drive.google.com/file/d/1ASDHjlo6O98rVq3QzcbGquYQz2XnJIwe/view?usp=sharing</span><br><span class="line"></span><br><span class="line"><span class="comment"># https://drive.google.com/file/d/&lt;檔案ID&gt;/view?usp=sharing</span></span><br><span class="line"><span class="comment"># 因此該檔案的 ID 為 1ASDHjlo6O98rVq3QzcbGquYQz2XnJIwe</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>透過 <code>wget</code> 嘗試下載檔案到桌面。</p>
+<ul>
+<li><code>wget</code> 是一個 GNU 自由軟體之一，擁有強大的下載檔案的功能，支援 HTTP&#x2F;HTTPS&#x2F;FTP 等通訊協定。</li>
+<li><strong>Windows</strong> 沒有內建 <code>wget</code> 請到<a target="_blank" rel="noopener" href="https://eternallybored.org/misc/wget/">這裡</a>下載並且將檔案解壓至 <code>C:\Windows\System32</code>。</li>
+<li><strong>Mac</strong> 作業系統則是使用 <a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a> 透過指令 <code>brew install wget</code> 進行安裝。</li>
+<li><strong>Linux</strong> 則已內建該程式。</li>
+</ul>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate &quot;https://docs.google.com/uc?export=download&amp;id=&lt;檔案ID&gt;&quot; -O db.sqlite3 </span><br></pre></td></tr></table></figure>
+
+<p> 上方指令 <code>&lt;檔案ID&gt;</code> 替換成自己的檔案 ID。</p>
+ <div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/20250703002.png' data-fancybox='default' data-caption='image'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/20250703002.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/20250703002.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" style="width:400px;"/></a><span></span></div></div></div></div>
+
+<p> 上圖為實際從 Google Drive 下載檔案至電腦上的執行結果。</p>
+</li>
+<li><p>新增 db.sqlite3 下載程式碼</p>
+<ul>
+<li><strong>Windows</strong> (<code>download_db.bat</code>) <figure class="highlight bat"><figcaption><span>download_db.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="comment">REM 移除舊的 db.sqlite3</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">exist</span> db.sqlite3 (</span><br><span class="line">    <span class="built_in">echo</span> 刪除舊的 db.sqlite3...</span><br><span class="line">    <span class="built_in">del</span> /Q db.sqlite3</span><br><span class="line">)</span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">REM 下載新的 db.sqlite3</span></span><br><span class="line"><span class="built_in">echo</span> 正在下載新的 db.sqlite3...</span><br><span class="line">wget --no-check-certificate &quot;https://docs.google.com/uc?export=download&amp;id=&lt;檔案ID&gt;&quot; -O db.sqlite3</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> 完成！</span><br><span class="line"><span class="built_in">pause</span> </span><br></pre></td></tr></table></figure></li>
+<li><strong>Linux&#x2F;Mac</strong> (<code>download_db.sh</code>) <figure class="highlight bash"><figcaption><span>download_db.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 移除舊的 db.sqlite3</span></span><br><span class="line"><span class="keyword">if</span> [ -f <span class="string">&quot;db.sqlite3&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;刪除舊的 db.sqlite3...&quot;</span></span><br><span class="line">    <span class="built_in">rm</span> -f db.sqlite3</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下載新的 db.sqlite3</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;正在下載新的 db.sqlite3...&quot;</span></span><br><span class="line">wget --no-check-certificate <span class="string">&quot;https://docs.google.com/uc?export=download&amp;id=&lt;檔案ID&gt;&quot;</span> -O db.sqlite3</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;完成！&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>存檔後並且建立 Git 版本並同步至 Github</p>
+</li>
+</ol>
+</li>
+</ul>
+<details yellow><summary> 課程完整筆記：點擊此處展開筆記 </summary>
               <div class='content'>
-              <ul><li><p>前置作業</p><ol><li>將 GCP 主機進行開機</li><li>SSH Key 放置於桌面並用 MobaXTerm 測試登入</li><li>把 DjangoBlog 專案從 Github Clone 至本地端</li><li>將 GCP 主機的 IP 登錄於 GoDaddy 域名服務</li></ol></li><li><p>修改 DjangoBlog 程式碼</p></li></ul><ol><li>把 <code>db.sqlite</code> 檔案存放至 Google Drive</li></ol>
+              
               </div>
             </details>
 
@@ -3396,7 +3438,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"2025 人工智慧雲端系統實務 Day08 (3 Hours)","description":"Recording the daily code snippets produced from work and research.","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/course/2025cloud/20250703T3950410657.html"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/course/2025cloud/20250703T3950410657.html","wordCount":0,"datePublished":"2025-07-03T13:01:20.000Z","dateModified":"2025-08-10T00:54:22.461Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"2025 人工智慧雲端系統實務 Day08 (3 Hours)","description":"Recording the daily code snippets produced from work and research.","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/course/2025cloud/20250703T3950410657.html"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/course/2025cloud/20250703T3950410657.html","wordCount":0,"datePublished":"2025-07-03T13:01:20.000Z","dateModified":"2025-08-19T15:25:35.678Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
