@@ -35,21 +35,21 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>【n8n系列】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式 - Wayne's Snippets Note</title>
-  <meta name="keywords" content="n8n,Tutorial,AI,code snippets">
+  <meta name="keywords" content="Tutorial,n8n,AI,code snippets">
   <meta desc name="description" content="Recording the daily code snippets produced from work and research. - Wayne Chang - Wayne's Snippets Note">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="【n8n系列|撰寫中】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式">
+<meta property="og:title" content="【n8n系列|初稿】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式">
 <meta property="og:url" content="https://keoinn.github.io/posts/2029855681/index.html">
 <meta property="og:site_name" content="Wayne&#39;s Snippets Note">
 <meta property="og:description" content="接下來要的教學將使用 n8n 來讀取存放在 Google Drive 上的資料，因此需要為 n8n 申請專屬應用程式的憑證才可以讓使用者透過 OAuth2 進行認證並登入，讀取使用者自己的檔案。 1. 登入 n8n 並進入新增 Credential 頁面 第 1&#x2F;2 步： 於 Credential 分頁點選 Create credential 按鈕 點擊 Create credentia">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-08-20T15:48:29.000Z">
-<meta property="article:modified_time" content="2026-08-20T18:16:26.135Z">
+<meta property="article:modified_time" content="2026-08-20T18:26:59.582Z">
 <meta property="article:author" content="Wayne Chang">
-<meta property="article:tag" content="n8n">
 <meta property="article:tag" content="Tutorial">
+<meta property="article:tag" content="n8n">
 <meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -865,7 +865,7 @@ button {
     --color-copyright-bkg: #21252b;
   }
   :root:not([color-scheme]) img {
-    filter: brightness(70%) !important;
+    filter: brightness(100%) !important;
   }
   :root:not([color-scheme]) .blur {
     background: rgba(31,31,31,0.9) !important;
@@ -937,7 +937,7 @@ button {
   --color-copyright-bkg: #21252b;
 }
 [color-scheme='dark'] img {
-  filter: brightness(70%) !important;
+  filter: brightness(100%) !important;
 }
 [color-scheme='dark'] .blur {
   background: rgba(31,31,31,0.9) !important;
@@ -2278,7 +2278,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1787249918251),
+    lastupdate: new Date(1787250694017),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2630,7 +2630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        【n8n系列|撰寫中】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式
+        【n8n系列|初稿】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式
       </h1>
       <div class='new-meta-box'>
         
@@ -2684,7 +2684,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2026-08-21T02:16:26+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2026-08-21T02:26:59+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新於：2026年8月21日</p>
@@ -2841,8 +2841,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/n8n/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>n8n</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Tutorial/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Tutorial</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AI/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AI</p></a></div>
-  <span hidden itemprop="keywords">n8n Tutorial AI</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Tutorial/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Tutorial</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/n8n/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>n8n</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AI/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AI</p></a></div>
+  <span hidden itemprop="keywords">Tutorial n8n AI</span>
   
 
 
@@ -3541,7 +3541,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/","name":"學習筆記"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/","name":"人工智慧雲端系統實務"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/n8n/","name":"n8n"}},{"@type":"ListItem","position":3,"item":{"@id":"https://keoinn.github.io/posts/2029855681/","name":"【n8n系列|撰寫中】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"【n8n系列|撰寫中】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式","description":"Recording the daily code snippets produced from work and research.","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/posts/2029855681/"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/posts/2029855681/","wordCount":0,"datePublished":"2026-08-20T15:48:29.000Z","dateModified":"2026-08-20T18:16:26.135Z","articleSection":"學習筆記","keywords":"n8n,Tutorial,AI","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/","name":"學習筆記"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/","name":"人工智慧雲端系統實務"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/n8n/","name":"n8n"}},{"@type":"ListItem","position":3,"item":{"@id":"https://keoinn.github.io/posts/2029855681/","name":"【n8n系列|初稿】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"【n8n系列|初稿】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式","description":"Recording the daily code snippets produced from work and research.","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/posts/2029855681/"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/posts/2029855681/","wordCount":0,"datePublished":"2026-08-20T15:48:29.000Z","dateModified":"2026-08-20T18:26:59.582Z","articleSection":"學習筆記","keywords":"Tutorial,n8n,AI","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

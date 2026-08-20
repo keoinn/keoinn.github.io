@@ -808,7 +808,7 @@ button {
     --color-copyright-bkg: #21252b;
   }
   :root:not([color-scheme]) img {
-    filter: brightness(70%) !important;
+    filter: brightness(100%) !important;
   }
   :root:not([color-scheme]) .blur {
     background: rgba(31,31,31,0.9) !important;
@@ -880,7 +880,7 @@ button {
   --color-copyright-bkg: #21252b;
 }
 [color-scheme='dark'] img {
-  filter: brightness(70%) !important;
+  filter: brightness(100%) !important;
 }
 [color-scheme='dark'] .blur {
   background: rgba(31,31,31,0.9) !important;

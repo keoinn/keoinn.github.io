@@ -7035,7 +7035,7 @@ pre {
   :root:not([color-scheme]) svg.iconfont,
   :root:not([color-scheme]) img,
   :root:not([color-scheme]) .lazyload {
-    filter: brightness(70%) !important;
+    filter: brightness(100%) !important;
   }
   :root:not([color-scheme]) .widget.blogger .content .social-wrapper a.social:hover {
     background: var(--color-card);
@@ -7123,7 +7123,7 @@ pre {
 [color-scheme='dark'] svg.iconfont,
 [color-scheme='dark'] img,
 [color-scheme='dark'] .lazyload {
-  filter: brightness(70%) !important;
+  filter: brightness(100%) !important;
 }
 [color-scheme='dark'] .widget.blogger .content .social-wrapper a.social:hover {
   background: var(--color-card);
