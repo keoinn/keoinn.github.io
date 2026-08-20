@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://keoinn.github.io/course/2025cloud/"/>
+  <link rel="canonical" href="https://keoinn.github.io/posts/2029855681/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,21 +34,23 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>2025 人工智慧雲端系統實務 - Wayne's Snippets Note</title>
-  <meta name="keywords" content="code snippets">
-  <meta desc name="description" content="這裡需要密碼繼續閱讀 - Wayne Chang - Wayne's Snippets Note">
+  <title>【n8n系列】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式 - Wayne's Snippets Note</title>
+  <meta name="keywords" content="n8n,Tutorial,AI,code snippets">
+  <meta desc name="description" content="Recording the daily code snippets produced from work and research. - Wayne Chang - Wayne's Snippets Note">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="2025 人工智慧雲端系統實務">
-<meta property="og:url" content="https://keoinn.github.io/course/2025cloud/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【n8n系列|撰寫中】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式">
+<meta property="og:url" content="https://keoinn.github.io/posts/2029855681/index.html">
 <meta property="og:site_name" content="Wayne&#39;s Snippets Note">
-<meta property="og:description" content="這裡需要密碼繼續閱讀">
+<meta property="og:description" content="接下來要的教學將使用 n8n 來讀取存放在 Google Drive 上的資料，因此需要為 n8n 申請專屬應用程式的憑證才可以讓使用者透過 OAuth2 進行認證並登入，讀取使用者自己的檔案。 1. 登入 n8n 並進入新增 Credential 頁面 第 1&#x2F;2 步： 於 Credential 分頁點選 Create credential 按鈕 點擊 Create credentia">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2025-06-05T11:01:15.000Z">
-<meta property="article:modified_time" content="2025-08-21T13:10:54.518Z">
+<meta property="article:published_time" content="2026-08-20T15:48:29.000Z">
+<meta property="article:modified_time" content="2026-08-20T18:16:26.135Z">
 <meta property="article:author" content="Wayne Chang">
-<meta property="article:tag" content="code snippets">
+<meta property="article:tag" content="n8n">
+<meta property="article:tag" content="Tutorial">
+<meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2268,7 +2270,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2606,8 +2608,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="https://schema.org.cn/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/course/2025cloud/index.html">
+  <article itemscope itemtype="https://schema.org.cn/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/2029855681/">
   <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
     <meta itemprop="name" content="Wayne's Snippets Note">
   </span>
@@ -2628,7 +2630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        2025 人工智慧雲端系統實務
+        【n8n系列|撰寫中】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式
       </h1>
       <div class='new-meta-box'>
         
@@ -2645,25 +2647,47 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/">人工智慧雲端系統實務</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/">n8n</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" itemprop="url"><span itemprop="name">人工智慧雲端系統實務</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/" itemprop="url"><span itemprop="name">n8n</span></a>
+      </span>
+    
+  </div>
+  
+
 
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-05T19:01:15+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-08-20T23:48:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>發表於：2025年6月5日</p>
+    <p>發表於：2026年8月20日</p>
   </a>
 </div>
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2025-08-21T21:10:54+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2026-08-21T02:16:26+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新於：2025年8月21日</p>
+    <p>更新於：2026年8月21日</p>
   </a>
 </div>
 
@@ -2686,20 +2710,124 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="您提供的密碼錯了，請聯絡作者提供密碼進行閱讀。" data-whm="Oh, these decrypted content cannot be verified, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="4ed16a08b7a12f80412006836d65399c7445cede37c3ce8f408332ec72a8d191">63c89bab7c4697bea316c3b048bb0a2f29f819cda31b7032eaabd902efb87d42a9c451f8309558b39bd53427a463d8db9d616eec344565bdcf6a3f2137ede7690188ab4135854b6dc79f2d57e8b95a169d782b8e19bc60589b960d6b179c780c45f0a1b26a8465348ac7b9b38503bb5d20fcd1c61422755b4435092f18150c2d7264dc12ec6b5f4d2bd72c66248ae06c8dfca0232e508f73a6726cf3aad3884d0f2b8affb7746803d64c17a38896876aa7139b791c359b032dd8e330854841ac838ad5317c8edffc8a22467f293e39ea06820f31332f75666bdabf214ca1cb78e6b78a9783f3f7ed848a5da202ed67d986eb2cc209b0ae6c1720b5d9c78b6754d5189cf8219dd9b4f16dc186c69c9777557b6f5b32f1afc2b72bd25d00e111ee88a24703f4b029eb7a52dc92821cc344ac94966d7c1e03fe9e2b733fb558baa29cb343d207fa1c715d7c39f21a969f971f892b69c1b6436335b02fdfde4b20f635188699161f0a340950eecd275aa0f2933bbf7cef795add003fc930024fb3abf7272a32aaac8f76363755fd4e08bbd1e005acc3444c73b02f1afc6582d7c0dbce921a6668d8f7c1749e0883119263e6828ef410a4e2f58ea651a8a2b55bbada5ff5db5aa5807a9c0058a137aeddc0c994aec02fae794d9568b15fd59a6d6b1febd9bcd5d69fd6a9d0d189766b886ea3409cda2f2fa38f723bf6291ed9e50453cf7f8cb51bd9ac232b9b3b7d239e0a0d64aa20ded9b0aebb256426f271bb092f29cadbfd2afbd2611103045721bd1bfda4418ba605246e42d7a662638d5f39f42d02f62ccb280cedff5448daf8070396ceff945de7ada846a1d10533e1b8370698c83053458621b66506031864cd5a39717f36c71deb49a7ff41e9f92df321c04e4baf3cd083ea1faa49cb05513d9d0172cf42848a1582d8abd025dd2c955d1b27bcbe255f918fdab9ae9b853fcbe6229773cd8743885933290b8ece49268463092b92c8b1f89aa6bbd9399e71212ed7113567fa16fd1a0de8ae599749564156569aaa32b8afa8c14936800f2b668312ed4ac01f67b6eb875649c3419bd5e86223d53961e751ec6752803f2d093c84731a962d6d5fb1deb8b7efc3ab30c7973300ecf6916a357e611c50585a4ba16f97a21c906521cbe28a79772c52752ace84bb25fdd0400a7b9f9c29d483e001e4ba8e2c36ff8aa2eb4cd2ec82ba0b79bcd00757dce707ed6aad8b394497056704493b4208a142f4c675b5410e99c953716e40ddbab2aaf5aa7917aa691a44c2578bbff738d0e92c6bef3c17ccddf4ed2efeab60e5d96e9fbe9c7bd1a836db06ad580936cf3f5ad884cf35bbf09e07d8d839cf2a1bfa52fecce52cfcfd9d5254e490d88eff99af213490b6b650664ef4bba74fb503583d7ada3c7415905a46d2e4234c9806ff568394649bbf299a34555f37d78212ccb4540e479e7724764d4bb715c5c44c4cb763ba83130a0f97763b45ddcec15e50d1bb401c9f4e571c57a5e3397645d9931093de27e00d3080aad167a7f62d91137336df3aefaebbe9f0849edc60c9374e48c4bda0875f4d6924a628b582644e1b39b21d17d0162b9759eb2beefd2dc43177df02541f66116ee1fa3472ae738effc8dced7743130dcc505ad7335d190733fe25a46ecf875c28ea86d0bf1b36556ed371877731a76a02fd5ff9c7ea26a762c299e47197bb6bad1b9f3d314f28c9ac38eced7a2c4e21ec19e2e8e3195a2c1b2b5c32a98192605292c486a239f2cafe0b00a0b9f21d1ad0e5b0cb4299bc4780a28335624cc35f842090edc4b87ab76e9b4b488d57159cb40488a93499d026c5de46e281ce017f2d3fcdb6a00ec84d492908df2707456faaaa5bf4817c6871c8036dbdb4871342b6d6c6690bea28a236d5a7f51f4d7d60de410086ad5cbe565756cce1b56789a954a79d9ca1f180d9f3861cef2dc2a4e85b4622bc76f619ca2b420421a7fb6af3699019d2bc0dc9f23335807e9016752c98521151fa28f6a56708c67fc3acc90e828786e5e400453566ca5d1d1ed4326a6b30f957fc9c9dc960a22d9f25aed3dc9a40deadf6c33589887af71367781b7a08b4adb35c8ac474de7fabe7cb564c6d2328ee30f863908186a823b44c7265d430fec77228bec2ea7c1c2f60b7c2fe426882500787b0fecb5682c35cea32f979d2d56df05c36183543839291b81be8cbd9cdade2e6f112751d18d01db4ee081d208f684905448cc0c2df4f0d91cf2cb5d644cc25b017e1b9c84a22f96a63354cb0246d7ab207bf898110a812313862e43ba8b0c1c496df3bd5eadb97ec0b1cebbaf813a9ffb8866c4b35c71df8dde4938db5b3624b67c6413779a3b6b2da864cdb3acdb6c892bb20ae0d0b6b04452d47eeae73280c35c71a1370a164d12434fa971ad95ab53bdcc7531534bd2c94340816238b1e0e78e53fab1af43b734f2fc1d600a8857927f3dff335d50dc0c85138a8c0655fca6df6aa33254fda059ceb65f2232fec0a0665d3992c410c91bbc9b122365c73b4b2cdeaf24bb27f4a576d87ea158cf7df90c4780bb451e44ffa8029185e4b12adcb53b13fd0146df2434721d55205c686e59225a501524183d4a9c3332770919c53af00bd10a0e3b22f5e73386a059e3c9cabdc96ac81b889bd5fc9935ac1414d78f45932b144675a29c5147aec234c15b30bbe1c3f7d3e17fef6a157c7a3ab1e3b045106e239bc9090f74da5f7603ea60a2f01c7474c4a8d8c8e10bdfd7c78c61ca3bdbf85031d51a434f914a6e1a5dc56e63e527a6d2c0ce053be976d2d4b1052e64956325e004782b1192f73b321fd075bc1ba84c07dfe8159e9feb8fbab5c6d6d09d86a3d2b8b547caffdaea44c79a6f1216b0c849bf2f2cb3f5903de33fc53d7d6273b6ada273700a611e8b6c3ce68992ae8e447117b71aa4c09fe8dad48b35da44ebbeac1d3b9f3ad3ae2f3ec1c6820f7f004b863c3b2cc1f2884e01670205d88182e0529aa6e6e09ee74a7a8c6ee128b984a3e320eadd85ba5307fe481be60dd3533c3b14dc06d7c684760ae39ffb22df57d7705a68a59f29d8440d7969eb22ac61013faef3586728f112ac8dad198dd91159652dafa4c8dd61502a7150a33a40fce7ea0bbcdec54cbc8e20d973c5ad5c92b073a3d5f5741a9e6cbd1d42ea75b7659adba1fcad1af99febba6576fe02d6025bfa3574b4134895feaf7c9c3041eb0f783af75ddfbc55841826e0e60056366f20f76e54ca3b6c454a1fd963186e9867a590783a56ea39d224cc7ae51adcf6e7bef162ddaa81b9daaabc5cf57a198bf7e561c8d4c1195a4ff75405e549361351c643de20d379705cebdc71fc3f2820b0c2de5f2e466cad81beaf5b37bc688ef21e23dd471b7ecaf19d884d5c7c702f9e6421f0c4555de23f0a08c16d9aa4564789dc054c3ec6fb3ea19fcb356dba58615cdfec40d6d6b7bc37c039383a023c595790401d8b06432c94551133f82a4afdd919d71f54ccf87e9b813cf897a18de8a295672e375ce73be5a0ca9fe95b0833c79807601ce005dc9c9d9ecb438a0a245b97d7a37aa908821331343090558a9e4d8b1e780ae0c39e38e4d408507029ccad65067351a97fc1f7eb995c6f7989f1b87e1c99b8d5ecc950ba7f3860548865ff5243827dca373adb687f894cbfb44a39d1a0ce29747a8209257d14768fa7f27aeffece267c544334416073ab12b6b42b5183321638b1d98b0cadff6799af8c8c97a0d969ec973f1768036972ede4135a819a2d182abf481aed204a139020f1deb06a26c973fd117d676c41daba2d89c2e3b33c94a14635d1fe520485e6463e7c08075f94579f9e385d84738f300b229bbe914951b8c221cfa76256f1a9c9f8f2d68b8672061725df65ff3f43033f5d5ec22efee8c524d964b1f3f0ac844c51cdd28ccf71af465ccc95ddd5ca81954294f99ddc9030804f8d8caab6968f627cada7789beb6facfecd5e8d731016bb3c2288958d8471a3bffcf33dc9918d8340c5669db749fda5cc03b334a8de8c54f4549a7b4c3d7b8870faefae3073ac4b6259c68e6eba81151e1bc43ebfeaad7c75fd56cef3b0c6e4f17bad9b7a329cedc75089a039dbe5419c0009cbf6de053a7404f7585a33406bd6994b87e05fdc2a73632b37cee34d3164f81468590cb8eb5d41fa1c5ffc337f6d134311c44aef9ad89ce802758af21162a1d72dd3314c24174e000d5808d091df80809befc77409790fd0ccd574304db5d050ee93c56e155ed40793323761d260c6634afa99ccfd348a6ab0d3ac9e67db8c56ad7ada51b13200276cb345bbd286873fbceb008e74a86fe467c8b57ffac90e455baf62ca54af2d667a77ff874c23df526fbbf55f413f645d3dae5c83d1a09a8c36952475659c1bc3142ce9a021c9f456e475a2d5a9051381eadb4f1c25f0233d933c18ba2ebfcf889930c531749db789996abbea273eae754d7850ecd17db473374a83dc5f23ea44e3cdd7612285d2bb4fdd862b8216a5cea714e401ac2c91518dc5412719392e6165c0bd58e3141114bbf4889e7289498641d23c59dcccb39eb5e8ebe197efd7bdbe2d6f93771c7a1dffca84647ddde5453515cf7ea551bea02cac703c03623fe1c2117e9688bb9c7190a8206fdf9a3e72f9f90b4dd9e4467ed8f41998563e7514101a237d5aec3b1082194c79dfcc41c0a8f569a62d4a60fc282f2737e3d710a2e5049293a8e32405209a83cbc3150a4dc734639f6199d8b3d8e7f12bb49a787c7f57f2e186036b67083efb41c6058ce3f4e9bd22bcc10730cf7e5807fccadd2b5ca549965ccea2871842d16b099646420f2aa0eac5d2e1c182a0ee3bfb9ec430d23415cfccd56d3bf21d1cd70410a77d7be5106326f13cb6361f8a94f8e8ef34b607da2375475a1a374411ca46663fbe51437770fdf971bbb7f879f002045f4b2a8e3809608906d19f4bc6d75c321f0c14d0a8183c47bdad7924f90918bf9295f1d026ab0a31e0c6697f6062cdf7cf1d13bf0d6a1c1b9a09f29594ad2a6acdcebcc7a7203e7b0d9c553916fd28c67c756fbbf92861fa76f0c12468a6b75a9699a160d4d85616c246e803cfe6be14f96c38600d2557dbfcaf5442cd85c92313963c4ac58c02e7068f9ff6a3250372ff674a6a7a6e74beecfb127e3edee66115766bc3322d15f274bee4e9cbc1991e3aacfd96326792d6b228a087b67730c84101d1d77aa43b772b303d51394a22526c4648b1bd4ee6340a766a3c47b7c55dfe58d5c53151516387b7b25d12807b60ae6094c81be7cc179708c31c86afdb0dc0f0aa5eb28611f7c07051eb85b6a92e5afbc62f1c6de2ec9b04d74f90dbe81cdac04007070b49be3faea49533cf81209b6fdba029fef5d8792a987c83b1a0e6d415288182110c729860ec48d4cc63f4c8c1177bff67845509b981796396bfd8f28b386ee3c46531fb8dd2a3be3000de19e0ecc5fb7f70266271adcb6066d2b6b6b3ead107a43358d89c8d69659e3a921dfcc582cb8a7d96938f42c0b4b0dc92801054846c3feb74f2c8130a7f03cc96fe1347ab33c090701ee5ae150d9a8d970d422a6b47c2a2c37d09985138eb3b8e25a1c2f45c38b62051b3d2fdee471063b23fbe1dabffaa77cc279fc8d9754079add850040d0538e2dc3a19807b1be03b9ed9ff1164ac364c5f4de91e256aef1584e61aafb9b2ed3d5b0714f8e9bf4968862f0f30180e1c6c376eabb87724e5f07ced4b8d1a63bfe2fc7c5d51b7b08a45e00935bf86f58f11648f10d7faa79a9e421b623be03faa6d0f72c8e678884758e2fd84a66096a3344c232ab15ebfce3c33c587131050cfc327d57c0bf2576a57a3509c3b146389ed201becb04c094b8f56abea865c5900e6111207cdb0238b43033ac43fb8b85f93ee824d7a63f1d1dda551de81db6ac88df2d867341ecadc8b5cb504fd9786c2c1397ff058fe23a551e3812a8ff8670e1c011ad6a556d0b65f88944d189e7aa10be21d0673cfc5210c0379eba10159bfeca3360d2e2b682b11ad1819f6846aeb4934ab756cf34eb7dce69e3ee65df9c4f41b41f11541417cf947937fef8e187ffc45da62061afb2340d4b6f3a4805eb1ab944b4fe7c75ade3aee04bfa7ebead06f9bdefcf</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">輸入密碼繼續閱讀</span>
-      </label>
-    </div>
-  </div>
+    <p>接下來要的教學將使用 n8n 來讀取存放在 Google Drive 上的資料，因此需要為 n8n 申請專屬應用程式的憑證才可以讓使用者透過 <code>OAuth2</code> 進行認證並登入，讀取使用者自己的檔案。</p>
+<h2 id="1-登入-n8n-並進入新增-Credential-頁面"><a href="#1-登入-n8n-並進入新增-Credential-頁面" class="headerlink" title="1. 登入 n8n 並進入新增 Credential 頁面"></a>1. 登入 n8n 並進入新增 Credential 頁面</h2><div class="timeline">
+<div class="timenode"><div class="meta"><p><p>第 1&#x2F;2 步： 於 <code>Credential</code> 分頁點選 <code>Create credential</code> 按鈕</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-001.png' data-fancybox='default' data-caption='點擊 Create credential'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-001.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-001.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊 Create credential" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊 Create credential</span></div></div><p>並且在 <code>Add new credential</code> 視窗的 <code>Select an app or service to connect to</code> 欄位搜尋 <code>Google Sheets OAuth2 API</code>，並按下 <code>Continue</code>。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 2&#x2F;2 步： 複製 <code>OAuth Redirect URL</code></p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-002.png' data-fancybox='default' data-caption='複製 OAuth Redirect URL'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-002.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-002.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="複製 OAuth Redirect URL" style="width:auto;"/></a><span></span></div></div><span class="image-caption">複製 OAuth Redirect URL</span></div></div><p>紀錄並複製 <code>OAuth Redirect URL</code> 欄位上的目標路徑。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>切換到 <code>Google Cloud Platform</code></p>
+</p></div><div class="body"><p>切換到 <code>Google Cloud Platform</code> 進行憑證的申請。</p></div></div>
 </div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+
+<h2 id="2-開啟-GCP-進行-OAuth-設定與憑證申請"><a href="#2-開啟-GCP-進行-OAuth-設定與憑證申請" class="headerlink" title="2. 開啟 GCP 進行 OAuth 設定與憑證申請"></a>2. 開啟 GCP 進行 OAuth 設定與憑證申請</h2><div class="timeline">
+<div class="timenode"><div class="meta"><p><p>第 1&#x2F;6 步： 選擇專案後進入 OAuth 同意畫面設定</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-003.png' data-fancybox='default' data-caption='進入 OAuth 同意畫面'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-003.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-003.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="進入 OAuth 同意畫面" style="width:auto;"/></a><span></span></div></div><span class="image-caption">進入 OAuth 同意畫面</span></div></div><p>打開側邊導覽頁面 ⮕ 選擇 <code>API和服務</code> ⮕ 選擇 <code>OAuth 同意畫面</code>。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 2&#x2F;6 步： OAuth總覽畫面點擊 <code>開始</code></p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-004.png' data-fancybox='default' data-caption='點擊開始'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-004.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-004.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊開始" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊開始</span></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 3&#x2F;6 步： 填寫專案設定 ⮕ 應用程式資訊</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-005.png' data-fancybox='default' data-caption='填寫應用程式資訊'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-005.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-005.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="填寫應用程式資訊" style="width:auto;"/></a><span></span></div></div><span class="image-caption">填寫應用程式資訊</span></div></div><p>① 應用程式名稱： 填入 <code>n8n x GoogleService</code> (名稱可以自行決定)<br>② 使用者支援電子郵件：透過下拉式選單選擇信箱 (通常是 GCP 的登入信箱)<br>③ 點擊 <code>下一步</code> 繼續完成資訊填寫。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 4&#x2F;6 步： 填寫專案設定 ⮕ 目標對象</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-006.png' data-fancybox='default' data-caption='目標對象選擇外部'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-006.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-006.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="目標對象選擇外部" style="width:auto;"/></a><span></span></div></div><span class="image-caption">目標對象選擇外部</span></div></div><p>在 <code>目標對象</code> 選擇介面，選擇 <code>外部</code> 並且點擊 <code>下一步</code>。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 5&#x2F;6 步： 填寫專案設定 ⮕ 聯絡資訊</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-007.png' data-fancybox='default' data-caption='輸入電子郵件地址'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-007.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-007.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="輸入電子郵件地址" style="width:auto;"/></a><span></span></div></div><span class="image-caption">輸入電子郵件地址</span></div></div><p>① 電子郵件地址： 填入自己常收發信的信箱<br>② 點擊 <code>下一步</code> 繼續完成資訊填寫。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 6&#x2F;6 步： 填寫專案設定 ⮕ 完成</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-008.png' data-fancybox='default' data-caption='勾選同意政策'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-008.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-008.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="勾選同意政策" style="width:auto;"/></a><span></span></div></div><span class="image-caption">勾選同意政策</span></div></div><p>① 勾選 <code>我同意 Google API 服務：使用者資料政策</code><br>② 點擊 <code>建立</code> 完成資訊填寫。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>進入下一階段 <code>OAuth</code> 用戶端申請</p>
+</p></div><div class="body"></div></div>
+</div>
+
+<h2 id="3-進入-OAuth-建立用戶端"><a href="#3-進入-OAuth-建立用戶端" class="headerlink" title="3. 進入 OAuth 建立用戶端"></a>3. 進入 OAuth 建立用戶端</h2><div class="timeline">
+<div class="timenode"><div class="meta"><p><p>第 1&#x2F;9 步： 進入 <code>用戶端</code> 功能並點擊 <code>+ 建立用戶端</code></p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-009.png' data-fancybox='default' data-caption='點擊建立用戶端'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-009.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-009.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊建立用戶端" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊建立用戶端</span></div></div><p>① 從產品側欄 <code>Google Auth Platform</code> 選擇 <code>用戶端</code>。<br>② 點擊 <code>+ 建立用戶端</code>。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 2&#x2F;9 步： 填寫 <code>建立 OAuth 用戶端 ID</code> 資訊</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-010.png' data-fancybox='default' data-caption='輸入 OAuth 資訊'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-010.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-010.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="輸入 OAuth 資訊" style="width:auto;"/></a><span></span></div></div><span class="image-caption">輸入 OAuth 資訊</span></div></div><p>① 應用程式類型：展開下拉式選單，選擇 <code>網頁應用程式</code>。<br>② 名稱： 輸入 <code>n8n</code> (名稱可以自行決定)。<br>③ 已授權的 JavaScript 來源，維持不動。<br>④ 已授權的重新導向 URI：點選 <code>+ 新增 URI</code>。<br>⑤ 在跳出的輸入欄位貼上來自 <code>n8n</code> 介面的 <code>OAuth Redirect URL</code> 字串。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 3&#x2F;9 步： 點擊 <code>建立</code> 按鈕</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-011.png' data-fancybox='default' data-caption='點擊建立按鈕'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-011.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-011.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊建立按鈕" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊建立按鈕</span></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 4&#x2F;9 步： 記錄應用程式憑證資訊</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-012.png' data-fancybox='default' data-caption='紀錄憑證資訊'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-012.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-012.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="紀錄憑證資訊" style="width:auto;"/></a><span></span></div></div><span class="image-caption">紀錄憑證資訊</span></div></div><p>① 用戶端 ID： 請複製到記事本，該欄位是 n8n <code>Google Sheets OAuth2 API</code> 的 <code>Client ID</code>。<br>② 用戶端密碼： 請複製到記事本，該欄位是 n8n <code>Google Sheets OAuth2 API</code> 的 <code>Client Secret</code>。<br>③ 也可以透過 <code>下載 JSON</code> 把應用程式憑證進行保存。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 5&#x2F;9 步： 進到目標對象功能，設定測試帳號</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-013.png' data-fancybox='default' data-caption='設定測試帳號'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-013.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-013.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="設定測試帳號" style="width:auto;"/></a><span></span></div></div><span class="image-caption">設定測試帳號</span></div></div><p>① 從產品側欄 <code>Google Auth Platform</code> 選擇 <code>目標對象</code>。<br>② 在 <code>測試使用者</code> 點選 <code>+ Add users</code> 按鈕。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 6&#x2F;9 步： 新增測試使用者</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-014.png' data-fancybox='default' data-caption='輸入測試使用者帳號'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-014.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-014.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="輸入測試使用者帳號" style="width:auto;"/></a><span></span></div></div><span class="image-caption">輸入測試使用者帳號</span></div></div><p>① 在輸入欄位填寫測試使用者的 Google 帳號 (至多 100 組帳號)。<br>② 接著按下 <code>儲存</code>。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 7&#x2F;9 步： 進入啟用 API 功能</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-015.png' data-fancybox='default' data-caption='進入 API 和服務的程式庫'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-015.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-015.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="進入 API 和服務的程式庫" style="width:auto;"/></a><span></span></div></div><span class="image-caption">進入 API 和服務的程式庫</span></div></div><p>從功能總覽選擇 <code>API 和服務</code> ⮕ <code>程式庫</code>。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 8&#x2F;9 步： 啟用 <code>Google Sheets API</code></p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-016.png' data-fancybox='default' data-caption='搜尋 Google Sheets API'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-016.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-016.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="搜尋 Google Sheets API" style="width:auto;"/></a><span></span></div></div><span class="image-caption">搜尋 Google Sheets API</span></div></div><p>① 在搜尋介面上打上 <code>Google Sheets API</code>。<br>② 搜尋結果點擊 <code>Google Sheets API</code> 功能。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-017.png' data-fancybox='default' data-caption='點擊啟用'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-017.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-017.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊啟用" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊啟用</span></div></div><p>③ 點擊啟用</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-018.png' data-fancybox='default' data-caption='完成啟用'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-018.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-018.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="完成啟用" style="width:auto;"/></a><span></span></div></div><span class="image-caption">完成啟用</span></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 9&#x2F;9 步： 啟用 <code>Google Drive API</code></p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-019.png' data-fancybox='default' data-caption='搜尋 Google Drive API'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-019.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-019.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="搜尋 Google Drive API" style="width:auto;"/></a><span></span></div></div><span class="image-caption">搜尋 Google Drive API</span></div></div><p>① 回到 <code>API 程式庫</code> 的搜尋頁面。<br>② 在搜尋介面上打上 <code>Google Drive API</code>。<br>③ 搜尋結果點擊 <code>Google Drive API</code> 功能。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-020.png' data-fancybox='default' data-caption='點擊啟用'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-020.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-020.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊啟用" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊啟用</span></div></div><p>④ 點擊啟用</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-021.png' data-fancybox='default' data-caption='完成啟用'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-021.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-021.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="完成啟用" style="width:auto;"/></a><span></span></div></div><span class="image-caption">完成啟用</span></div></div></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>完成 GCP 設定</p>
+</p></div><div class="body"><p>接下來回到 <code>n8n</code> 設定 Credential 頁面  </p></div></div>
+</div>
+
+<h2 id="4-回到-n8n-繼續完成-Credential-設定"><a href="#4-回到-n8n-繼續完成-Credential-設定" class="headerlink" title="4. 回到 n8n 繼續完成 Credential 設定"></a>4. 回到 n8n 繼續完成 Credential 設定</h2><div class="timeline">
+<div class="timenode"><div class="meta"><p><p>第 1&#x2F;5 步： 回到 <code>n8n</code> 的 <code>Google Sheets OAuth2 API</code> 設定頁面</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-022.png' data-fancybox='default' data-caption='填寫 Client ID 和 Client Secret'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-022.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-022.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="填寫 Client ID 和 Client Secret" style="width:auto;"/></a><span></span></div></div><span class="image-caption">填寫 Client ID 和 Client Secret</span></div></div><p>① <code>Client ID</code>： 填入來自步驟 3-4 的資訊。<br>② <code>Client Secret</code>： 填入來自步驟 3-4 的資訊。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 2&#x2F;5 步： 點擊 <code>Sign in with Google</code> 進行測試</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-023.png' data-fancybox='default' data-caption='點擊 Sign in with Google 進行測試'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-023.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-023.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊 Sign in with Google 進行測試" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊 Sign in with Google 進行測試</span></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 3&#x2F;5 步： 彈窗進行 Google 帳戶登入&#x2F;選擇</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-024.png' data-fancybox='default' data-caption='彈窗進行 Google 帳戶登入/選擇'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-024.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-024.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="彈窗進行 Google 帳戶登入/選擇" style="width:auto;"/></a><span></span></div></div><span class="image-caption">彈窗進行 Google 帳戶登入/選擇</span></div></div><div class="note info yellow"><p>登入帳號必須是在設定應用程式憑證的測試帳號，否則登入後會出現錯誤。  </p></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 4&#x2F;5 步： 跳過警告 <code>這個應用程式未經 Google 驗證</code></p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-025.png' data-fancybox='default' data-caption='點擊繼續'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-025.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-025.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊繼續" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊繼續</span></div></div></div></div>
+
+<div class="timenode"><div class="meta"><p><p>第 5&#x2F;5 步： 允許應用程式權限</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-026.png' data-fancybox='default' data-caption='勾選全選的選項'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-026.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-026.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="勾選全選的選項" style="width:auto;"/></a><span></span></div></div><span class="image-caption">勾選全選的選項</span></div></div><p>① 勾選 <code>全選</code>。<br>② 滾動畫面至最下方。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-027.png' data-fancybox='default' data-caption='點擊繼續完成登入'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-027.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-027.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊繼續完成登入" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊繼續完成登入</span></div></div><p>③ 點擊<code>繼續</code>。</p></div></div>
+
+<div class="timenode"><div class="meta"><p><p>完成應用程式與 Google 服務串接</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-028.png' data-fancybox='default' data-caption='測試成功'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-028.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/googlesheets-workflow-028.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="測試成功" style="width:auto;"/></a><span></span></div></div><span class="image-caption">測試成功</span></div></div></div></div>
+</div>
+
   </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  <p>文章内容遵循 姓名標示-非商業性-相同方式分享 4.0 國際 (CC BY-NC-SA 4.0) 協議</p>
+
+                
+              
+                
+                  <p>本文章永久網址為：<a href="https://keoinn.github.io/posts/2029855681/">https://keoinn.github.io/posts/2029855681/</a></p>
+                
+              
+            </blockquote>
+          </div>
+        
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
@@ -2710,6 +2838,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/n8n/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>n8n</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Tutorial/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Tutorial</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AI/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AI</p></a></div>
+  <span hidden itemprop="keywords">n8n Tutorial AI</span>
+  
+
 
         
       
@@ -2763,6 +2898,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/1331333060/'>
+          <p class='title'>【n8n系列|初稿】 03. 第一支 n8n workflow： 聊天機器人<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>安裝完成後且新增 LLM Keys 後，先製作一個簡單的 workflow 進行測試，這個 workflow 主要串接 Chat Tigger、AI Agent、Chat Model與Memor...</p>
+        </a>
+      
+    </div>
+  
   <!-- 文章推荐 -->
   
   
@@ -2777,7 +2922,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/course/2025cloud/index.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/2029855681/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comment'></i> 留言</p>
     
@@ -2809,7 +2954,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-<section class="widget toc-wrapper desktop mobile" id="toc-div" style="display:none" >
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
   
   <header>
     
@@ -2819,7 +2964,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%B2%E7%A8%8B%E9%8C%84%E5%BD%B1"><span class="toc-text">課程錄影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%88%E9%A1%8C%E8%A3%BD%E4%BD%9C"><span class="toc-text">專題製作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE"><span class="toc-text">環境建置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%88%E9%A1%8C%E5%88%86%E7%B5%84"><span class="toc-text">專題分組</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%B2%E5%BE%8C%E5%85%AC%E5%91%8A"><span class="toc-text">課後公告</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%99%BB%E5%85%A5-n8n-%E4%B8%A6%E9%80%B2%E5%85%A5%E6%96%B0%E5%A2%9E-Credential-%E9%A0%81%E9%9D%A2"><span class="toc-text">1. 登入 n8n 並進入新增 Credential 頁面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%96%8B%E5%95%9F-GCP-%E9%80%B2%E8%A1%8C-OAuth-%E8%A8%AD%E5%AE%9A%E8%88%87%E6%86%91%E8%AD%89%E7%94%B3%E8%AB%8B"><span class="toc-text">2. 開啟 GCP 進行 OAuth 設定與憑證申請</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%80%B2%E5%85%A5-OAuth-%E5%BB%BA%E7%AB%8B%E7%94%A8%E6%88%B6%E7%AB%AF"><span class="toc-text">3. 進入 OAuth 建立用戶端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%9B%9E%E5%88%B0-n8n-%E7%B9%BC%E7%BA%8C%E5%AE%8C%E6%88%90-Credential-%E8%A8%AD%E5%AE%9A"><span class="toc-text">4. 回到 n8n 繼續完成 Credential 設定</span></a></li></ol>
   </div>
 </section>
 
@@ -3396,7 +3541,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"2025 人工智慧雲端系統實務","description":"這裡需要密碼繼續閱讀","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/course/2025cloud/index.html"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/course/2025cloud/index.html","wordCount":10,"datePublished":"2025-06-05T11:01:15.000Z","dateModified":"2025-08-21T13:10:54.518Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/","name":"學習筆記"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/","name":"人工智慧雲端系統實務"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/n8n/","name":"n8n"}},{"@type":"ListItem","position":3,"item":{"@id":"https://keoinn.github.io/posts/2029855681/","name":"【n8n系列|撰寫中】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"【n8n系列|撰寫中】 04. 建立 Google Service 的應用程式憑證：讓 n8n 可以使用 Google 的應用程式","description":"Recording the daily code snippets produced from work and research.","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/posts/2029855681/"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/posts/2029855681/","wordCount":0,"datePublished":"2026-08-20T15:48:29.000Z","dateModified":"2026-08-20T18:16:26.135Z","articleSection":"學習筆記","keywords":"n8n,Tutorial,AI","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
