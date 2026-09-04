@@ -7193,3 +7193,506 @@ pre {
 [color-scheme='dark'] .btn-copy:hover {
   background: var(--color-site-body);
 }
+html.announcement-modal-open {
+  overflow: hidden;
+}
+#l_side .widget.text > header {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#l_side .widget.text > header .name {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+}
+#l_side .widget.text .content .announcement-open-btn {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  margin-top: 0.8em;
+  margin-bottom: 0.6em;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+#l_side .announ-side__item {
+  margin-bottom: 0.85em;
+  padding-bottom: 0.85em;
+  border-bottom: 1px solid rgba(68,68,68,0.1);
+}
+#l_side .announ-side__item:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+#l_side .announ-side__heading {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 0.4em;
+}
+#l_side .announ-side__heading strong {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  min-width: 0;
+}
+#l_side .announ-side__heading .announ-node__action {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+#l_side .announ-side__time {
+  margin: 0.4em 0 0;
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--color-meta);
+}
+#l_side .announ-side__time time {
+  font-variant-numeric: tabular-nums;
+}
+#post-body .announcement-open-wrap {
+  margin: 0.8em 0;
+}
+#post-body .announcement-open-wrap--center,
+#post-body .announcement-open-wrap--right {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  width: 100%;
+}
+#post-body .announcement-open-wrap--center {
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+}
+#post-body .announcement-open-wrap--right {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  -khtml-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+}
+.announcement-open-btn {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-inline-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-inline-flex /* NEW - Chrome */;
+  display: inline-flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: #fff;
+  background: #44d7b6;
+  transition: background 0.2s ease;
+  -webkit-transition: background 0.2s ease;
+  -khtml-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
+  -o-transition: background 0.2s ease;
+  -ms-transition: background 0.2s ease;
+}
+.announcement-open-btn:hover {
+  background: #ff5722;
+}
+.announcement-open-btn i {
+  font-size: 0.95em;
+}
+.announcement-modal {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+}
+.announcement-modal.is-open {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+.announcement-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+.announcement-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: 92%;
+  max-width: 560px;
+  max-height: 80vh;
+  margin: 12vh auto 0;
+  overflow: hidden;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: var(--color-card);
+  color: var(--color-text);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+  -webkit-box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+}
+.announcement-modal__header {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -khtml-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(68,68,68,0.12);
+}
+.announcement-modal__header h2 {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  min-width: 0;
+  gap: 8px;
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--color-h2);
+  border: none;
+  padding: 0;
+}
+.announcement-modal__badge {
+  flex-shrink: 0;
+}
+.announcement-modal__date {
+  flex-shrink: 0;
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--color-meta);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.announcement-modal:not(.is-single) .announcement-modal__badge,
+.announcement-modal:not(.is-single) .announcement-modal__date {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.announcement-modal.is-single .announcement-modal__icon,
+.announcement-modal.is-single .announcement-modal__close {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.announcement-modal.is-single .announ-node__meta {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.announcement-modal.is-single .announ-node__body .is-meta-duplicate {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.announcement-modal.is-single .announ-node {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.announcement-modal.is-single .announcement-modal__footer {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+}
+.announcement-modal__close {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.announcement-modal__close:hover {
+  color: #ff5722;
+}
+.announcement-modal__body {
+  padding: 18px;
+  overflow: auto;
+}
+.announcement-modal__body p {
+  margin: 0 0 0.75rem;
+}
+.announcement-modal__body p:last-child {
+  margin-bottom: 0;
+}
+.announcement-modal__footer {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  padding: 12px 18px 18px;
+  border-top: 1px solid rgba(68,68,68,0.12);
+}
+.announcement-modal__footer .announcement-open-btn {
+  min-width: 8em;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+}
+.announ-node {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(68,68,68,0.1);
+}
+.announ-node:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.announ-node--expired {
+  opacity: 0.65;
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+}
+.announ-node__meta {
+  margin-bottom: 0.6rem;
+}
+.announ-node__heading {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.announ-node__heading .announ-node__title {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  min-width: 0;
+  margin: 0;
+}
+.announ-node__heading time {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: var(--color-meta);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.announ-node__title {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-h3);
+  border: none;
+  padding: 0;
+}
+.announ-node__action {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #fff;
+  background: #44d7b6;
+}
+.announ-node--expired .announ-node__action,
+.announ-dashboard__row--expired .announ-node__action,
+.announ-node__action--expired {
+  background: rgba(68,68,68,0.35);
+}
+.announ-node--persist .announ-node__action,
+.announ-dashboard__row--persist .announ-node__action,
+.announ-node__action--persist {
+  background: #ff5722;
+}
+.announ-node--new .announ-node__action,
+.announ-dashboard__row--new .announ-node__action,
+.announ-node__action--new {
+  background: #44d7b6;
+}
+.announ-node--notice .announ-node__action,
+.announ-dashboard__row--notice .announ-node__action,
+.announ-node__action--notice {
+  background: #2196f3;
+}
+.announ-node.is-hidden {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.announ-dashboard {
+  overflow: auto;
+  margin: 0.5em 0 1em;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.announ-dashboard__title {
+  margin: 0 0 0.75em;
+  padding-bottom: 0.2rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-h2);
+  border-bottom: 1px solid rgba(68,68,68,0.1);
+}
+.announ-dashboard table {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  vertical-align: top;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.announ-dashboard th,
+.announ-dashboard td {
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(68,68,68,0.1);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.announ-dashboard th:nth-child(1),
+.announ-dashboard td:nth-child(1) {
+  width: 18%;
+  text-align: center;
+}
+.announ-dashboard th:nth-child(2),
+.announ-dashboard td:nth-child(2) {
+  width: auto;
+}
+.announ-dashboard th:nth-child(3),
+.announ-dashboard td:nth-child(3) {
+  width: 22%;
+  white-space: nowrap;
+}
+.announ-dashboard th:nth-child(4),
+.announ-dashboard td:nth-child(4) {
+  width: 18%;
+  text-align: center;
+}
+.announ-dashboard th {
+  font-size: 0.85rem;
+  color: var(--color-meta);
+  white-space: nowrap;
+}
+.announ-dashboard td time {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.announ-dashboard td:last-child {
+  white-space: nowrap;
+}
+.announ-dashboard .announcement-open-btn {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+.announ-dashboard__row--expired td:not(:last-child) {
+  opacity: 0.65;
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+}
+@media screen and (max-width: 680px) {
+  .announcement-modal__dialog {
+    width: 100%;
+    max-width: none;
+    max-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    height: 100%;
+  }
+}
