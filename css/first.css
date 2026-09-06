@@ -1771,3 +1771,281 @@ ul.list-v >li>a:hover {
     background: var(--color-site-bg) !important;
   }
 }
+:root {
+  --color-divider: rgba(68,68,68,0.32);
+}
+hr {
+  margin: 1.25em 0;
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+#l_header {
+  overflow: visible;
+}
+#l_header #wrapper {
+  overflow: visible;
+}
+#l_header #wrapper .nav-sub {
+  pointer-events: none;
+  visibility: hidden;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -khtml-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+}
+#l_header #wrapper .nav-sub .title {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  min-width: 0;
+}
+#l_header #wrapper.sub .nav-sub {
+  pointer-events: auto;
+  visibility: visible;
+}
+#l_header #wrapper .nav-main-end {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+  max-height: 100%;
+  overflow: visible;
+  gap: 8px;
+}
+.scheme-switch {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex !important;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: auto;
+  height: 32px;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible;
+  border: none !important;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  background: transparent !important;
+  font-size: inherit;
+}
+.scheme-switch summary {
+  list-style: none;
+}
+.scheme-switch summary::-webkit-details-marker {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.scheme-switch summary::marker {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  content: none;
+}
+.scheme-switch > .scheme-switch__toggle {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  gap: 6px;
+  height: 32px;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  border: none !important;
+  border-radius: 999px;
+  -webkit-border-radius: 999px;
+  background: transparent !important;
+  color: var(--color-text) !important;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+.scheme-switch > .scheme-switch__toggle:hover {
+  color: #ff5722 !important;
+}
+.scheme-switch > .scheme-switch__toggle:hover:after {
+  content: none !important;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.scheme-switch__caret {
+  font-size: 0.65em;
+  opacity: 0.7;
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  transition: transform 0.15s ease;
+  -webkit-transition: transform 0.15s ease;
+  -khtml-transition: transform 0.15s ease;
+  -moz-transition: transform 0.15s ease;
+  -o-transition: transform 0.15s ease;
+  -ms-transition: transform 0.15s ease;
+}
+.scheme-switch[open] {
+  border: none !important;
+}
+.scheme-switch[open] > .scheme-switch__toggle {
+  border-bottom: none !important;
+  border-radius: 999px !important;
+  -webkit-border-radius: 999px !important;
+  margin-bottom: 0 !important;
+}
+.scheme-switch[open] .scheme-switch__caret {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -khtml-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+.scheme-switch[open] > .scheme-switch__menu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+}
+.scheme-switch__menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  left: auto;
+  z-index: 1100;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 8.75em;
+  padding: 6px;
+  border: 1px solid var(--color-divider);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: var(--color-card);
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+}
+.scheme-switch__btn {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  white-space: nowrap;
+}
+.scheme-switch__btn:hover {
+  color: #ff5722;
+  background: var(--color-site-bg);
+}
+.scheme-switch__btn.is-active {
+  color: #197560;
+  background: #caf3ea;
+}
+.scheme-switch__btn i {
+  font-size: 0.9em;
+}
+@media screen and (max-width: 768px) {
+  .scheme-switch > .scheme-switch__toggle {
+    padding: 0 8px !important;
+  }
+  .scheme-switch__current-label {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+[color-scheme='light'] {
+  color-scheme: light;
+}
+[color-scheme='dark'] {
+  color-scheme: dark;
+}
+[color-scheme='dark'] .custom-donate iframe {
+  color-scheme: dark;
+  background-color: transparent;
+}
+.custom-donate iframe {
+  background-color: transparent;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) {
+    --color-divider: rgba(238,238,238,0.55);
+  }
+  :root:not([color-scheme]) .scheme-switch > .scheme-switch__toggle {
+    border: none !important;
+    background: transparent !important;
+    color: var(--color-text) !important;
+  }
+  :root:not([color-scheme]) .scheme-switch__btn.is-active {
+    color: #44d7b6;
+    background: rgba(68,215,182,0.22);
+  }
+}
+html[color-scheme='dark'] {
+  --color-divider: rgba(238,238,238,0.55);
+}
+html[color-scheme='dark'] .scheme-switch > .scheme-switch__toggle {
+  border: none !important;
+  background: transparent !important;
+  color: var(--color-text) !important;
+}
+html[color-scheme='dark'] .scheme-switch__btn.is-active {
+  color: #44d7b6;
+  background: rgba(68,215,182,0.22);
+}

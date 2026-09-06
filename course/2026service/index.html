@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-08-19T15:01:15.000Z">
-<meta property="article:modified_time" content="2026-09-03T19:52:21.871Z">
+<meta property="article:modified_time" content="2026-09-06T21:15:40.880Z">
 <meta property="article:author" content="Wayne Chang">
 <meta property="article:tag" content="code snippets">
 <meta name="twitter:card" content="summary">
@@ -1826,6 +1826,284 @@ ul.list-v >li>a:hover {
     background: var(--color-site-bg) !important;
   }
 }
+:root {
+  --color-divider: rgba(68,68,68,0.32);
+}
+hr {
+  margin: 1.25em 0;
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+#l_header {
+  overflow: visible;
+}
+#l_header #wrapper {
+  overflow: visible;
+}
+#l_header #wrapper .nav-sub {
+  pointer-events: none;
+  visibility: hidden;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -khtml-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+}
+#l_header #wrapper .nav-sub .title {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  min-width: 0;
+}
+#l_header #wrapper.sub .nav-sub {
+  pointer-events: auto;
+  visibility: visible;
+}
+#l_header #wrapper .nav-main-end {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+  max-height: 100%;
+  overflow: visible;
+  gap: 8px;
+}
+.scheme-switch {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex !important;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: auto;
+  height: 32px;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible;
+  border: none !important;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  background: transparent !important;
+  font-size: inherit;
+}
+.scheme-switch summary {
+  list-style: none;
+}
+.scheme-switch summary::-webkit-details-marker {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.scheme-switch summary::marker {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  content: none;
+}
+.scheme-switch > .scheme-switch__toggle {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  gap: 6px;
+  height: 32px;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  border: none !important;
+  border-radius: 999px;
+  -webkit-border-radius: 999px;
+  background: transparent !important;
+  color: var(--color-text) !important;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+.scheme-switch > .scheme-switch__toggle:hover {
+  color: #ff5722 !important;
+}
+.scheme-switch > .scheme-switch__toggle:hover:after {
+  content: none !important;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.scheme-switch__caret {
+  font-size: 0.65em;
+  opacity: 0.7;
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  transition: transform 0.15s ease;
+  -webkit-transition: transform 0.15s ease;
+  -khtml-transition: transform 0.15s ease;
+  -moz-transition: transform 0.15s ease;
+  -o-transition: transform 0.15s ease;
+  -ms-transition: transform 0.15s ease;
+}
+.scheme-switch[open] {
+  border: none !important;
+}
+.scheme-switch[open] > .scheme-switch__toggle {
+  border-bottom: none !important;
+  border-radius: 999px !important;
+  -webkit-border-radius: 999px !important;
+  margin-bottom: 0 !important;
+}
+.scheme-switch[open] .scheme-switch__caret {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -khtml-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+.scheme-switch[open] > .scheme-switch__menu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+}
+.scheme-switch__menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  left: auto;
+  z-index: 1100;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 8.75em;
+  padding: 6px;
+  border: 1px solid var(--color-divider);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: var(--color-card);
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+}
+.scheme-switch__btn {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  white-space: nowrap;
+}
+.scheme-switch__btn:hover {
+  color: #ff5722;
+  background: var(--color-site-bg);
+}
+.scheme-switch__btn.is-active {
+  color: #197560;
+  background: #caf3ea;
+}
+.scheme-switch__btn i {
+  font-size: 0.9em;
+}
+@media screen and (max-width: 768px) {
+  .scheme-switch > .scheme-switch__toggle {
+    padding: 0 8px !important;
+  }
+  .scheme-switch__current-label {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+[color-scheme='light'] {
+  color-scheme: light;
+}
+[color-scheme='dark'] {
+  color-scheme: dark;
+}
+[color-scheme='dark'] .custom-donate iframe {
+  color-scheme: dark;
+  background-color: transparent;
+}
+.custom-donate iframe {
+  background-color: transparent;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) {
+    --color-divider: rgba(238,238,238,0.55);
+  }
+  :root:not([color-scheme]) .scheme-switch > .scheme-switch__toggle {
+    border: none !important;
+    background: transparent !important;
+    color: var(--color-text) !important;
+  }
+  :root:not([color-scheme]) .scheme-switch__btn.is-active {
+    color: #44d7b6;
+    background: rgba(68,215,182,0.22);
+  }
+}
+html[color-scheme='dark'] {
+  --color-divider: rgba(238,238,238,0.55);
+}
+html[color-scheme='dark'] .scheme-switch > .scheme-switch__toggle {
+  border: none !important;
+  background: transparent !important;
+  color: var(--color-text) !important;
+}
+html[color-scheme='dark'] .scheme-switch__btn.is-active {
+  color: #44d7b6;
+  background: rgba(68,215,182,0.22);
+}
 
   </style>
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
@@ -2276,7 +2554,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1788712397920),
+    lastupdate: new Date(1788731307670),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2300,6 +2578,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     plugins: {
       message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       
+      
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.darkMode","plugins.articlePage"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"上一頁","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"下一頁","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"重新整理","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到頂端","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"貼上","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全選","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪下","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"複製","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站內搜尋","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"googleSearch","name":"Google 搜尋","icon":"fa-solid fa-search","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"以新分頁開啟","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"複製連結網址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"googleImg","name":"Google 以圖搜圖","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"列印頁面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"閱讀模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"schemeLight","name":"淺色","icon":"fa-solid fa-sun","event":"window.setColorScheme&&window.setColorScheme('light')","group":"darkMode"},{"id":"schemeDark","name":"深色","icon":"fa-solid fa-moon","event":"window.setColorScheme&&window.setColorScheme('dark')","group":"darkMode"},{"id":"schemeSystem","name":"跟隨系統","icon":"fa-solid fa-circle-half-stroke","event":"window.setColorScheme&&window.setColorScheme('system')","group":"darkMode"}]}}
       
     },
     search: {
@@ -2325,6 +2605,118 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- import head_end end -->
   <!-- Custom Files headEnd begin-->
   
+<script>
+(function () {
+  var PREF_KEY = 'color-scheme-pref';
+  var LS_KEY = 'color-scheme';
+  var ATTR = 'color-scheme';
+  var ICONS = {
+    light: 'fa-sun',
+    dark: 'fa-moon',
+    system: 'fa-circle-half-stroke'
+  };
+  var LABELS = {
+    light: 'Light',
+    dark: 'Dark',
+    system: 'System'
+  };
+
+  function systemMode() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function getPref() {
+    var pref = localStorage.getItem(PREF_KEY);
+    if (pref === 'light' || pref === 'dark' || pref === 'system') return pref;
+    var legacy = localStorage.getItem(LS_KEY);
+    if (legacy === 'light' || legacy === 'dark') return legacy;
+    return 'system';
+  }
+
+  function closeMenus() {
+    document.querySelectorAll('.scheme-switch').forEach(function (el) {
+      el.removeAttribute('open');
+      var summary = el.querySelector('summary');
+      if (summary) summary.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  function apply(pref, notify) {
+    var root = document.documentElement;
+    if (pref !== 'light' && pref !== 'dark') pref = 'system';
+    localStorage.setItem(PREF_KEY, pref);
+    if (pref === 'system') {
+      localStorage.removeItem(LS_KEY);
+      root.removeAttribute(ATTR);
+    } else {
+      localStorage.setItem(LS_KEY, pref);
+      root.setAttribute(ATTR, pref);
+    }
+    var effective = pref === 'system' ? systemMode() : pref;
+    if (window.volantis && volantis.dark) {
+      volantis.dark.mode = effective;
+      if (notify && volantis.dark.method && volantis.dark.method.toggle) {
+        try { volantis.dark.method.toggle.start(); } catch (err) {}
+      }
+    }
+    document.querySelectorAll('[data-scheme-option]').forEach(function (btn) {
+      var on = btn.getAttribute('data-scheme-option') === pref;
+      btn.classList.toggle('is-active', on);
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    ['light', 'dark', 'system'].forEach(function (mode) {
+      var item = document.getElementById('scheme' + mode.charAt(0).toUpperCase() + mode.slice(1));
+      if (item) item.classList.toggle('active', mode === pref);
+    });
+    document.querySelectorAll('.scheme-switch').forEach(function (el) {
+      var icon = el.querySelector('.scheme-switch__current-icon');
+      var label = el.querySelector('.scheme-switch__current-label');
+      if (icon) icon.className = 'scheme-switch__current-icon fa-solid fa-fw ' + ICONS[pref];
+      if (label) label.textContent = LABELS[pref];
+    });
+    closeMenus();
+  }
+
+  window.setColorScheme = function (pref) {
+    apply(pref, true);
+  };
+
+  apply(getPref(), false);
+  document.addEventListener('DOMContentLoaded', function () {
+    apply(getPref(), false);
+    document.querySelectorAll('.scheme-switch').forEach(function (el) {
+      el.addEventListener('toggle', function () {
+        var summary = el.querySelector('summary');
+        if (summary) summary.setAttribute('aria-expanded', el.open ? 'true' : 'false');
+        if (!el.open) return;
+        document.querySelectorAll('.scheme-switch').forEach(function (other) {
+          if (other !== el) other.removeAttribute('open');
+        });
+      });
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    var target = e.target && e.target.nodeType === 1 ? e.target : e.target && e.target.parentElement;
+    document.querySelectorAll('.scheme-switch[open]').forEach(function (el) {
+      if (!target || !el.contains(target)) el.removeAttribute('open');
+    });
+  }, true);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenus();
+  });
+
+  var media = window.matchMedia('(prefers-color-scheme: dark)');
+  var onMedia = function () {
+    if (getPref() === 'system') apply('system', true);
+  };
+  if (media.addEventListener) media.addEventListener('change', onMedia);
+  else if (media.addListener) media.addListener(onMedia);
+})();
+</script>
+
+
   <!-- Custom Files headEnd end-->
 </head>
   <body itemscope itemtype="https://schema.org.cn/WebPage">
@@ -2344,6 +2736,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" title="toc"></a></li>
         
       </ul>
+      
+<details class="scheme-switch">
+  <summary class="scheme-switch__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="配色模式">
+    <i class="scheme-switch__current-icon fa-solid fa-circle-half-stroke fa-fw" aria-hidden="true"></i>
+    <span class="scheme-switch__current-label">System</span>
+    <i class="scheme-switch__caret fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </summary>
+  <div class="scheme-switch__menu" role="listbox" aria-label="配色模式">
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="light" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('light')">
+      <i class="fa-solid fa-sun fa-fw" aria-hidden="true"></i>
+      <span>Light</span>
+    </button>
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="dark" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('dark')">
+      <i class="fa-solid fa-moon fa-fw" aria-hidden="true"></i>
+      <span>Dark</span>
+    </button>
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="system" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('system')">
+      <i class="fa-solid fa-circle-half-stroke fa-fw" aria-hidden="true"></i>
+      <span>System</span>
+    </button>
+  </div>
+</details>
+
+
     </div>
 		<div class="nav-main">
       
@@ -2466,6 +2882,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 				</ul>
 			</div>
+      <div class="nav-main-end">
       
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
@@ -2589,6 +3006,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </li>
 			</ul>
 
+      
+<details class="scheme-switch">
+  <summary class="scheme-switch__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="配色模式">
+    <i class="scheme-switch__current-icon fa-solid fa-circle-half-stroke fa-fw" aria-hidden="true"></i>
+    <span class="scheme-switch__current-label">System</span>
+    <i class="scheme-switch__caret fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </summary>
+  <div class="scheme-switch__menu" role="listbox" aria-label="配色模式">
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="light" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('light')">
+      <i class="fa-solid fa-sun fa-fw" aria-hidden="true"></i>
+      <span>Light</span>
+    </button>
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="dark" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('dark')">
+      <i class="fa-solid fa-moon fa-fw" aria-hidden="true"></i>
+      <span>Dark</span>
+    </button>
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="system" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('system')">
+      <i class="fa-solid fa-circle-half-stroke fa-fw" aria-hidden="true"></i>
+      <span>System</span>
+    </button>
+  </div>
+</details>
+
+
+      </div>
+
       <!-- Custom Files header begin -->
       
       <!-- Custom Files header end -->
@@ -2660,10 +3103,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2026-09-04T03:52:21+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2026-09-07T05:15:40+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新於：2026年9月4日</p>
+    <p>更新於：2026年9月7日</p>
   </a>
 </div>
 
@@ -2687,7 +3130,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="您提供的密碼錯了，請聯絡作者提供密碼進行閱讀。" data-whm="Oh, these decrypted content cannot be verified, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="a6f334b2ce78a02e4f26a53b990122485ee8453b1a963639ea81563cd96285b8">63898f1d92087d7e814156d7d7ed725a05b03471294360844d468f717dd921fa0b9effb1f7212f8d5511a3e1979a4670c6d977a74c164f52bfc9120d6c3fd20534c600fbafcfbfdf209503b546b05c740467b7b07dd0395b126efd26acb73e1dd09fcf8bf7ff35754c82d16ffac92f33ae90d5f020ca0a782fe7b0729929feea5ed4bf38e02fd109e86aae7d0b62d78396a86dc5bd00693486a8425a85e825fc0b5a1a7a03f5299684dbc5fc9fc5e32477fe748569586a8496fd67d87cbf469e76d396f83d9a2d0c1e99fb1b52ba4fa450eb77b0e3bf947c316c36263e131dccbb8a594702de1288ebb8892a9625b93edbc0bc60c2c0ff6858086203ef0c3af6f134aba83b4711f52480c741811ee64f615c63edd29c44829e303e98044f6a32ecce6a3d45367d51f3d21d44c44933c6568559d93c0195c097aa391c60086f6415f3cdc467601229f8f5677917de334969e6e4f981cfd8c80a41f7a50e2bd47f9f7c0f89cc4e6f7d7ea1387c5e36dd5b76bcd3a4c69b58d952ad3c7ac611d66db910a01d9e3b84df8057d98e52a6965897968be2aaaa45ed46beb0bf5a4e82434e27158e6419d488ab75c629f3d8160748691a7f64e8e8fc4d152853b72cade4335d56366b4121f84d8a359901c121c0da88ddba3c84403e6d74476a2ab62f739fab692b7605c24dd712d98c7fa341f5ccc47a8e11a4f1ebfa35b2c0906fba65898ed77d0677c197fd87142db45cba0ae879aa4cdda921cd1ba23685267d6015784930d1d7c4d7a93fafdc040583da5a0058b4de8660dab6290e99f4c5f6a07bd488e9d531ecad036720b39d975e6ee17dd71d20a21724e0b322fd130e1512fcc5271c5867595692f9ece296d2972b11a0621f5c0002f1992746619b978d1d587c2aa48e5f6a5c559c5e52d5f6fd342603832c6ddbffbb7837c9b9864401a0778e051e217e8a653d6e7e470d8b9e856522650f5898f0d654e3479220deb517c3c1560cc5344188aeda0c9a9b86ced9939ded1519ebb81b958cda42f3b5a170af8bc126589932fac36f9c356889bf7865613bdb7024a7d6f142817ee435ab5b4d47f9f59220919b373af0bf1883881ada7a5b9e723b8ecca6c055b6ba22251f0bf41d1db4f6463d4cfcbf02127557424c95e96100f238707302d6de161ce2961a688dc0254cc2ec15460f45d93e4901a9974ecd055e3d25dec2c9104d5e8a0d4a43b3165d6805f314df96af9ba470291e54da289a14ea80c5796e11f09dd919fbbb23df95fee9cf4c64d9157035d2c7d492b1edb69b66cc8b7f8457e2c222cf8d0195329a85658da2e212edbc48401475be07228e451efc8d05664fb5efb84cb228c2f78fefa9761e291114d1e0eb6365</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="9998da296871f3b67542298360ce559728ba87ea298d7c3e11126d2aaa44766b">63898f1d92087d7e814156d7d7ed725a1f5c1b28795e201b4f6d55e780328097947dd908ad6b0927f7f22737dc51c5a6edeac2987b53c1275c83d7ec466d14530be93916cf478ce577b8a9172fe5d9666955ff98633c1a05da19ae1abd379606082ac5521dbfd36d6cba050b907097d24d16a3a372cb29f627ccee2137a1516a76c5f187f7443b17443f3ade9d7cb145ac61c449931c7874cd826caef08d6f9bab51edb07f65ab0073ba51890ccc842de44b33838da45bd25474f84071686f27e8035c891507c04c0b2409ce758fed7251559321728cbe3d1fd69b81fe674cea0d4b85682dfa68d1f727370494b79305c2e3231fef95c50ef6a0e12fced02c81ffdb5188f38f1f1ca3a38e9160c4079a9859bc1c5613675d5aa694cb7e798419fc3bd2ce2fee7a28d96b533724ed1e2effc5783cc9e30417b342d27ecc1c6b689bc98e7dffb8d1db5ba720633eeaf805cba7a36887404bd1d56d298483d1045699cee81232f3959edff8149c3e2614d0868b79b8f00a7f0c53bf88211240bbe5eda4613e0a5f5c1794c722d6aebed710fef69091ed3b67d177afa5dad8b886d1465fe21487c650b1bd8062a8dd0692f758e2acff33c4699da0b52e3f05eeaa99c5d40803c7245081c970a68953f06ad7e80c6ba7e7a4b75689ff7863815e801fdaaa3bae77b13839ca5534b2fcb3cbfffe19144765b176999f14c16dff50de0f872cfdf0e223163e50e3ebef8edd3095b27f67e37c51e3a74768aeea7949899d19923c4e7a7245ba3e921d1bfbccbc2ae16408fd5e6daee6e3c0850bba9a9ba271d292ce7fb2433f5e1631e52ba3746963c38162362b30f68fc054f8cfd3a0e6e7d251014eec5ba4e1927eac45d152bfcdc1c9e4f4f84e3eb94fc2100890e3151e657645ba89bb130ecb65be275d95a55c1cf70261c1af320509fb8ac3dc52260eee9c372fb40eeefb02221dc813be56815b0b2bfc0ca1a051b2272f44ea4ce4279e6d563563c1ff4b700d1eb349f9aa5847a2e3e8a8245914fe043c38c14b5d8febfeef63f207ef045daf4b489965046fb9a9ba6724f3573616dd72e3595a826c9c35b362203536d99d8d0210968456ac7110f587fd2af8ff5566538d20fb46780f5ecc5e5db9b176a1b55612d2128908b39db03c6dc8121fe9e2683dab456a3b8e7004f151870eec1bae014e586efc5c94ca9d0c83e5be92dac3d2fc2af7aad10fba1f6565268f2dea030dd197a9e936485372e84b3cc93362ae65c0ba8fc19c4f6edacd49780e34069482c7c2971b91e60dd554e1b6be2afecd80a5a8aaaab92a428d3630863e2098c3835b5ec89a4343199424408b47c74b5c3968c2693730261833e98fb0d0faf775061810dde7f0158418e8f87598570251fbb95fe5d8c720259dfc859838fd5ef1c3061dfd7b306cee981ed515fe30bcdaab3a198646412d373e26aa5eaa64c93fddf21eb9110a6745759137069395105eda89f9ffd5c8aa350350fe36bed6ab81aa31753dd183297023b100cabe7421a27e22adcc33c273dc963040b051af89c9e46f5c5dfa7df5e87cf6e95cabf444199a43a30103211170fbc15c11052f58443d771fb20c78c7a924d1547177b0153593bfeec83cbbf607da26be37a8d20eb9b3126a62d4c1111cca0c792f6b951c22a2d29855034bafe1a037b4c58518edc62bc8ff0c593f78c44006317babff2d547b9371da0194d730937b6cba2f703fdc1bf6ad0d99a16a0a0d46193d28bf85536969c3a321706f9ec4efa226c5ff5bdffe9640d6a22d9d88e005d5641653fd8aaed281b6e64758478649c220d386dceb8c5ba47840bd17c9c1dcc5e716adcdc491b30c8e6ebfaba67e7cff065bb5434fc0faf6ca433a480a406cbecd8ca3e8c44a5c0802591dcf4b929c516c0b72693032e44ae6ee581fa4c364b08ad0d56e7843f7c61e78a6eca975cb9122ac7cd409f035e7f6317cf48f874968d37c9939587e43c536262471bce4ea8bf7c48f4945d9f538991173e0705929e37a263484eabf718470700c82dd8cd87be722caf42d874d996c72d09f002acda9e648cd69be5fd8c84f8b796aa52cd02193ad48bc4084682913e8f3676e4547d17ec4cf58a1eab1320b4b4b271be0f29648687820b22b82ebd5e55bb1235e41efdeeae34e8242f424f094de1a05913922510a5a84774bf75ebbdfe4a62f5251c03af6c67680fb06c34cc29ca77d8b0b043500ad7d1a51b556f8a95d82518ded03c4185ddea9f25df7b047df259f0986c0086f2f6b729b6c7eb545019cfec2cd023b182fd6962f072fae0be1819243051186dcf4b2a12de42c51a70e910f09c2db33ef43b667078783b4e08bbbe26d2f8112c34b1dae62dd2747d9ac69fd571b1b16ef0baed5b89ecba40a9f5edecced85f0ab0692a5a626902e9b9b3f4d1f18237e948386153fe3c5defcf2945b297b9249f7da151b24470e26aca62ae9c9ad498ad491f3bfa85aca62fcc01878e0982b39519524bc3888aa5860a9124a394728178dd0e95f375bac1a010ed84554303bbf803ef0470ba098a9a8</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -2746,7 +3189,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div>
           <script type="text/javascript">
             document.write(
-              "<iframe scrolling='no' frameborder='0' sandbox='allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation' style='height: 150px; width: 100%;' src='https://button.like.co/in/embed/keoinn582/button?referrer=" +
+              "<iframe scrolling='no' frameborder='0' sandbox='allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation' style='height: 150px; width: 100%; background: transparent;' src='https://button.like.co/in/embed/keoinn582/button?referrer=" +
               encodeURIComponent(location.href.split("?")[0].split("#")[0]) + "'></iframe>");
           </script>
         <div>
@@ -2819,7 +3262,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%B2%E7%A8%8B%E9%8C%84%E5%BD%B1"><span class="toc-text">課程錄影</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text">課程公告</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%B2%E7%A8%8B%E9%8C%84%E5%BD%B1"><span class="toc-text">課程錄影</span></a></li></ol>
   </div>
 </section>
 
@@ -2885,6 +3328,274 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script src="/js/app.js"></script>
 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="rightmenu-wrapper">
+  <ul class="list-v rightmenu" id="rightmenu-content">
+    
+  <li class='navigation menuNavigation-Content'>
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
+
+
+  </li>
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
+      <i class="fa-solid fa-paste fa-fw"></i>
+      貼上
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyAll" data-event="copyAll" data-group="inputBox">
+      <i class="fa-solid fa-object-ungroup fa-fw"></i>
+      全選
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyCut" data-event="copyCut" data-group="inputBox">
+      <i class="fa-solid fa-cut fa-fw"></i>
+      剪下
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
+      <i class="fa-solid fa-copy fa-fw"></i>
+      複製
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      站內搜尋
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="googleSearch" data-event="window.open(`https://www.google.com/search?q=${__text__}`)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      Google 搜尋
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
+      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
+      以新分頁開啟
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
+      <i class="fa-solid fa-link fa-fw"></i>
+      複製連結網址
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
+      <i class="fa-solid fa-images fa-fw"></i>
+      Google 以圖搜圖
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="schemeLight" data-event="window.setColorScheme&&window.setColorScheme('light')" data-group="darkMode">
+      <i class="fa-solid fa-sun fa-fw"></i>
+      淺色
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="schemeDark" data-event="window.setColorScheme&&window.setColorScheme('dark')" data-group="darkMode">
+      <i class="fa-solid fa-moon fa-fw"></i>
+      深色
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="schemeSystem" data-event="window.setColorScheme&&window.setColorScheme('system')" data-group="darkMode">
+      <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+      跟隨系統
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
+      <i class="fa-solid fa-print fa-fw"></i>
+      列印頁面
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
+      <i class="fa-solid fa-book-open fa-fw"></i>
+      閱讀模式
+    </span>
+  </li>
+
+
+  </ul>
+</div>
+<script src="/js/plugins/rightMenus.js"></script>
+<script>
+  const RightMenusFunction = {};
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  //RightMenusFunction['copyPaste'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyAll'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyCut'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyText'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['searchWord'] = (__text__) => {OpenSearch(__text__)}
+
+
+
+
+
+  RightMenusFunction['googleSearch'] = (__text__) => {window.open(`https://www.google.com/search?q=${__text__}`)}
+
+
+
+
+
+  RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
+
+
+
+
+
+  //RightMenusFunction['copyLink'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)}
+
+
+
+
+
+
+
+  RightMenusFunction['schemeLight'] = () => {window.setColorScheme&&window.setColorScheme('light')}
+
+
+
+
+
+  RightMenusFunction['schemeDark'] = () => {window.setColorScheme&&window.setColorScheme('dark')}
+
+
+
+
+
+  RightMenusFunction['schemeSystem'] = () => {window.setColorScheme&&window.setColorScheme('system')}
+
+
+
+
+
+  //RightMenusFunction['printMode'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['readMode'] = (fun) => {fun()}
+
+
+
+</script>
 
 
 
@@ -3396,7 +4107,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"2026 服務業智慧營運與數據分析AI人才培訓班","description":"這裡需要密碼繼續閱讀","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/course/2026service/index.html"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/course/2026service/index.html","wordCount":10,"datePublished":"2026-08-19T15:01:15.000Z","dateModified":"2026-09-03T19:52:21.871Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"2026 服務業智慧營運與數據分析AI人才培訓班","description":"這裡需要密碼繼續閱讀","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/course/2026service/index.html"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/course/2026service/index.html","wordCount":10,"datePublished":"2026-08-19T15:01:15.000Z","dateModified":"2026-09-06T21:15:40.880Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
@@ -3406,6 +4117,263 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
     
+
+<div id="announcement-modal" class="announcement-modal" aria-hidden="true">
+  <div class="announcement-modal__overlay" data-announcement-close></div>
+  <div class="announcement-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="announcement-modal-title">
+    <header class="announcement-modal__header">
+      <h2 id="announcement-modal-title">
+        <i class="fa-solid fa-bullhorn fa-fw announcement-modal__icon" aria-hidden="true"></i>
+        <span class="announ-node__action announcement-modal__badge" hidden></span>
+        <span data-default-title="課程公告">課程公告</span>
+      </h2>
+      <time class="announcement-modal__date" hidden></time>
+      <button type="button" class="announcement-modal__close" data-announcement-close aria-label="關閉公告">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </header>
+    <div class="announcement-modal__body">
+      
+        <article class="announ-node announ-node--new" data-announ-id="0">
+          <header class="announ-node__meta">
+            <div class="announ-node__heading">
+              <span class="announ-node__action">最新</span>
+              <h3 class="announ-node__title">專題分組名單</h3>
+              
+                <time>2026-09-07</time>
+              
+            </div>
+          </header>
+          <div class="announ-node__body">
+            <ol>
+<li>專題分組名單如下，因為學員名冊變動問題，因此以我手上名冊與座號為主。</li>
+<li>另外公告一週後，將會隱藏姓名保留學號。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>組別</th>
+<th>成員</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Team A</td>
+<td><code>01(楊Ｏ穎)</code>, <code>02(林Ｏ真)</code>, <code>06(賴Ｏ銘)</code>, <code>08(劉Ｏ玫)</code>, <code>11(吳Ｏ瑋)</code>, <code>14(楊Ｏ惟)</code>, <code>17(廖Ｏ嵐)</code></td>
+</tr>
+<tr>
+<td>Team B</td>
+<td><code>03(余Ｏ微)</code>, <code>04(蔡Ｏ溱)</code>, <code>12(薛Ｏ宏)</code>, <code>13(薛Ｏ霖)</code>, <code>16(吳Ｏ儒)</code>, <code>18(方Ｏ茹)</code>, <code>20(葉Ｏ菁)</code></td>
+</tr>
+<tr>
+<td>Team C</td>
+<td><code>05(林Ｏ儒)</code>, <code>07(廖Ｏ惠)</code>, <code>09(莊Ｏ瑀)</code>, <code>10(陳Ｏ筠)</code>, <code>19(張Ｏ麟)</code>, <code>21(曹Ｏ泰)</code></td>
+</tr>
+</tbody></table>
+<hr>
+<p>專題方向統計</p>
+<table>
+<thead>
+<tr>
+<th>分類</th>
+<th>人數</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>智慧倉儲&#x2F;營運&#x2F;進銷存</td>
+<td>8</td>
+</tr>
+<tr>
+<td>財務工程&#x2F;投資理財</td>
+<td>5</td>
+</tr>
+<tr>
+<td>教育學習</td>
+<td>3</td>
+</tr>
+<tr>
+<td>旅遊</td>
+<td>3</td>
+</tr>
+<tr>
+<td>體育&#x2F;運動</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+          </div>
+        </article>
+      
+    </div>
+    <footer class="announcement-modal__footer">
+      <button type="button" class="announcement-open-btn" data-announcement-close>我知道了</button>
+    </footer>
+  </div>
+</div>
+<script>
+(function () {
+  function normalizeMetaText(value) {
+    return String(value || '').replace(/\s+/g, '').replace(/[：:.\-/]/g, '');
+  }
+
+  function isDuplicateTitleOrDate(text, title, datetime) {
+    const source = normalizeMetaText(text);
+    if (!source) return false;
+    const titleText = normalizeMetaText(title);
+    const dateText = normalizeMetaText(datetime);
+    let rest = source;
+    if (titleText) rest = rest.split(titleText).join('');
+    if (dateText) rest = rest.split(dateText).join('');
+    return rest === '' && (
+      source === titleText ||
+      source === dateText ||
+      (titleText && source.indexOf(titleText) !== -1)
+    );
+  }
+
+  function syncSingleBodyMeta(modal, focused) {
+    modal.querySelectorAll('.announ-node__body .is-meta-duplicate').forEach(function (el) {
+      el.classList.remove('is-meta-duplicate');
+    });
+    if (!focused) return;
+    const title = ((focused.querySelector('.announ-node__title') || {}).textContent) || '';
+    const datetime = ((focused.querySelector('.announ-node__heading time') || {}).textContent) || '';
+    const children = focused.querySelectorAll('.announ-node__body > *');
+    for (let i = 0; i < children.length; i++) {
+      const el = children[i];
+      if (isDuplicateTitleOrDate(el.textContent, title, datetime)) {
+        el.classList.add('is-meta-duplicate');
+      } else {
+        break;
+      }
+    }
+  }
+
+  function getModal() {
+    return document.getElementById('announcement-modal');
+  }
+
+  function openModal(targetId) {
+    const modal = getModal();
+    if (!modal) return;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.documentElement.classList.add('announcement-modal-open');
+
+    const hasTarget = targetId != null && String(targetId) !== '';
+    const titleEl = modal.querySelector('#announcement-modal-title [data-default-title]');
+    const defaultTitle = titleEl && titleEl.getAttribute('data-default-title');
+    const badgeEl = modal.querySelector('.announcement-modal__badge');
+    const dateEl = modal.querySelector('.announcement-modal__date');
+    let focused = null;
+
+    modal.querySelectorAll('.announ-node').forEach(function (el) {
+      const match = hasTarget && el.getAttribute('data-announ-id') === String(targetId);
+      el.classList.toggle('is-hidden', hasTarget && !match);
+      el.classList.toggle('is-target', !!match);
+      if (match) focused = el;
+    });
+
+    modal.classList.toggle('is-single', !!focused);
+
+    if (titleEl) {
+      if (focused) {
+        const nodeTitle = focused.querySelector('.announ-node__title');
+        titleEl.textContent = (nodeTitle && nodeTitle.textContent) || defaultTitle || '';
+      } else {
+        titleEl.textContent = defaultTitle || '';
+      }
+    }
+
+    if (badgeEl) {
+      badgeEl.classList.remove('announ-node__action--notice', 'announ-node__action--new', 'announ-node__action--persist', 'announ-node__action--expired');
+      if (focused) {
+        const nodeBadge = focused.querySelector('.announ-node__action');
+        const action = (focused.className.match(/announ-node--(\S+)/) || [])[1] || 'notice';
+        badgeEl.hidden = false;
+        badgeEl.textContent = (nodeBadge && nodeBadge.textContent) || '';
+        badgeEl.classList.add('announ-node__action--' + action);
+      } else {
+        badgeEl.hidden = true;
+        badgeEl.textContent = '';
+      }
+    }
+
+    if (dateEl) {
+      if (focused) {
+        const nodeTime = focused.querySelector('.announ-node__heading time');
+        dateEl.hidden = !(nodeTime && nodeTime.textContent);
+        dateEl.textContent = nodeTime ? nodeTime.textContent : '';
+      } else {
+        dateEl.hidden = true;
+        dateEl.textContent = '';
+      }
+    }
+
+    const focusEl = focused
+      ? modal.querySelector('.announcement-modal__footer [data-announcement-close]')
+      : modal.querySelector('.announcement-modal__close');
+    if (focusEl) focusEl.focus();
+    syncSingleBodyMeta(modal, focused);
+  }
+
+  function closeModal() {
+    const modal = getModal();
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('announcement-modal-open');
+  }
+
+  window.openAnnounModal = openModal;
+  window.closeAnnounModal = closeModal;
+
+  function applyPeriodExpiry() {
+    document.querySelectorAll('[data-announ-period]').forEach(function (el) {
+      const end = Date.parse(el.getAttribute('data-announ-period'));
+      if (!end || Date.now() <= end) return;
+      el.classList.remove('announ-node--notice', 'announ-node--new', 'announ-node--persist', 'announ-dashboard__row--notice', 'announ-dashboard__row--new', 'announ-dashboard__row--persist');
+      if (el.classList.contains('announ-dashboard__row')) {
+        el.classList.add('announ-dashboard__row--expired');
+      } else {
+        el.classList.add('announ-node--expired');
+      }
+      const label = el.querySelector('.announ-node__action');
+      if (label) label.textContent = '已過期';
+    });
+  }
+  applyPeriodExpiry();
+
+  if (!window.__announcementModalBound) {
+    window.__announcementModalBound = true;
+    document.addEventListener('click', function (e) {
+      const target = e.target && e.target.nodeType === 1 ? e.target : e.target && e.target.parentElement;
+      if (!target || !target.closest) return;
+      if (target.closest('[data-announcement-open]')) {
+        e.preventDefault();
+        const opener = target.closest('[data-announcement-open]');
+        openModal(opener.getAttribute('data-announ-target'));
+      } else if (target.closest('[data-announcement-close]')) {
+        closeModal();
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  }
+
+  const widget = document.querySelector('#l_side .widget.text');
+  if (widget && !widget.querySelector('[data-announcement-open]')) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'announcement-open-btn';
+    btn.setAttribute('data-announcement-open', '');
+    btn.innerHTML = '<i class="fa-solid fa-bullhorn" aria-hidden="true"></i><span>檢視所有公告</span>';
+    const content = widget.querySelector('.content') || widget;
+    content.appendChild(btn);
+  }
+})();
+</script>
+
 
     <!-- Custom Files bodyEnd end-->
   </body>

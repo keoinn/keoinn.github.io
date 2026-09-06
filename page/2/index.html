@@ -1824,6 +1824,284 @@ ul.list-v >li>a:hover {
     background: var(--color-site-bg) !important;
   }
 }
+:root {
+  --color-divider: rgba(68,68,68,0.32);
+}
+hr {
+  margin: 1.25em 0;
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+#l_header {
+  overflow: visible;
+}
+#l_header #wrapper {
+  overflow: visible;
+}
+#l_header #wrapper .nav-sub {
+  pointer-events: none;
+  visibility: hidden;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -khtml-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+}
+#l_header #wrapper .nav-sub .title {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  min-width: 0;
+}
+#l_header #wrapper.sub .nav-sub {
+  pointer-events: auto;
+  visibility: visible;
+}
+#l_header #wrapper .nav-main-end {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+  max-height: 100%;
+  overflow: visible;
+  gap: 8px;
+}
+.scheme-switch {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex !important;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: auto;
+  height: 32px;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible;
+  border: none !important;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  background: transparent !important;
+  font-size: inherit;
+}
+.scheme-switch summary {
+  list-style: none;
+}
+.scheme-switch summary::-webkit-details-marker {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.scheme-switch summary::marker {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  content: none;
+}
+.scheme-switch > .scheme-switch__toggle {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  gap: 6px;
+  height: 32px;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  border: none !important;
+  border-radius: 999px;
+  -webkit-border-radius: 999px;
+  background: transparent !important;
+  color: var(--color-text) !important;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+.scheme-switch > .scheme-switch__toggle:hover {
+  color: #ff5722 !important;
+}
+.scheme-switch > .scheme-switch__toggle:hover:after {
+  content: none !important;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+.scheme-switch__caret {
+  font-size: 0.65em;
+  opacity: 0.7;
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  transition: transform 0.15s ease;
+  -webkit-transition: transform 0.15s ease;
+  -khtml-transition: transform 0.15s ease;
+  -moz-transition: transform 0.15s ease;
+  -o-transition: transform 0.15s ease;
+  -ms-transition: transform 0.15s ease;
+}
+.scheme-switch[open] {
+  border: none !important;
+}
+.scheme-switch[open] > .scheme-switch__toggle {
+  border-bottom: none !important;
+  border-radius: 999px !important;
+  -webkit-border-radius: 999px !important;
+  margin-bottom: 0 !important;
+}
+.scheme-switch[open] .scheme-switch__caret {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -khtml-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+.scheme-switch[open] > .scheme-switch__menu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+}
+.scheme-switch__menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  left: auto;
+  z-index: 1100;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 8.75em;
+  padding: 6px;
+  border: 1px solid var(--color-divider);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: var(--color-card);
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+}
+.scheme-switch__btn {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  white-space: nowrap;
+}
+.scheme-switch__btn:hover {
+  color: #ff5722;
+  background: var(--color-site-bg);
+}
+.scheme-switch__btn.is-active {
+  color: #197560;
+  background: #caf3ea;
+}
+.scheme-switch__btn i {
+  font-size: 0.9em;
+}
+@media screen and (max-width: 768px) {
+  .scheme-switch > .scheme-switch__toggle {
+    padding: 0 8px !important;
+  }
+  .scheme-switch__current-label {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+[color-scheme='light'] {
+  color-scheme: light;
+}
+[color-scheme='dark'] {
+  color-scheme: dark;
+}
+[color-scheme='dark'] .custom-donate iframe {
+  color-scheme: dark;
+  background-color: transparent;
+}
+.custom-donate iframe {
+  background-color: transparent;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) {
+    --color-divider: rgba(238,238,238,0.55);
+  }
+  :root:not([color-scheme]) .scheme-switch > .scheme-switch__toggle {
+    border: none !important;
+    background: transparent !important;
+    color: var(--color-text) !important;
+  }
+  :root:not([color-scheme]) .scheme-switch__btn.is-active {
+    color: #44d7b6;
+    background: rgba(68,215,182,0.22);
+  }
+}
+html[color-scheme='dark'] {
+  --color-divider: rgba(238,238,238,0.55);
+}
+html[color-scheme='dark'] .scheme-switch > .scheme-switch__toggle {
+  border: none !important;
+  background: transparent !important;
+  color: var(--color-text) !important;
+}
+html[color-scheme='dark'] .scheme-switch__btn.is-active {
+  color: #44d7b6;
+  background: rgba(68,215,182,0.22);
+}
 
   </style>
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
@@ -2274,7 +2552,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1788712397920),
+    lastupdate: new Date(1788731307670),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2298,6 +2576,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     plugins: {
       message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       
+      
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.darkMode","plugins.articlePage"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"上一頁","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"下一頁","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"重新整理","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到頂端","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"貼上","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全選","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪下","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"複製","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站內搜尋","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"googleSearch","name":"Google 搜尋","icon":"fa-solid fa-search","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"以新分頁開啟","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"複製連結網址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"googleImg","name":"Google 以圖搜圖","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"列印頁面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"閱讀模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"schemeLight","name":"淺色","icon":"fa-solid fa-sun","event":"window.setColorScheme&&window.setColorScheme('light')","group":"darkMode"},{"id":"schemeDark","name":"深色","icon":"fa-solid fa-moon","event":"window.setColorScheme&&window.setColorScheme('dark')","group":"darkMode"},{"id":"schemeSystem","name":"跟隨系統","icon":"fa-solid fa-circle-half-stroke","event":"window.setColorScheme&&window.setColorScheme('system')","group":"darkMode"}]}}
       
     },
     search: {
@@ -2323,6 +2603,118 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- import head_end end -->
   <!-- Custom Files headEnd begin-->
   
+<script>
+(function () {
+  var PREF_KEY = 'color-scheme-pref';
+  var LS_KEY = 'color-scheme';
+  var ATTR = 'color-scheme';
+  var ICONS = {
+    light: 'fa-sun',
+    dark: 'fa-moon',
+    system: 'fa-circle-half-stroke'
+  };
+  var LABELS = {
+    light: 'Light',
+    dark: 'Dark',
+    system: 'System'
+  };
+
+  function systemMode() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function getPref() {
+    var pref = localStorage.getItem(PREF_KEY);
+    if (pref === 'light' || pref === 'dark' || pref === 'system') return pref;
+    var legacy = localStorage.getItem(LS_KEY);
+    if (legacy === 'light' || legacy === 'dark') return legacy;
+    return 'system';
+  }
+
+  function closeMenus() {
+    document.querySelectorAll('.scheme-switch').forEach(function (el) {
+      el.removeAttribute('open');
+      var summary = el.querySelector('summary');
+      if (summary) summary.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  function apply(pref, notify) {
+    var root = document.documentElement;
+    if (pref !== 'light' && pref !== 'dark') pref = 'system';
+    localStorage.setItem(PREF_KEY, pref);
+    if (pref === 'system') {
+      localStorage.removeItem(LS_KEY);
+      root.removeAttribute(ATTR);
+    } else {
+      localStorage.setItem(LS_KEY, pref);
+      root.setAttribute(ATTR, pref);
+    }
+    var effective = pref === 'system' ? systemMode() : pref;
+    if (window.volantis && volantis.dark) {
+      volantis.dark.mode = effective;
+      if (notify && volantis.dark.method && volantis.dark.method.toggle) {
+        try { volantis.dark.method.toggle.start(); } catch (err) {}
+      }
+    }
+    document.querySelectorAll('[data-scheme-option]').forEach(function (btn) {
+      var on = btn.getAttribute('data-scheme-option') === pref;
+      btn.classList.toggle('is-active', on);
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    ['light', 'dark', 'system'].forEach(function (mode) {
+      var item = document.getElementById('scheme' + mode.charAt(0).toUpperCase() + mode.slice(1));
+      if (item) item.classList.toggle('active', mode === pref);
+    });
+    document.querySelectorAll('.scheme-switch').forEach(function (el) {
+      var icon = el.querySelector('.scheme-switch__current-icon');
+      var label = el.querySelector('.scheme-switch__current-label');
+      if (icon) icon.className = 'scheme-switch__current-icon fa-solid fa-fw ' + ICONS[pref];
+      if (label) label.textContent = LABELS[pref];
+    });
+    closeMenus();
+  }
+
+  window.setColorScheme = function (pref) {
+    apply(pref, true);
+  };
+
+  apply(getPref(), false);
+  document.addEventListener('DOMContentLoaded', function () {
+    apply(getPref(), false);
+    document.querySelectorAll('.scheme-switch').forEach(function (el) {
+      el.addEventListener('toggle', function () {
+        var summary = el.querySelector('summary');
+        if (summary) summary.setAttribute('aria-expanded', el.open ? 'true' : 'false');
+        if (!el.open) return;
+        document.querySelectorAll('.scheme-switch').forEach(function (other) {
+          if (other !== el) other.removeAttribute('open');
+        });
+      });
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    var target = e.target && e.target.nodeType === 1 ? e.target : e.target && e.target.parentElement;
+    document.querySelectorAll('.scheme-switch[open]').forEach(function (el) {
+      if (!target || !el.contains(target)) el.removeAttribute('open');
+    });
+  }, true);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenus();
+  });
+
+  var media = window.matchMedia('(prefers-color-scheme: dark)');
+  var onMedia = function () {
+    if (getPref() === 'system') apply('system', true);
+  };
+  if (media.addEventListener) media.addEventListener('change', onMedia);
+  else if (media.addListener) media.addListener(onMedia);
+})();
+</script>
+
+
   <!-- Custom Files headEnd end-->
 </head>
   <body itemscope itemtype="https://schema.org.cn/WebPage">
@@ -2342,6 +2734,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" title="toc"></a></li>
         
       </ul>
+      
+<details class="scheme-switch">
+  <summary class="scheme-switch__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="配色模式">
+    <i class="scheme-switch__current-icon fa-solid fa-circle-half-stroke fa-fw" aria-hidden="true"></i>
+    <span class="scheme-switch__current-label">System</span>
+    <i class="scheme-switch__caret fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </summary>
+  <div class="scheme-switch__menu" role="listbox" aria-label="配色模式">
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="light" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('light')">
+      <i class="fa-solid fa-sun fa-fw" aria-hidden="true"></i>
+      <span>Light</span>
+    </button>
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="dark" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('dark')">
+      <i class="fa-solid fa-moon fa-fw" aria-hidden="true"></i>
+      <span>Dark</span>
+    </button>
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="system" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('system')">
+      <i class="fa-solid fa-circle-half-stroke fa-fw" aria-hidden="true"></i>
+      <span>System</span>
+    </button>
+  </div>
+</details>
+
+
     </div>
 		<div class="nav-main">
       
@@ -2464,6 +2880,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 				</ul>
 			</div>
+      <div class="nav-main-end">
       
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
@@ -2586,6 +3003,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           </ul>
         </li>
 			</ul>
+
+      
+<details class="scheme-switch">
+  <summary class="scheme-switch__toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="配色模式">
+    <i class="scheme-switch__current-icon fa-solid fa-circle-half-stroke fa-fw" aria-hidden="true"></i>
+    <span class="scheme-switch__current-label">System</span>
+    <i class="scheme-switch__caret fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </summary>
+  <div class="scheme-switch__menu" role="listbox" aria-label="配色模式">
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="light" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('light')">
+      <i class="fa-solid fa-sun fa-fw" aria-hidden="true"></i>
+      <span>Light</span>
+    </button>
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="dark" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('dark')">
+      <i class="fa-solid fa-moon fa-fw" aria-hidden="true"></i>
+      <span>Dark</span>
+    </button>
+    <button type="button" class="scheme-switch__btn" role="option" data-scheme-option="system" aria-selected="false" onclick="window.setColorScheme&&window.setColorScheme('system')">
+      <i class="fa-solid fa-circle-half-stroke fa-fw" aria-hidden="true"></i>
+      <span>System</span>
+    </button>
+  </div>
+</details>
+
+
+      </div>
 
       <!-- Custom Files header begin -->
       
@@ -3506,6 +3949,274 @@ Git 安裝與設定
 
 <script src="/js/app.js"></script>
 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="rightmenu-wrapper">
+  <ul class="list-v rightmenu" id="rightmenu-content">
+    
+  <li class='navigation menuNavigation-Content'>
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
+
+
+  </li>
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
+      <i class="fa-solid fa-paste fa-fw"></i>
+      貼上
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyAll" data-event="copyAll" data-group="inputBox">
+      <i class="fa-solid fa-object-ungroup fa-fw"></i>
+      全選
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyCut" data-event="copyCut" data-group="inputBox">
+      <i class="fa-solid fa-cut fa-fw"></i>
+      剪下
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
+      <i class="fa-solid fa-copy fa-fw"></i>
+      複製
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      站內搜尋
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="googleSearch" data-event="window.open(`https://www.google.com/search?q=${__text__}`)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      Google 搜尋
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
+      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
+      以新分頁開啟
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
+      <i class="fa-solid fa-link fa-fw"></i>
+      複製連結網址
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
+      <i class="fa-solid fa-images fa-fw"></i>
+      Google 以圖搜圖
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="schemeLight" data-event="window.setColorScheme&&window.setColorScheme('light')" data-group="darkMode">
+      <i class="fa-solid fa-sun fa-fw"></i>
+      淺色
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="schemeDark" data-event="window.setColorScheme&&window.setColorScheme('dark')" data-group="darkMode">
+      <i class="fa-solid fa-moon fa-fw"></i>
+      深色
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="schemeSystem" data-event="window.setColorScheme&&window.setColorScheme('system')" data-group="darkMode">
+      <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+      跟隨系統
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
+      <i class="fa-solid fa-print fa-fw"></i>
+      列印頁面
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
+      <i class="fa-solid fa-book-open fa-fw"></i>
+      閱讀模式
+    </span>
+  </li>
+
+
+  </ul>
+</div>
+<script src="/js/plugins/rightMenus.js"></script>
+<script>
+  const RightMenusFunction = {};
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  //RightMenusFunction['copyPaste'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyAll'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyCut'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyText'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['searchWord'] = (__text__) => {OpenSearch(__text__)}
+
+
+
+
+
+  RightMenusFunction['googleSearch'] = (__text__) => {window.open(`https://www.google.com/search?q=${__text__}`)}
+
+
+
+
+
+  RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
+
+
+
+
+
+  //RightMenusFunction['copyLink'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)}
+
+
+
+
+
+
+
+  RightMenusFunction['schemeLight'] = () => {window.setColorScheme&&window.setColorScheme('light')}
+
+
+
+
+
+  RightMenusFunction['schemeDark'] = () => {window.setColorScheme&&window.setColorScheme('dark')}
+
+
+
+
+
+  RightMenusFunction['schemeSystem'] = () => {window.setColorScheme&&window.setColorScheme('system')}
+
+
+
+
+
+  //RightMenusFunction['printMode'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['readMode'] = (fun) => {fun()}
+
+
+
+</script>
 
 
 
