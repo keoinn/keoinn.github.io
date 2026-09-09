@@ -1774,6 +1774,26 @@ ul.list-v >li>a:hover {
 :root {
   --color-divider: rgba(68,68,68,0.32);
 }
+@media screen and (min-width: 769px) {
+  html[data-sidebar='hide'] #l_side {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none !important;
+  }
+  html[data-sidebar='hide'] #l_main {
+    width: 100% !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  html[data-sidebar='hide'] .body-wrapper {
+    max-width: 1112px;
+  }
+}
+@media screen and (min-width: 769px) and (min-width: 2048px) {
+  .body-wrapper {
+    max-width: 65vw;
+  }
+}
 hr {
   margin: 1.25em 0;
   height: 0;
@@ -2048,4 +2068,88 @@ html[color-scheme='dark'] .scheme-switch > .scheme-switch__toggle {
 html[color-scheme='dark'] .scheme-switch__btn.is-active {
   color: #44d7b6;
   background: rgba(68,215,182,0.22);
+}
+#rightmenu-wrapper ul.list-v.rightmenu {
+  overflow: visible;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu {
+  position: relative;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu > .vlts-menu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu > .vlts-menu .submenu-caret {
+  margin-left: auto;
+  margin-right: 0;
+  font-size: 0.7em;
+  opacity: 0.65;
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu .rightmenu-submenu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: calc(100% - 2px);
+  z-index: 2;
+  min-width: 8.75em;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: var(--color-card);
+  border: 1px solid var(--color-divider);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu .rightmenu-submenu > li > .vlts-menu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  color: var(--color-list);
+  font-size: 0.875rem;
+  line-height: 36px;
+  padding: 0 14px 0 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  white-space: nowrap;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu .rightmenu-submenu > li > .vlts-menu > i {
+  margin-right: 8px;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu .rightmenu-submenu > li > .vlts-menu:hover {
+  color: var(--color-list-hl);
+  background: var(--color-site-bg);
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu .rightmenu-submenu > li > .vlts-menu.active {
+  color: var(--color-list-hl);
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu:hover > .rightmenu-submenu,
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu.is-open > .rightmenu-submenu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu.submenu-left .rightmenu-submenu {
+  left: auto;
+  right: calc(100% - 2px);
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu.submenu-up .rightmenu-submenu {
+  top: auto;
+  bottom: 0;
 }

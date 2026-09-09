@@ -8,14 +8,14 @@ const RightMenus = {
   imgRegx: /\.(jpe?g|png|webp|svg|gif|jifi)(-|_|!|\?|\/)?.*$/,
 
   /**
-   * 加载右键菜单
+   * 載入右鍵選單
    */
   initialMenu: () => {
     RightMenus.fun.init();
   },
 
   /**
-   * 读取剪切板
+   * 讀取剪貼簿
    * @returns text
    */
   readClipboard: async () => {
@@ -34,7 +34,7 @@ const RightMenus = {
   },
 
   /**
-   * 写入文本到剪切板
+   * 寫入文本到剪貼簿
    * @param {String} text
    */
   writeClipText: text => {
@@ -49,7 +49,7 @@ const RightMenus = {
   },
 
   /**
-   * 写入图片到剪切板
+   * 寫入圖片到剪貼簿
    * @param {*} link
    * @param {*} success
    * @param {*} error
@@ -77,7 +77,7 @@ const RightMenus = {
   },
 
   /**
-   * 粘贴文本到剪切板
+   * 貼上文本到剪貼簿
    * @param {*} elemt
    * @param {*} value
    */
@@ -106,7 +106,7 @@ const RightMenus = {
 }
 
 /**
- * 事件处理区域
+ * 事件處理區域
  */
 RightMenus.fun = (() => {
   const rightMenuConfig = volantis.GLOBAL_CONFIG.plugins.rightmenus;
@@ -123,7 +123,7 @@ RightMenus.fun = (() => {
     _toggle = document.querySelector('#menuMusic .toggle'),
     _forward = document.querySelector('#menuMusic .forward');
 
-  // 公共数据
+  // 公共數據
   let globalData = {
     mouseEvent: null,
     isInputBox: false,
@@ -143,7 +143,7 @@ RightMenus.fun = (() => {
   const globalDataBackup = Object.assign({}, globalData);
 
   /**
-   * 初始化监听事件处理
+   * 初始化監聽事件處理
    */
   fn.initEvent = () => {
     fn.elementAppend();
@@ -152,10 +152,10 @@ RightMenus.fun = (() => {
   }
 
   /**
-   * 预置元素设定
+   * 預置元素設定
    */
   fn.elementAppend = () => {
-    // 阅读模式
+    // 閱讀模式
     if (_readBkg) _readBkg.parentNode.removeChild(_readBkg);
     const readBkg = document.createElement("div");
     readBkg.className = "common_read_bkg common_read_hide";
@@ -164,7 +164,7 @@ RightMenus.fun = (() => {
   }
 
   /**
-   * 右键菜单位置设定
+   * 右鍵選單位置設定
    * @param {*} event
    */
   fn.menuPosition = (event) => {
@@ -195,7 +195,7 @@ RightMenus.fun = (() => {
   }
 
   /**
-   * 菜单项控制
+   * 選單項目控制
    * @param {*} event
    */
   fn.menuControl = (event) => {
@@ -241,11 +241,11 @@ RightMenus.fun = (() => {
       }
     })
 
-    // 执行外部事件
+    // 執行外部事件
     volantis.mouseEvent = event;
     volantis.rightmenu.method.handle.start()
 
-    // 过滤 HR 元素
+    // 過濾 HR 元素
     let elementHrItem = { item: null, hide: true };
     _rightMenuListWithHr.forEach((item) => {
       if (item.nodeName === "HR") {
@@ -269,7 +269,7 @@ RightMenus.fun = (() => {
   }
 
   /**
-   * 元素状态判断/全局数据设置
+   * 元素狀態判斷/全局數據設定
    * @param {*} event
    */
   fn.globalDataSet = (event) => {
@@ -277,41 +277,41 @@ RightMenus.fun = (() => {
     globalData.mouseEvent = event;
     globalData.selectText = window.getSelection().toString();
 
-    // 判断是否为输入框
+    // 判斷是否為輸入框
     if (event.target.tagName.toLowerCase() === 'input' || event.target.tagName.toLowerCase() === 'textarea') {
       globalData.isInputBox = true;
       globalData.inputValue = event.target.value;
     }
 
-    // 判断是否允许读取剪切板
+    // 判斷是否允許讀取剪貼簿
     if (globalData.isInputBox && window.clipboardRead === false) {
       globalData.isReadClipboard = false;
     }
 
-    // 判断是否包含链接
+    // 判斷是否包含鏈接
     if (!!event.target.href && RightMenus.urlRegx.test(event.target.href)) {
       globalData.isLink = true;
       globalData.linkUrl = event.target.href;
     }
 
-    // 判断是否包含媒体链接
+    // 判斷是否包含媒體鏈接
     if (!!event.target.currentSrc && RightMenus.urlRegx.test(event.target.currentSrc)) {
       globalData.isMediaLink = true;
       globalData.mediaLinkUrl = event.target.currentSrc;
     }
 
-    // 判断是否为图片地址
+    // 判斷是否為圖片地址
     if (globalData.isMediaLink && RightMenus.imgRegx.test(globalData.mediaLinkUrl)) {
       globalData.isImage = true;
     }
 
-    // 判断是否为文章页面
+    // 判斷是否為文章頁面
     if (!!(document.querySelector('#post.article') || null)) {
       globalData.isArticle = true;
       globalData.pathName = window.location.pathname;
     }
 
-    // 判断是否显示音乐控制器
+    // 判斷是否顯示音樂控制器
     if (volantis.GLOBAL_CONFIG.plugins.aplayer?.enable
       && typeof RightMenuAplayer !== 'undefined'
       && RightMenuAplayer.APlayer.player !== undefined) {
@@ -322,14 +322,14 @@ RightMenus.fun = (() => {
       }
     }
 
-    // 设定校验状态
+    // 設定校驗狀態
     if (!!globalData.selectText || globalData.isInputBox || globalData.isLink || globalData.isMediaLink) {
       globalData.statusCheck = true;
     }
   }
 
   /**
-   * 全局右键监听函数
+   * 全局右鍵監聽函數
    */
   fn.contextmenu = () => {
     window.document.oncontextmenu = (event) => {
@@ -353,7 +353,7 @@ RightMenus.fun = (() => {
   }
 
   /**
-   * 菜单项事件处理函数
+   * 選單項目事件處理函數
    */
   fn.menuEvent = () => {
     _rightMenuList.forEach(item => {
@@ -361,9 +361,22 @@ RightMenus.fun = (() => {
       const id = item.firstElementChild.getAttribute('id');
       const groupName = item.firstElementChild.getAttribute('data-group');
       if (item.firstElementChild.nodeName === "A") return;
-      item.addEventListener('click', () => {
+      item.addEventListener('click', (event) => {
         try {
+          if (item.classList.contains('has-submenu')) {
+            const subTarget = event.target && event.target.closest
+              ? event.target.closest('.rightmenu-submenu [data-event]')
+              : null;
+            if (subTarget) {
+              const subId = subTarget.getAttribute('id');
+              if (subId && typeof RightMenusFunction[subId] === 'function') {
+                RightMenusFunction[subId]();
+              }
+            }
+            return;
+          }
           if (RightMenus.defaultEvent.every(item => { return eventName !== item })) {
+            if (typeof RightMenusFunction[id] !== 'function') return;
             if (groupName === 'seletctText') {
               RightMenusFunction[id](globalData.selectText)
             } else if (groupName === 'elementCheck') {
@@ -387,7 +400,7 @@ RightMenus.fun = (() => {
             });
           }
           if (RightMenus.messageRightMenu) {
-            VolantisApp.message('错误提示', error, {
+            VolantisApp.message('錯誤提示', error, {
               icon: rightMenuConfig.options.iconPrefix + ' fa-exclamation-square red',
               time: '15000'
             });
@@ -416,7 +429,7 @@ RightMenus.fun = (() => {
   }
 
   /**
-   * 隐藏菜单显示
+   * 隱藏選單顯示
    */
   fn.hideMenu = () => {
     _rightMenuWrapper.style.display = null;
@@ -425,12 +438,12 @@ RightMenus.fun = (() => {
   }
 
   /**
-   * 右键菜单覆盖提示
+   * 右鍵選單覆蓋提示
    */
   fn.menuNotic = () => {
     const NoticeRightMenu = localStorage.getItem('NoticeRightMenu') === 'true';
     if (RightMenus.messageRightMenu && !NoticeRightMenu)
-      VolantisApp.message('右键菜单', '唤醒原系统菜单请使用：<kbd>Ctrl</kbd> + <kbd>右键</kbd>', {
+      VolantisApp.message('右鍵選單', '喚醒原系統選單請使用：<kbd>Ctrl</kbd> + <kbd>右鍵</kbd>', {
         icon: rightMenuConfig.options.iconPrefix + ' fa-exclamation-square red',
         displayMode: 1,
         time: 9000
@@ -447,7 +460,7 @@ RightMenus.fun = (() => {
         }
       }).catch(e => {
         if (RightMenus.messageRightMenu) {
-          VolantisApp.message('系统提示', e, {
+          VolantisApp.message('系統提示', e, {
             icon: rightMenuConfig.options.iconPrefix + ' fa-exclamation-square red',
             displayMode: 1,
             time: 9000
@@ -464,7 +477,7 @@ RightMenus.fun = (() => {
         }
       }).catch(e => {
         if (RightMenus.messageRightMenu) {
-          VolantisApp.message('系统提示', e, {
+          VolantisApp.message('系統提示', e, {
             icon: rightMenuConfig.options.iconPrefix + ' fa-exclamation-square red',
             displayMode: 1,
             time: 9000
@@ -480,9 +493,9 @@ RightMenus.fun = (() => {
   fn.copyPaste = async () => {
     const result = await RightMenus.readClipboard() || '';
     if (RightMenus.messageRightMenu && window.clipboardRead === false) {
-      VolantisApp.message('系统提示', '未授予剪切板读取权限！');
+      VolantisApp.message('系統提示', '未授予剪貼簿讀取權限！');
     } else if (RightMenus.messageRightMenu && result === '') {
-      VolantisApp.message('系统提示', '仅支持复制文本内容！');
+      VolantisApp.message('系統提示', '僅支援複製文字內容！');
     } else {
       RightMenus.insertAtCaret(globalData.mouseEvent.target, result);
     }
@@ -501,14 +514,14 @@ RightMenus.fun = (() => {
 
   fn.copyImg = () => {
     if (volantis.GLOBAL_CONFIG.plugins.message.rightmenu.notice) {
-      VolantisApp.message('系统提示', '复制中，请等待。', {
+      VolantisApp.message('系統提示', '複製中，請等待。', {
         icon: rightMenuConfig.options.iconPrefix + ' fa-images'
       })
     }
     RightMenus.writeClipImg(globalData.mediaLinkUrl, e => {
       if (RightMenus.messageRightMenu) {
         VolantisApp.hideMessage();
-        VolantisApp.message('系统提示', '图片复制成功！', {
+        VolantisApp.message('系統提示', '圖片複製成功！', {
           icon: rightMenuConfig.options.iconPrefix + ' fa-images'
         });
       }
@@ -516,7 +529,7 @@ RightMenus.fun = (() => {
       console.error(e);
       if (RightMenus.messageRightMenu) {
         VolantisApp.hideMessage();
-        VolantisApp.message('系统提示', '复制失败：' + e, {
+        VolantisApp.message('系統提示', '複製失敗：' + e, {
           icon: rightMenuConfig.options.iconPrefix + ' fa-exclamation-square red',
           time: 9000
         });
@@ -527,7 +540,7 @@ RightMenus.fun = (() => {
   fn.printMode = () => {
     if (window.location.pathname === globalData.pathName) {
       if (RightMenus.messageRightMenu) {
-        const message = '是否打印当前页面？<br><em style="font-size: 80%">建议打印时勾选背景图形</em><br>'
+        const message = '是否列印當前頁面？<br><em style="font-size: 80%">建議列印時勾選背景圖形</em><br>'
         VolantisApp.question('', message, { time: 9000 }, () => { fn.printHtml() })
       } else {
         fn.printHtml()
@@ -579,7 +592,7 @@ RightMenus.fun = (() => {
     DOMController.setStyle('.copyright.license', 'margin', '15px 0');
     volantis.isReadModel = volantis.isReadModel === undefined ? true : !volantis.isReadModel;
     if (volantis.isReadModel) {
-      if (RightMenus.messageRightMenu) VolantisApp.message('系统提示', '阅读模式已开启，您可以点击屏幕空白处退出。', {
+      if (RightMenus.messageRightMenu) VolantisApp.message('系統提示', '閱讀模式已開啟，您可以點擊螢幕空白處退出。', {
         backgroundColor: 'var(--color-read-post)',
         icon: rightMenuConfig.options.iconPrefix + ' fa-book-reader',
         displayMode: 1,

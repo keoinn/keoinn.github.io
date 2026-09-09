@@ -1829,6 +1829,26 @@ ul.list-v >li>a:hover {
 :root {
   --color-divider: rgba(68,68,68,0.32);
 }
+@media screen and (min-width: 769px) {
+  html[data-sidebar='hide'] #l_side {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none !important;
+  }
+  html[data-sidebar='hide'] #l_main {
+    width: 100% !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  html[data-sidebar='hide'] .body-wrapper {
+    max-width: 1112px;
+  }
+}
+@media screen and (min-width: 769px) and (min-width: 2048px) {
+  .body-wrapper {
+    max-width: 65vw;
+  }
+}
 hr {
   margin: 1.25em 0;
   height: 0;
@@ -2104,6 +2124,90 @@ html[color-scheme='dark'] .scheme-switch__btn.is-active {
   color: #44d7b6;
   background: rgba(68,215,182,0.22);
 }
+#rightmenu-wrapper ul.list-v.rightmenu {
+  overflow: visible;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu {
+  position: relative;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu > .vlts-menu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu > .vlts-menu .submenu-caret {
+  margin-left: auto;
+  margin-right: 0;
+  font-size: 0.7em;
+  opacity: 0.65;
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu .rightmenu-submenu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: calc(100% - 2px);
+  z-index: 2;
+  min-width: 8.75em;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: var(--color-card);
+  border: 1px solid var(--color-divider);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu .rightmenu-submenu > li > .vlts-menu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  color: var(--color-list);
+  font-size: 0.875rem;
+  line-height: 36px;
+  padding: 0 14px 0 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  white-space: nowrap;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu .rightmenu-submenu > li > .vlts-menu > i {
+  margin-right: 8px;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu .rightmenu-submenu > li > .vlts-menu:hover {
+  color: var(--color-list-hl);
+  background: var(--color-site-bg);
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu .rightmenu-submenu > li > .vlts-menu.active {
+  color: var(--color-list-hl);
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu:hover > .rightmenu-submenu,
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu.is-open > .rightmenu-submenu {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu.submenu-left .rightmenu-submenu {
+  left: auto;
+  right: calc(100% - 2px);
+}
+#rightmenu-wrapper ul.list-v.rightmenu > li.has-submenu.submenu-up .rightmenu-submenu {
+  top: auto;
+  bottom: 0;
+}
 
   </style>
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
@@ -2140,8 +2244,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>抱歉，您的瀏覽器無法訪問本站</b></span><br/>`+
-        `<span class="kill-c">微軟已經於2016年終止了對 Internet Explorer (IE) 10 及更早版本的支持，<br/>繼續使用存在極大的安全隱患，請使用當代主流的瀏覽器進行訪問。</span><br/>`+
+        `<span class="kill-t"><b>抱歉，您的瀏覽器無法存取本站</b></span><br/>`+
+        `<span class="kill-c">微軟已經於2016年終止了對 Internet Explorer (IE) 10 及更早版本的支援，<br/>繼續使用存在極大的安全隱患，請使用當代主流的瀏覽器進行存取。</span><br/>`+
         `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解詳情 ></strong></a>`+
     '</div>');
 </script>
@@ -2170,8 +2274,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的瀏覽器無法訪問本站</b></span><br/>
-        <span class="kill-c">本頁面需要瀏覽器支持（啟用）JavaScript</span><br/>
+        <span class="kill-t"><b>抱歉，您的瀏覽器無法存取本站</b></span><br/>
+        <span class="kill-c">本頁面需要瀏覽器支援（啟用）JavaScript</span><br/>
         <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解詳情 ></strong></a>
     </div>
 </noscript>
@@ -2554,7 +2658,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1788782471137),
+    lastupdate: new Date(1788963529625),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2576,10 +2680,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     },
     plugins: {
-      message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
+      message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知識共享授權條款","message":"請遵守 CC BY-NC-SA 4.0 協議。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       
       
-      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.darkMode","plugins.articlePage"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"上一頁","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"下一頁","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"重新整理","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到頂端","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"貼上","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全選","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪下","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"複製","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站內搜尋","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"googleSearch","name":"Google 搜尋","icon":"fa-solid fa-search","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"以新分頁開啟","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"複製連結網址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"googleImg","name":"Google 以圖搜圖","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"列印頁面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"閱讀模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"schemeLight","name":"淺色","icon":"fa-solid fa-sun","event":"window.setColorScheme&&window.setColorScheme('light')","group":"darkMode"},{"id":"schemeDark","name":"深色","icon":"fa-solid fa-moon","event":"window.setColorScheme&&window.setColorScheme('dark')","group":"darkMode"},{"id":"schemeSystem","name":"跟隨系統","icon":"fa-solid fa-circle-half-stroke","event":"window.setColorScheme&&window.setColorScheme('system')","group":"darkMode"}]}}
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.darkMode","menus.sidebar","plugins.articlePage"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"上一頁","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"下一頁","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"重新整理","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到頂端","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"貼上","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全選","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪下","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"複製","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站內搜尋","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"googleSearch","name":"Google 搜尋","icon":"fa-solid fa-search","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"以新分頁開啟","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"複製連結網址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"googleImg","name":"Google 以圖搜圖","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"列印頁面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"閱讀模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常見問題","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"範例部落格","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社群","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站原始碼","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主題原始碼","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"schemeToggle","name":"配色模式","icon":"fa-solid fa-circle-half-stroke","group":"darkMode","children":[{"id":"schemeLight","name":"淺色","icon":"fa-solid fa-sun","event":"window.setColorScheme&&window.setColorScheme('light')","group":"darkMode"},{"id":"schemeDark","name":"深色","icon":"fa-solid fa-moon","event":"window.setColorScheme&&window.setColorScheme('dark')","group":"darkMode"},{"id":"schemeSystem","name":"跟隨系統","icon":"fa-solid fa-circle-half-stroke","event":"window.setColorScheme&&window.setColorScheme('system')","group":"darkMode"}]}],"sidebar":[{"id":"sidebarToggle","name":"關閉側欄","icon":"fa-solid fa-expand","event":"window.toggleSidebar&&window.toggleSidebar()","group":"sidebar"}]}}
       
     },
     search: {
@@ -2595,7 +2699,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         search: {
           hits_empty: "找不到您查詢的內容：${query}",
-          hits_stats: "找到 ${hits} 條結果，用時 ${time} 毫秒",
+          hits_stats: "找到 ${hits} 筆結果，用時 ${time} 毫秒",
         }
       
     }
@@ -2620,6 +2724,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     dark: 'Dark',
     system: 'System'
   };
+  var CYCLE = ['light', 'dark', 'system'];
+  var MENU_ICONS = {
+    light: 'fa-solid fa-sun fa-fw',
+    dark: 'fa-solid fa-moon fa-fw',
+    system: 'fa-solid fa-circle-half-stroke fa-fw'
+  };
 
   function systemMode() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -2631,6 +2741,34 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     var legacy = localStorage.getItem(LS_KEY);
     if (legacy === 'light' || legacy === 'dark') return legacy;
     return 'system';
+  }
+
+  function updateRightMenu(pref) {
+    if (pref !== 'light' && pref !== 'dark') pref = 'system';
+    var parent = document.getElementById('schemeToggle');
+    if (parent) {
+      var icon = parent.querySelector('i:not(.submenu-caret)');
+      if (icon) icon.className = MENU_ICONS[pref];
+    }
+    ['light', 'dark', 'system'].forEach(function (mode) {
+      var item = document.getElementById('scheme' + mode.charAt(0).toUpperCase() + mode.slice(1));
+      if (item) item.classList.toggle('active', mode === pref);
+    });
+  }
+
+  function placeRightMenuSubmenus() {
+    var wrap = document.getElementById('rightmenu-wrapper');
+    if (!wrap) return;
+    var wrapRect = wrap.getBoundingClientRect();
+    document.querySelectorAll('#rightmenu-content li.has-submenu').forEach(function (li) {
+      var sub = li.querySelector('.rightmenu-submenu');
+      if (!sub) return;
+      li.classList.remove('submenu-left', 'submenu-up');
+      var subWidth = sub.offsetWidth || 140;
+      var subHeight = sub.offsetHeight || 120;
+      if (wrapRect.right + subWidth > window.innerWidth - 8) li.classList.add('submenu-left');
+      if (wrapRect.top + subHeight > window.innerHeight - 8) li.classList.add('submenu-up');
+    });
   }
 
   function closeMenus() {
@@ -2668,6 +2806,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       var item = document.getElementById('scheme' + mode.charAt(0).toUpperCase() + mode.slice(1));
       if (item) item.classList.toggle('active', mode === pref);
     });
+    updateRightMenu(pref);
     document.querySelectorAll('.scheme-switch').forEach(function (el) {
       var icon = el.querySelector('.scheme-switch__current-icon');
       var label = el.querySelector('.scheme-switch__current-label');
@@ -2681,9 +2820,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     apply(pref, true);
   };
 
+  window.toggleColorScheme = function () {
+    var current = getPref();
+    var idx = CYCLE.indexOf(current);
+    apply(CYCLE[(idx + 1) % CYCLE.length], true);
+  };
+
   apply(getPref(), false);
   document.addEventListener('DOMContentLoaded', function () {
     apply(getPref(), false);
+    if (window.volantis && volantis.rightmenu && typeof volantis.rightmenu.handle === 'function') {
+      volantis.rightmenu.handle(function () {
+        updateRightMenu(getPref());
+        placeRightMenuSubmenus();
+      }, 'schemeMenuState');
+    }
     document.querySelectorAll('.scheme-switch').forEach(function (el) {
       el.addEventListener('toggle', function () {
         var summary = el.querySelector('summary');
@@ -2716,6 +2867,99 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 })();
 </script>
 
+<script>
+(function () {
+  var PREF_KEY = 'sidebar-visible';
+
+  function hasSidebarWidgets() {
+    var side = document.getElementById('l_side');
+    return !!(side && side.querySelectorAll('section').length);
+  }
+
+  function isSidebarVisible() {
+    var main = document.getElementById('l_main');
+    if (!main) return hasSidebarWidgets();
+    return !main.classList.contains('no_sidebar') && hasSidebarWidgets();
+  }
+
+  function updateMenu(visible) {
+    var item = document.getElementById('sidebarToggle');
+    if (!item) return;
+    var label = visible ? '關閉側欄' : '開啟側欄';
+    var iconClass = visible ? 'fa-solid fa-expand fa-fw' : 'fa-solid fa-table-columns fa-fw';
+    var icon = item.querySelector('i');
+    if (icon) icon.className = iconClass;
+    var replaced = false;
+    item.childNodes.forEach(function (node) {
+      if (node.nodeType === 3 && node.textContent.trim()) {
+        node.textContent = ' ' + label;
+        replaced = true;
+      }
+    });
+    if (!replaced) item.appendChild(document.createTextNode(' ' + label));
+  }
+
+  function apply(visible, persist) {
+    var root = document.documentElement;
+    var main = document.getElementById('l_main');
+    var canShow = hasSidebarWidgets();
+    if (visible && !canShow) {
+      root.setAttribute('data-sidebar', 'hide');
+      if (main) main.classList.add('no_sidebar');
+      updateMenu(false);
+      return false;
+    }
+    if (persist) localStorage.setItem(PREF_KEY, visible ? 'show' : 'hide');
+    root.setAttribute('data-sidebar', visible ? 'show' : 'hide');
+    if (main) main.classList.toggle('no_sidebar', !visible);
+    updateMenu(visible);
+    return true;
+  }
+
+  function getPref() {
+    var pref = localStorage.getItem(PREF_KEY);
+    return pref === 'show' || pref === 'hide' ? pref : null;
+  }
+
+  function syncFromPref() {
+    var pref = getPref();
+    if (pref === 'hide') apply(false, false);
+    else if (pref === 'show') apply(true, false);
+    else {
+      var visible = isSidebarVisible();
+      document.documentElement.setAttribute('data-sidebar', visible ? 'show' : 'hide');
+      updateMenu(visible);
+    }
+  }
+
+  window.setSidebarVisible = function (visible) {
+    if (visible && !hasSidebarWidgets()) {
+      if (window.VolantisApp && typeof VolantisApp.message === 'function') {
+        VolantisApp.message('系統提示', '此頁沒有側欄內容可顯示。');
+      }
+      updateMenu(false);
+      return;
+    }
+    apply(!!visible, true);
+  };
+
+  window.toggleSidebar = function () {
+    window.setSidebarVisible(!isSidebarVisible());
+  };
+
+  var pref = getPref();
+  if (pref) document.documentElement.setAttribute('data-sidebar', pref);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    syncFromPref();
+    if (window.volantis && volantis.rightmenu && typeof volantis.rightmenu.handle === 'function') {
+      volantis.rightmenu.handle(function () {
+        updateMenu(isSidebarVisible());
+      }, 'sidebarMenuState');
+    }
+  });
+})();
+</script>
 
   <!-- Custom Files headEnd end-->
 </head>
@@ -3303,15 +3547,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div>
       <script>
   /******************** volantis.dom ********************************/
-  // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
-  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
+  // 頁面選擇器 將dom對象緩存起來 see: /source/js/app.js etc.
+  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 頁面主體
   volantis.dom.topBtn = volantis.dom.$(document.getElementById('s-top')); // 向上
-  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整个导航栏
-  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1个
-  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按钮   移动端 1个
-  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
-  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
-  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
+  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整個導航欄
+  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1個
+  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按鈕   移動端 1個
+  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移動端導航欄
+  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移動端 1個
+  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手機端 子菜單 多個
 </script>
 
 <script>
@@ -3450,28 +3694,44 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="schemeLight" data-event="window.setColorScheme&&window.setColorScheme('light')" data-group="darkMode">
-      <i class="fa-solid fa-sun fa-fw"></i>
-      淺色
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="schemeDark" data-event="window.setColorScheme&&window.setColorScheme('dark')" data-group="darkMode">
-      <i class="fa-solid fa-moon fa-fw"></i>
-      深色
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="schemeSystem" data-event="window.setColorScheme&&window.setColorScheme('system')" data-group="darkMode">
+  <li class="menuLoad-Content has-submenu">
+    <span class="vlts-menu fix-cursor-default" id="schemeToggle" data-group="darkMode">
       <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
-      跟隨系統
+      配色模式
+      <i class="fa-solid fa-caret-right submenu-caret"></i>
+    </span>
+    <ul class="rightmenu-submenu">
+
+      <li class="submenu-item">
+        <span class="vlts-menu fix-cursor-default event" id="schemeLight" data-event="window.setColorScheme&&window.setColorScheme('light')" data-group="darkMode">
+          <i class="fa-solid fa-sun fa-fw"></i>
+          淺色
+        </span>
+      </li>
+
+      <li class="submenu-item">
+        <span class="vlts-menu fix-cursor-default event" id="schemeDark" data-event="window.setColorScheme&&window.setColorScheme('dark')" data-group="darkMode">
+          <i class="fa-solid fa-moon fa-fw"></i>
+          深色
+        </span>
+      </li>
+
+      <li class="submenu-item">
+        <span class="vlts-menu fix-cursor-default event" id="schemeSystem" data-event="window.setColorScheme&&window.setColorScheme('system')" data-group="darkMode">
+          <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+          跟隨系統
+        </span>
+      </li>
+
+    </ul>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="sidebarToggle" data-event="window.toggleSidebar&&window.toggleSidebar()" data-group="sidebar">
+      <i class="fa-solid fa-expand fa-fw"></i>
+      關閉側欄
     </span>
   </li>
 
@@ -3500,8 +3760,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   const RightMenusFunction = {};
   
-
-
 
 
 
@@ -3586,6 +3844,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
+  RightMenusFunction['sidebarToggle'] = () => {window.toggleSidebar&&window.toggleSidebar()}
+
+
+
+
+
   //RightMenusFunction['printMode'] = (fun) => {fun()}
 
 
@@ -3596,6 +3860,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
+  document.querySelectorAll('#rightmenu-content li.has-submenu').forEach(function (li) {
+    li.addEventListener('click', function (e) {
+      if (!e.target.closest || !e.target.closest('.rightmenu-submenu')) {
+        e.stopPropagation();
+      }
+    });
+  });
 </script>
 
 

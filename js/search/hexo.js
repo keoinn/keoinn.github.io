@@ -90,7 +90,7 @@ let SearchService = (() => {
     let html = "";
     data.forEach((post) => {
       if (post.text) {
-        post.text = post.text.replace(/12345\d*/g, "") // 简易移除代码行号
+        post.text = post.text.replace(/12345\d*/g, "") // 簡易移除代碼行號
       }
       if (!post.title && post.text) {
         post.title = post.text.trim().slice(0, 15)

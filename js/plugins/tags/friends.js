@@ -4,12 +4,12 @@ const FriendsJS = {
 
     function request() {
       return new Promise((resolve, reject) => {
-        let status = 0; // 0 等待 1 完成 2 超时
+        let status = 0; // 0 等待 1 完成 2 超時
         let timer = setTimeout(() => {
           if (status === 0) {
             status = 2;
             timer = null;
-            reject('请求超时');
+            reject('請求超時');
             if (retryTimes == 0) {
               timeout();
             }
@@ -63,7 +63,7 @@ const FriendsJS = {
     }, function () {
       try {
         el.querySelector('.loading-wrap svg').remove();
-        el.querySelector('.loading-wrap p').innerText('加载失败，请稍后重试。');
+        el.querySelector('.loading-wrap p').innerText('載入失敗，請稍後重試。');
       } catch (e) { }
     });
   },

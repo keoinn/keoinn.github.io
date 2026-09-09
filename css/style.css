@@ -1574,18 +1574,20 @@ svg.loading {
 #l_main.no_sidebar {
   width: 100%;
   padding-right: 0;
-  max-width: 840px;
+  max-width: 100%;
   margin: auto;
 }
 @media screen and (min-width: 2048px) {
   #l_main.no_sidebar {
-    max-width: calc(55vw - 240px);
+    max-width: 100%;
   }
 }
-#l_main.no_sidebar ~#l_side {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: none;
+@media screen and (min-width: 769px) {
+  #l_main.no_sidebar ~#l_side {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
 }
 #l_main .post-list {
   position: relative;
@@ -2004,6 +2006,14 @@ svg.loading {
 @media screen and (min-width: 2048px) {
   .body-wrapper {
     max-width: 55vw;
+  }
+}
+.body-wrapper:has(#l_main.no_sidebar) {
+  max-width: 1112px;
+}
+@media screen and (min-width: 2048px) {
+  .body-wrapper:has(#l_main.no_sidebar) {
+    max-width: 65vw;
   }
 }
 article#comments p[ct] {

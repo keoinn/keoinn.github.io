@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/* 锚点定位 */
+/* 錨點定位 */
 const locationHash = () => {
   if (window.location.hash) {
     let locationID = decodeURI(window.location.hash.split('#')[1]).replace(/\ /g, '-');
@@ -18,7 +18,7 @@ const locationHash = () => {
         if (window.location.hash.startsWith('#fn')) { // hexo-reference https://github.com/volantis-x/hexo-theme-volantis/issues/647
           volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant', observer: true })
         } else {
-          // 锚点中上半部有大片空白 高度大概是 volantis.dom.header.offsetHeight
+          // 錨點中上半部有大片空白 高度大概是 volantis.dom.header.offsetHeight
           volantis.scroll.to(target, { addTop: 5, behavior: 'instant', observer: true })
         }
       }, 1000)
@@ -58,7 +58,7 @@ const VolantisApp = (() => {
       fn.scrolltoElement(volantis.dom.bodyAnchor);
     });
 
-    // 如果 sidebar 为空，隐藏 sidebar。
+    // 如果 sidebar 為空，隱藏 sidebar。
     const sidebar = document.querySelector("#l_side")
     if (sidebar) {
       const sectionList = sidebar.querySelectorAll("section")
@@ -67,7 +67,7 @@ const VolantisApp = (() => {
       }
     }
 
-    // 站点信息 最后活动日期
+    // 站點信息 最後活動日期
     if (volantis.GLOBAL_CONFIG.sidebar.for_page.includes('webinfo') || volantis.GLOBAL_CONFIG.sidebar.for_post.includes('webinfo')) {
       const lastupd = volantis.GLOBAL_CONFIG.sidebar.webinfo.lastupd;
       if (!!document.getElementById('last-update-show') && lastupd.enable && lastupd.friendlyShow) {
@@ -75,7 +75,7 @@ const VolantisApp = (() => {
       }
     }
 
-    // 站点信息 运行时间
+    // 站點信息 運行時間
     if (!!document.getElementById('webinfo-runtime-count')) {
       let BirthDay = new Date(volantis.GLOBAL_CONFIG.sidebar.webinfo.runtime.data);
       let timeold = (new Date().getTime() - BirthDay.getTime());
@@ -83,7 +83,7 @@ const VolantisApp = (() => {
       document.getElementById('webinfo-runtime-count').innerHTML = `${daysold} ${volantis.GLOBAL_CONFIG.sidebar.webinfo.runtime.unit}`;
     }
 
-    // 消息提示 复制时弹出
+    // 消息提示 複製時彈出
     document.body.oncopy = function () {
       fn.messageCopyright()
     };
@@ -103,26 +103,26 @@ const VolantisApp = (() => {
     }
   }
 
-  // 校正页面定位（被导航栏挡住的区域）
+  // 校正頁面定位（被導航欄擋住的區域）
   fn.scrolltoElement = (elem, correction = scrollCorrection) => {
     volantis.scroll.to(elem, {
       top: elem.getBoundingClientRect().top + document.documentElement.scrollTop - correction
     })
   }
 
-  // 滚动事件回调们
+  // 滾動事件回調們
   fn.scrollEventCallBack = () => {
-    // 【移动端 PC】//////////////////////////////////////////////////////////////////////
+    // 【移動端 PC】//////////////////////////////////////////////////////////////////////
 
-    // 显示/隐藏 Header导航 topBtn 【移动端 PC】
+    // 顯示/隱藏 Header導航 topBtn 【移動端 PC】
     const showHeaderPoint = volantis.dom.bodyAnchor.offsetTop - scrollCorrection;
-    const scrollTop = volantis.scroll.getScrollTop(); // 滚动条距离顶部的距离
+    const scrollTop = volantis.scroll.getScrollTop(); // 滾動條距離頂部的距離
 
     // topBtn
     if (volantis.dom.topBtn) {
       if (scrollTop > volantis.dom.bodyAnchor.offsetTop) {
         volantis.dom.topBtn.addClass('show');
-        // 向上滚动高亮 topBtn
+        // 向上滾動高亮 topBtn
         if (volantis.scroll.del > 0) {
           volantis.dom.topBtn.removeClass('hl');
         } else {
@@ -133,7 +133,7 @@ const VolantisApp = (() => {
       }
     }
 
-    // Header导航
+    // Header導航
     if (volantis.dom.header) {
       if (scrollTop - showHeaderPoint > -1) {
         volantis.dom.header.addClass('show');
@@ -142,23 +142,23 @@ const VolantisApp = (() => {
       }
     }
 
-    // 决定一二级导航栏的切换 【向上滚动切换为一级导航栏；向下滚动切换为二级导航栏】  【移动端 PC】
+    // 決定一二級導航欄的切換 【向上滾動切換為一級導航欄；向下滾動切換為二級導航欄】  【移動端 PC】
     if (pdata.ispage && volantis.dom.wrapper) {
-      if (volantis.scroll.del > 0 && scrollTop > 100) { // 向下滚动
-        volantis.dom.wrapper.addClass('sub'); // <---- 二级导航显示
-      } else if (volantis.scroll.del < 0) { // 向上滚动
-        volantis.dom.wrapper.removeClass('sub'); // <---- 取消二级导航显示 一级导航显示
+      if (volantis.scroll.del > 0 && scrollTop > 100) { // 向下滾動
+        volantis.dom.wrapper.addClass('sub'); // <---- 二級導航顯示
+      } else if (volantis.scroll.del < 0) { // 向上滾動
+        volantis.dom.wrapper.removeClass('sub'); // <---- 取消二級導航顯示 一級導航顯示
       }
     }
 
-    // 【移动端】//////////////////////////////////////////////////////////////////////
+    // 【移動端】//////////////////////////////////////////////////////////////////////
     if (volantis.isMobile) {
-      // 【移动端】 页面滚动  隐藏 移动端toc目录按钮
+      // 【移動端】 頁面滾動  隱藏 移動端toc目錄按鈕
       if (pdata.ispage && volantis.dom.tocTarget && volantis.dom.toc) {
         volantis.dom.tocTarget.removeClass('active');
         volantis.dom.toc.removeClass('active');
       }
-      // 【移动端】 滚动时隐藏子菜单
+      // 【移動端】 滾動時隱藏子選單
       if (volantis.dom.mPhoneList) {
         volantis.dom.mPhoneList.forEach(function (e) {
           volantis.dom.$(e).hide();
@@ -167,9 +167,9 @@ const VolantisApp = (() => {
     }
   }
 
-  // 设置滚动锚点
+  // 設定滾動錨點
   fn.setScrollAnchor = () => {
-    // click topBtn 滚动至bodyAnchor 【移动端 PC】
+    // click topBtn 滾動至bodyAnchor 【移動端 PC】
     if (volantis.dom.topBtn && volantis.dom.bodyAnchor) {
       volantis.dom.topBtn.click(e => {
         e.preventDefault();
@@ -181,40 +181,40 @@ const VolantisApp = (() => {
 
   }
 
-  // 设置导航栏
+  // 設定導航欄
   fn.setHeader = () => {
-    // !!! 此处的Dom对象需要重载 !!!
+    // !!! 此處的Dom對象需要重載 !!!
     if (!pdata.ispage) return;
 
-    // 填充二级导航文章标题 【移动端 PC】
+    // 填充二級導航文章標題 【移動端 PC】
     volantis.dom.wrapper.find('.nav-sub .title').html(document.title.split(" - ")[0]);
 
     // ====== bind events to every btn =========
-    // 评论按钮 【移动端 PC】
-    volantis.dom.comment = volantis.dom.$(document.getElementById("s-comment")); // 评论按钮  桌面端 移动端
-    volantis.dom.commentTarget = volantis.dom.$(document.querySelector('#l_main article#comments')); // 评论区域
+    // 評論按鈕 【移動端 PC】
+    volantis.dom.comment = volantis.dom.$(document.getElementById("s-comment")); // 評論按鈕  桌面端 移動端
+    volantis.dom.commentTarget = volantis.dom.$(document.querySelector('#l_main article#comments')); // 評論區域
     if (volantis.dom.commentTarget) {
-      volantis.dom.comment.click(e => { // 评论按钮点击后 跳转到评论区域
+      volantis.dom.comment.click(e => { // 評論按鈕點擊後 跳轉到評論區域
         e.preventDefault();
         e.stopPropagation();
         volantis.cleanContentVisibility();
         fn.scrolltoElement(volantis.dom.commentTarget);
         e.stopImmediatePropagation();
       });
-    } else volantis.dom.comment.style.display = 'none'; // 关闭了评论，则隐藏评论按钮
+    } else volantis.dom.comment.style.display = 'none'; // 關閉了評論，則隱藏評論按鈕
 
-    // 移动端toc目录按钮 【移动端】
+    // 移動端toc目錄按鈕 【移動端】
     if (volantis.isMobile) {
-      volantis.dom.toc = volantis.dom.$(document.getElementById("s-toc")); // 目录按钮  仅移动端
-      volantis.dom.tocTarget = volantis.dom.$(document.querySelector('#l_side .toc-wrapper')); // 侧边栏的目录列表
+      volantis.dom.toc = volantis.dom.$(document.getElementById("s-toc")); // 目錄按鈕  僅移動端
+      volantis.dom.tocTarget = volantis.dom.$(document.querySelector('#l_side .toc-wrapper')); // 側邊欄的目錄列表
       if (volantis.dom.tocTarget) {
-        // 点击移动端目录按钮 激活目录按钮 显示侧边栏的目录列表
+        // 點擊移動端目錄按鈕 激活目錄按鈕 顯示側邊欄的目錄列表
         volantis.dom.toc.click((e) => {
           e.stopPropagation();
           volantis.dom.tocTarget.toggleClass('active');
           volantis.dom.toc.toggleClass('active');
         });
-        // 点击空白 隐藏
+        // 點擊空白 隱藏
         volantis.dom.$(document).click(function (e) {
           e.stopPropagation();
           if (volantis.dom.tocTarget) {
@@ -222,16 +222,16 @@ const VolantisApp = (() => {
           }
           volantis.dom.toc.removeClass('active');
         });
-      } else if (volantis.dom.toc) volantis.dom.toc.style.display = 'none'; // 隐藏toc目录按钮
+      } else if (volantis.dom.toc) volantis.dom.toc.style.display = 'none'; // 隱藏toc目錄按鈕
     }
   }
 
-  // 设置导航栏菜单选中状态  【移动端 PC】
+  // 設定導航欄選單選中狀態  【移動端 PC】
   fn.setHeaderMenuSelection = () => {
-    // !!! 此处的Dom对象需要重载 !!!
-    volantis.dom.headerMenu = volantis.dom.$(document.querySelectorAll('#l_header .navigation,#l_cover .navigation,#l_side .navigation')); // 导航列表
+    // !!! 此處的Dom對象需要重載 !!!
+    volantis.dom.headerMenu = volantis.dom.$(document.querySelectorAll('#l_header .navigation,#l_cover .navigation,#l_side .navigation')); // 導航列表
 
-    // 先把已经激活的取消激活
+    // 先把已經激活的取消激活
     volantis.dom.headerMenu.forEach(element => {
       let li = volantis.dom.$(element).find('li a.active')
       if (li)
@@ -256,11 +256,11 @@ const VolantisApp = (() => {
       index = index[0];
       idname = idname.split(index)[0];
     }
-    // 转义字符如 [, ], ~, #, @
+    // 轉義字符如 [, ], ~, #, @
     idname = idname.replace(/(\[|\]|~|#|@)/g, '\\$1');
     if (idname && volantis.dom.headerMenu) {
       volantis.dom.headerMenu.forEach(element => {
-        // idname 不能为数字开头, 加一个 action- 前缀
+        // idname 不能為數字開頭, 加一個 action- 前綴
         let id = element.querySelector("[active-action=action-" + idname + "]")
         if (id) {
           volantis.dom.$(id).addClass('active')
@@ -269,16 +269,16 @@ const VolantisApp = (() => {
     }
   }
 
-  // 设置全局事件
+  // 設定全局事件
   fn.setGlobalHeaderMenuEvent = () => {
     if (volantis.isMobile) {
-      // 【移动端】 关闭已经展开的子菜单 点击展开子菜单
+      // 【移動端】 關閉已經展開的子選單 點擊展開子選單
       document.querySelectorAll('#l_header .m-phone li').forEach(function (e) {
         if (e.querySelector(".list-v")) {
-          // 点击菜单
+          // 點擊選單
           volantis.dom.$(e).click(function (e) {
             e.stopPropagation();
-            // 关闭已经展开的子菜单
+            // 關閉已經展開的子選單
             e.currentTarget.parentElement.childNodes.forEach(function (e) {
               if (Object.prototype.toString.call(e) == '[object HTMLLIElement]') {
                 e.childNodes.forEach(function (e) {
@@ -288,11 +288,11 @@ const VolantisApp = (() => {
                 })
               }
             })
-            // 点击展开子菜单
+            // 點擊展開子選單
             let array = e.currentTarget.children
             for (let index = 0; index < array.length; index++) {
               const element = array[index];
-              if (volantis.dom.$(element).title === 'menu') { // 移动端菜单栏异常
+              if (volantis.dom.$(element).title === 'menu') { // 移動端選單欄異常
                 volantis.dom.$(element).display = "flex"      // https://github.com/volantis-x/hexo-theme-volantis/issues/706
               } else {
                 volantis.dom.$(element).show()
@@ -302,13 +302,13 @@ const VolantisApp = (() => {
         }
       })
     } else {
-      // 【PC端】 hover时展开子菜单，点击时[target.baseURI==origin时]隐藏子菜单? 现有逻辑大部分情况不隐藏子菜单
+      // 【PC端】 hover時展開子選單，點擊時[target.baseURI==origin時]隱藏子選單? 現有邏輯大部分情況不隱藏子選單
       document.querySelectorAll('#wrapper .m-pc li > a[href]').forEach(function (e) {
         volantis.dom.$(e.parentElement).click(function (e) {
           e.stopPropagation();
           if (e.target.origin == e.target.baseURI) {
             document.querySelectorAll('#wrapper .m-pc .list-v').forEach(function (e) {
-              volantis.dom.$(e).hide(); // 大概率不会执行
+              volantis.dom.$(e).hide(); // 大概率不會執行
             })
           }
         }, 0);
@@ -317,10 +317,10 @@ const VolantisApp = (() => {
     fn.setPageHeaderMenuEvent();
   }
 
-  // 【移动端】隐藏子菜单
+  // 【移動端】隱藏子選單
   fn.setPageHeaderMenuEvent = () => {
     if (!volantis.isMobile) return
-    // 【移动端】 点击空白处隐藏子菜单
+    // 【移動端】 點擊空白處隱藏子選單
     volantis.dom.$(document).click(function (e) {
       volantis.dom.mPhoneList.forEach(function (e) {
         volantis.dom.$(e).hide();
@@ -328,28 +328,28 @@ const VolantisApp = (() => {
     });
   }
 
-  // 设置导航栏搜索框 【移动端】
+  // 設定導航欄搜索框 【移動端】
   fn.setHeaderSearch = () => {
     if (!volantis.isMobile) return;
     if (!volantis.dom.switcher) return;
-    // 点击移动端搜索按钮
+    // 點擊移動端搜索按鈕
     volantis.dom.switcher.click(function (e) {
       e.stopPropagation();
-      volantis.dom.header.toggleClass('z_search-open'); // 激活移动端搜索框
-      volantis.dom.switcher.toggleClass('active'); // 移动端搜索按钮
+      volantis.dom.header.toggleClass('z_search-open'); // 激活移動端搜索框
+      volantis.dom.switcher.toggleClass('active'); // 移動端搜索按鈕
     });
-    // 点击空白取消激活
+    // 點擊空白取消激活
     volantis.dom.$(document).click(function (e) {
       volantis.dom.header.removeClass('z_search-open');
       volantis.dom.switcher.removeClass('active');
     });
-    // 移动端点击搜索框 停止事件传播
+    // 移動端點擊搜索框 停止事件傳播
     volantis.dom.search.click(function (e) {
       e.stopPropagation();
     });
   }
 
-  // 设置 tabs 标签  【移动端 PC】
+  // 設定 tabs 標籤  【移動端 PC】
   fn.setTabs = () => {
     let tabs = document.querySelectorAll('#l_main .tabs .nav-tabs')
     if (!tabs) return
@@ -369,11 +369,11 @@ const VolantisApp = (() => {
     })
   }
 
-  // hexo-reference 页脚跳转 https://github.com/volantis-x/hexo-theme-volantis/issues/647
+  // hexo-reference 頁腳跳轉 https://github.com/volantis-x/hexo-theme-volantis/issues/647
   fn.footnotes = () => {
     let ref = document.querySelectorAll('#l_main .footnote-backref, #l_main .footnote-ref > a');
     ref.forEach(function (e, i) {
-      ref[i].click = () => { }; // 强制清空原 click 事件
+      ref[i].click = () => { }; // 強制清空原 click 事件
       volantis.dom.$(e).on('click', (e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -386,7 +386,7 @@ const VolantisApp = (() => {
     })
   }
 
-  // 工具类：代码块复制
+  // 工具類：代碼塊複製
   fn.utilCopyCode = (Selector) => {
     document.querySelectorAll(Selector).forEach(node => {
       const test = node.insertAdjacentHTML("beforebegin", COPYHTML);
@@ -415,7 +415,7 @@ const VolantisApp = (() => {
             _span.innerText = "COPY";
           }, 2000)
         }).catch(e => {
-          VolantisApp.message('系统提示', e, {
+          VolantisApp.message('系統提示', e, {
             icon: 'fa fa-exclamation-circle red'
           });
           _BtnCopy.classList.add('copied-failed');
@@ -432,7 +432,7 @@ const VolantisApp = (() => {
     });
   }
 
-  // 工具类：复制字符串到剪切板
+  // 工具類：複製字符串到剪貼簿
   fn.utilWriteClipText = (str) => {
     return navigator.clipboard
       .writeText(str)
@@ -449,20 +449,20 @@ const VolantisApp = (() => {
           let result = document.execCommand('copy')
           document.body.removeChild(input);
           if (!result || result === 'unsuccessful') {
-            return Promise.reject('复制文本失败!')
+            return Promise.reject('複製文字失敗!')
           } else {
             return Promise.resolve()
           }
         } catch (e) {
           document.body.removeChild(input);
           return Promise.reject(
-            '当前浏览器不支持复制功能，请检查更新或更换其他浏览器操作!'
+            '當前瀏覽器不支援複製功能，請檢查更新或更換其他瀏覽器操作!'
           )
         }
       })
   }
 
-  // 工具类：返回时间间隔
+  // 工具類：返回時間間隔
   fn.utilTimeAgo = (dateTimeStamp) => {
     const minute = 1e3 * 60, hour = minute * 60, day = hour * 24, week = day * 7, month = day * 30;
     const now = new Date().getTime();
@@ -477,15 +477,15 @@ const VolantisApp = (() => {
     } else if (monthC >= 1 && monthC < 7) {
       result = " " + parseInt(monthC) + " 月前"
     } else if (weekC >= 1 && weekC < 4) {
-      result = " " + parseInt(weekC) + " 周前"
+      result = " " + parseInt(weekC) + " 週前"
     } else if (dayC >= 1 && dayC < 7) {
       result = " " + parseInt(dayC) + " 天前"
     } else if (hourC >= 1 && hourC < 24) {
-      result = " " + parseInt(hourC) + " 小时前"
+      result = " " + parseInt(hourC) + " 小時前"
     } else if (minC >= 1 && minC < 60) {
-      result = " " + parseInt(minC) + " 分钟前"
+      result = " " + parseInt(minC) + " 分鐘前"
     } else if (diffValue >= 0 && diffValue <= minute) {
-      result = "刚刚"
+      result = "剛剛"
     } else {
       const datetime = new Date();
       datetime.setTime(dateTimeStamp);
@@ -500,7 +500,7 @@ const VolantisApp = (() => {
     return result;
   }
 
-  // 消息提示：标准
+  // 消息提示：標準
   fn.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
       volantis.css(volantis.GLOBAL_CONFIG.cdn.izitoast_css)
@@ -546,7 +546,7 @@ const VolantisApp = (() => {
     }
   }
 
-  // 消息提示：询问
+  // 消息提示：詢問
   fn.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
       volantis.css(volantis.GLOBAL_CONFIG.cdn.izitoast_css)
@@ -601,7 +601,7 @@ const VolantisApp = (() => {
     }
   }
 
-  // 消息提示：隐藏
+  // 消息提示：隱藏
   fn.hideMessage = (done = null) => {
     const toast = document.querySelector('.iziToast');
     if (!toast) {
@@ -624,10 +624,10 @@ const VolantisApp = (() => {
     }
   }
 
-  // 消息提示：复制
+  // 消息提示：複製
   let messageCopyrightShow = 0;
   fn.messageCopyright = () => {
-    // 消息提示 复制时弹出
+    // 消息提示 複製時彈出
     if (volantis.GLOBAL_CONFIG.plugins.message.enable
       && volantis.GLOBAL_CONFIG.plugins.message.copyright.enable
       && messageCopyrightShow < 1) {
@@ -681,10 +681,10 @@ const VolantisFancyBox = (() => {
   }
 
   /**
-   * 加载及处理
+   * 載入及處理
    * 
-   * @param {*} checkMain 是否只处理文章区域的文章
-   * @param {*} done      FancyBox 加载完成后的动作，默认执行分组绑定
+   * @param {*} checkMain 是否只處理文章區域的文章
+   * @param {*} done      FancyBox 載入完成後的動作，預設執行分組綁定
    * @returns 
    */
   fn.init = (checkMain = true, done = fn.groupBind) => {
@@ -697,10 +697,10 @@ const VolantisFancyBox = (() => {
   }
 
   /**
-   * 图片元素预处理
+   * 圖片元素預處理
    * 
-   * @param {*} selectors 选择器
-   * @param {*} name      分组
+   * @param {*} selectors 選擇器
+   * @param {*} name      分組
    */
   fn.elementHandling = (selectors, name) => {
     const nodeList = document.querySelectorAll(selectors);
@@ -718,9 +718,9 @@ const VolantisFancyBox = (() => {
   }
 
   /**
-   * 原生绑定
+   * 原生綁定
    * 
-   * @param {*} selectors 选择器
+   * @param {*} selectors 選擇器
    */
   fn.bind = (selectors) => {
     fn.init(false, () => {
@@ -739,9 +739,9 @@ const VolantisFancyBox = (() => {
   }
 
   /**
-   * 分组绑定
+   * 分組綁定
    * 
-   * @param {*} groupName 分组名称
+   * @param {*} groupName 分組名稱
    */
   fn.groupBind = (groupName = null) => {
     const group = new Set();
@@ -783,18 +783,18 @@ const VolantisFancyBox = (() => {
 })()
 Object.freeze(VolantisFancyBox);
 
-// highlightKeyWords 与 搜索功能搭配 https://github.com/next-theme/hexo-theme-next/blob/eb194a7258058302baf59f02d4b80b6655338b01/source/js/third-party/search/local-search.js
-// Question: 锚点稳定性未知
+// highlightKeyWords 與 搜索功能搭配 https://github.com/next-theme/hexo-theme-next/blob/eb194a7258058302baf59f02d4b80b6655338b01/source/js/third-party/search/local-search.js
+// Question: 錨點穩定性未知
 // ToDo: 查找模式
-// 0. (/////////要知道浏览器自带全页面查找功能 CTRL + F)
-// 1. 右键开启查找模式 / 导航栏菜单开启?? / CTRL + F ???
-// 2. 查找模式面板 (可拖动? or 固定?)
-// 3. keyword mark id 从 0 开始编号 查找下一处 highlightKeyWords.scrollToNextHighlightKeywordMark() 查找上一处 scrollToPrevHighlightKeywordMark() 循环查找(取模%)
-// 4. 可输入修改 查找关键词 keywords(type:list)
-// 5. 区分大小写 caseSensitive (/ 全字匹配?? / 正则匹配??)
-// 6. 在选定区域中查找 querySelector ??
-// 7. 关闭查找模式
-// 8. 搜索跳转 (URL 入口) 自动开启查找模式 调用 scrollToNextHighlightKeywordMark()
+// 0. (/////////要知道瀏覽器自帶全頁面查找功能 CTRL + F)
+// 1. 右鍵開啟查找模式 / 導航欄選單開啟?? / CTRL + F ???
+// 2. 查找模式面板 (可拖動? or 固定?)
+// 3. keyword mark id 從 0 開始編號 查找下一處 highlightKeyWords.scrollToNextHighlightKeywordMark() 查找上一處 scrollToPrevHighlightKeywordMark() 循環查找(取模%)
+// 4. 可輸入修改 查找關鍵詞 keywords(type:list)
+// 5. 區分大小寫 caseSensitive (/ 全字匹配?? / 正則匹配??)
+// 6. 在選定區域中查找 querySelector ??
+// 7. 關閉查找模式
+// 8. 搜索跳轉 (URL 入口) 自動開啟查找模式 調用 scrollToNextHighlightKeywordMark()
 const highlightKeyWords = (() => {
   let fn = {}
   fn.markNum = 0
@@ -806,7 +806,7 @@ const highlightKeyWords = (() => {
     if (keywords.length == 1 && keywords[0] == "null") {
       return;
     }
-    fn.start(keywords, post); // 渲染耗时较长
+    fn.start(keywords, post); // 渲染耗時較長
     fn.scrollToFirstHighlightKeywordMark()
   }
   fn.scrollToFirstHighlightKeywordMark = () => {
@@ -984,7 +984,7 @@ Object.freeze(highlightKeyWords);
 /* DOM 控制 */
 const DOMController = {
   /**
-   * 控制元素显隐
+   * 控制元素顯隱
    */
   visible: (ele, type = true) => {
     if (ele) ele.style.display = type === true ? 'block' : 'none';
@@ -1007,7 +1007,7 @@ const DOMController = {
   },
 
   /**
-   * 设置属性
+   * 設定屬性
    */
   setAttribute: (param, attrName, attrValue) => {
     const node = document.querySelectorAll(param);
@@ -1023,7 +1023,7 @@ const DOMController = {
   },
 
   /**
-   * 设置样式
+   * 設定樣式
    */
   setStyle: (param, styleName, styleValue) => {
     const node = document.querySelectorAll(param);

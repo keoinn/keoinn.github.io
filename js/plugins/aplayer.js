@@ -1,9 +1,9 @@
 /**
- * 右键音乐
+ * 右鍵音樂
  * */
 const RightMenuAplayer = (() => {
-  let playStatus; // 播放器状态
-  const APlayer = {}; // 右键音乐所控制的播放器
+  let playStatus; // 播放器狀態
+  const APlayer = {}; // 右鍵音樂所控制的播放器
   const fn = {};
 
   fn.checkAPlayer = () => {
@@ -14,7 +14,7 @@ const RightMenuAplayer = (() => {
     }
   }
 
-  // 设置全局播放器所对应的 aplyer 对象
+  // 設定全局播放器所對應的 aplyer 對象
   fn.setAPlayerObject = () => {
     let meting = document.querySelectorAll('.footer meting-js');
     if (meting.length == 0) {
@@ -30,7 +30,7 @@ const RightMenuAplayer = (() => {
     });
   }
 
-  // 事件监听
+  // 事件監聽
   fn.setAPlayerObserver = () => {
     try {
       APlayer.player.on('play', function (e) {
@@ -48,7 +48,7 @@ const RightMenuAplayer = (() => {
         fn.updateTitle(e);
       });
 
-      // 监听音量手势
+      // 監聽音量手勢
       APlayer.volumeBarWrap = document.getElementsByClassName('nav volume')[0].children[0];
       APlayer.volumeBar = APlayer.volumeBarWrap.children[0];
 
@@ -99,7 +99,7 @@ const RightMenuAplayer = (() => {
     }
   }
 
-  // 更新控制器状态
+  // 更新控制器狀態
   fn.updateAPlayerControllerStatus = () => {
     try {
       if (APlayer.player.audio.paused) {
@@ -116,7 +116,7 @@ const RightMenuAplayer = (() => {
     }
   }
 
-  // 播放/暂停
+  // 播放/暫停
   fn.aplayerToggle = () => {
     fn.checkAPlayer();
     try {
@@ -148,7 +148,7 @@ const RightMenuAplayer = (() => {
     }
   }
 
-  // 调节音量
+  // 調節音量
   fn.aplayerVolume = (percent) => {
     fn.checkAPlayer();
     try {
@@ -158,7 +158,7 @@ const RightMenuAplayer = (() => {
     }
   }
 
-  // 更新音乐标题
+  // 更新音樂標題
   fn.updateTitle = () => {
     fn.checkAPlayer();
     try {
