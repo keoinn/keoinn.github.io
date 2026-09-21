@@ -1847,6 +1847,29 @@ ul.list-v >li>a:hover {
     max-width: 65vw;
   }
 }
+#l_main.no_sidebar {
+  max-width: 100% !important;
+}
+@media screen and (min-width: 2048px) {
+  #l_main.no_sidebar {
+    max-width: 100% !important;
+  }
+}
+@media screen and (min-width: 769px) {
+  #l_main.no_sidebar ~#l_side {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none !important;
+  }
+}
+.body-wrapper:has(#l_main.no_sidebar) {
+  max-width: 1112px;
+}
+@media screen and (min-width: 2048px) {
+  .body-wrapper:has(#l_main.no_sidebar) {
+    max-width: 65vw;
+  }
+}
 hr {
   margin: 1.25em 0;
   height: 0;
@@ -2242,8 +2265,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>抱歉，您的瀏覽器無法存取本站</b></span><br/>`+
-        `<span class="kill-c">微軟已經於2016年終止了對 Internet Explorer (IE) 10 及更早版本的支援，<br/>繼續使用存在極大的安全隱患，請使用當代主流的瀏覽器進行存取。</span><br/>`+
+        `<span class="kill-t"><b>抱歉，您的瀏覽器無法訪問本站</b></span><br/>`+
+        `<span class="kill-c">微軟已經於2016年終止了對 Internet Explorer (IE) 10 及更早版本的支持，<br/>繼續使用存在極大的安全隱患，請使用當代主流的瀏覽器進行訪問。</span><br/>`+
         `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解詳情 ></strong></a>`+
     '</div>');
 </script>
@@ -2272,8 +2295,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的瀏覽器無法存取本站</b></span><br/>
-        <span class="kill-c">本頁面需要瀏覽器支援（啟用）JavaScript</span><br/>
+        <span class="kill-t"><b>抱歉，您的瀏覽器無法訪問本站</b></span><br/>
+        <span class="kill-c">本頁面需要瀏覽器支持（啟用）JavaScript</span><br/>
         <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解詳情 ></strong></a>
     </div>
 </noscript>
@@ -2656,7 +2679,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1789907896095),
+    lastupdate: new Date(1789959259426),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2681,7 +2704,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知識共享授權條款","message":"請遵守 CC BY-NC-SA 4.0 協議。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       
       
-      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.darkMode","menus.sidebar","plugins.articlePage"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"上一頁","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"下一頁","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"重新整理","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到頂端","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"貼上","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全選","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪下","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"複製","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站內搜尋","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"googleSearch","name":"Google 搜尋","icon":"fa-solid fa-search","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"以新分頁開啟","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"複製連結網址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"googleImg","name":"Google 以圖搜圖","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"列印頁面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"閱讀模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常見問題","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"範例部落格","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社群","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站原始碼","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主題原始碼","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"schemeToggle","name":"配色模式","icon":"fa-solid fa-circle-half-stroke","group":"darkMode","children":[{"id":"schemeLight","name":"淺色","icon":"fa-solid fa-sun","event":"window.setColorScheme&&window.setColorScheme('light')","group":"darkMode"},{"id":"schemeDark","name":"深色","icon":"fa-solid fa-moon","event":"window.setColorScheme&&window.setColorScheme('dark')","group":"darkMode"},{"id":"schemeSystem","name":"跟隨系統","icon":"fa-solid fa-circle-half-stroke","event":"window.setColorScheme&&window.setColorScheme('system')","group":"darkMode"}]}],"sidebar":[{"id":"sidebarToggle","name":"關閉側欄","icon":"fa-solid fa-expand","event":"window.toggleSidebar&&window.toggleSidebar()","group":"sidebar"}]}}
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.darkMode","menus.sidebar","plugins.articlePage"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"上一頁","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"下一頁","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"重新整理","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到頂端","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"貼上","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全選","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪下","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"複製","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站內搜尋","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"googleSearch","name":"Google 搜尋","icon":"fa-solid fa-search","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"以新分頁開啟","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"複製連結網址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"googleImg","name":"Google 以圖搜圖","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"列印頁面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"閱讀模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"schemeToggle","name":"配色模式","icon":"fa-solid fa-circle-half-stroke","group":"darkMode","children":[{"id":"schemeLight","name":"淺色","icon":"fa-solid fa-sun","event":"window.setColorScheme&&window.setColorScheme('light')","group":"darkMode"},{"id":"schemeDark","name":"深色","icon":"fa-solid fa-moon","event":"window.setColorScheme&&window.setColorScheme('dark')","group":"darkMode"},{"id":"schemeSystem","name":"跟隨系統","icon":"fa-solid fa-circle-half-stroke","event":"window.setColorScheme&&window.setColorScheme('system')","group":"darkMode"}]}],"sidebar":[{"id":"sidebarToggle","name":"關閉側欄","icon":"fa-solid fa-expand","event":"window.toggleSidebar&&window.toggleSidebar()","group":"sidebar"}]}}
       
     },
     search: {
@@ -2697,7 +2720,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         search: {
           hits_empty: "找不到您查詢的內容：${query}",
-          hits_stats: "找到 ${hits} 筆結果，用時 ${time} 毫秒",
+          hits_stats: "找到 ${hits} 條結果，用時 ${time} 毫秒",
         }
       
     }
@@ -2967,7 +2990,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="https://schema.org.cn/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    
+<header itemscope itemtype="https://schema.org.cn/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -3539,17 +3563,17 @@ Pyenv
           <li><a class="flat-box"
             title="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/"
             active-action="action-categoriesE5ADB8E7BF92E7AD86E8A898"
-            ><div class='name'>學習筆記</div><div class='badge'>(19)</div></a></li>
+            ><div class='name'>學習筆記</div><div class='badge'>(20)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/"
             active-action="action-categoriesE5ADB8E7BF92E7AD86E8A898E4BABAE5B7A5E699BAE685A7E99BB2E7ABAFE7B3BBE7B5B1E5AFA6E58B99"
-            ><div class='name'>人工智慧雲端系統實務</div><div class='badge'>(10)</div></a></li>
+            ><div class='name'>人工智慧雲端系統實務</div><div class='badge'>(11)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/"
             active-action="action-categoriesE5ADB8E7BF92E7AD86E8A898E4BABAE5B7A5E699BAE685A7E99BB2E7ABAFE7B3BBE7B5B1E5AFA6E58B99n8n"
-            ><div class='name'>n8n</div><div class='badge'>(5)</div></a></li>
+            ><div class='name'>n8n</div><div class='badge'>(6)</div></a></li>
         
       </ul>
     </div>
@@ -3620,15 +3644,15 @@ Pyenv
     <div>
       <script>
   /******************** volantis.dom ********************************/
-  // 頁面選擇器 將dom對象緩存起來 see: /source/js/app.js etc.
-  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 頁面主體
+  // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
+  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
   volantis.dom.topBtn = volantis.dom.$(document.getElementById('s-top')); // 向上
-  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整個導航欄
-  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1個
-  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按鈕   移動端 1個
-  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移動端導航欄
-  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移動端 1個
-  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手機端 子菜單 多個
+  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整个导航栏
+  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1个
+  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按钮   移动端 1个
+  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
+  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
+  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
 </script>
 
 <script>
@@ -3649,6 +3673,7 @@ Pyenv
 
 
   
+
 
 
 

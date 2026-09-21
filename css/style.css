@@ -1574,20 +1574,18 @@ svg.loading {
 #l_main.no_sidebar {
   width: 100%;
   padding-right: 0;
-  max-width: 100%;
+  max-width: 840px;
   margin: auto;
 }
 @media screen and (min-width: 2048px) {
   #l_main.no_sidebar {
-    max-width: 100%;
+    max-width: calc(55vw - 240px);
   }
 }
-@media screen and (min-width: 769px) {
-  #l_main.no_sidebar ~#l_side {
-    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-    display: none;
-  }
+#l_main.no_sidebar ~#l_side {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
 }
 #l_main .post-list {
   position: relative;
@@ -2006,14 +2004,6 @@ svg.loading {
 @media screen and (min-width: 2048px) {
   .body-wrapper {
     max-width: 55vw;
-  }
-}
-.body-wrapper:has(#l_main.no_sidebar) {
-  max-width: 1112px;
-}
-@media screen and (min-width: 2048px) {
-  .body-wrapper:has(#l_main.no_sidebar) {
-    max-width: 65vw;
   }
 }
 article#comments p[ct] {
@@ -8224,4 +8214,37 @@ div.p.center:has(span.btn) span.btn a {
 [color-scheme='dark'] .announ-node__action--notice {
   color: #49a9f5;
   background: rgba(33,150,243,0.2);
+}
+#l_main.no_sidebar {
+  max-width: 100%;
+}
+@media screen and (min-width: 2048px) {
+  #l_main.no_sidebar {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #l_main.no_sidebar ~#l_side {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+  }
+}
+@media screen and (min-width: 769px) {
+  #l_main.no_sidebar ~#l_side {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+.body-wrapper:has(#l_main.no_sidebar) {
+  max-width: 1112px;
+}
+@media screen and (min-width: 2048px) {
+  .body-wrapper:has(#l_main.no_sidebar) {
+    max-width: 65vw;
+  }
 }

@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://keoinn.github.io/tags/tutorial/page/2/"/>
+  
+  <link rel="canonical" href="https://keoinn.github.io/posts/1345946501/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,23 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>標籤：Tutorial - Wayne's Snippets Note</title>
-  <meta name="keywords" content="code snippets">
-  <meta desc name="description" content="Recording the daily code snippets produced from work and research. - Wayne Chang - Wayne's Snippets Note">
+  <title>【n8n系列】 06. 申請 OpenRouter 並測試 API Key - Wayne's Snippets Note</title>
+  <meta name="keywords" content="Tutorial,n8n,AI,code snippets">
+  <meta desc name="description" content="OpenRouter 是一個 LLM API 的統一轉發平台。開發者只需申請一組 API Key，就能透過與 OpenAI 相容的介面，呼叫多家供應商的模型（例如 OpenAI、Anthropic、Google、Meta），不必為每一家各申請帳號與金鑰。請求會由 OpenRouter 轉送到對應供應商，用量與費用... - Wayne Chang - Wayne's Snippets Note">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wayne&#39;s Snippets Note">
-<meta property="og:url" content="https://keoinn.github.io/tags/Tutorial/page/2/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【n8n系列|初稿】 06. 申請 OpenRouter 並測試 API Key">
+<meta property="og:url" content="https://keoinn.github.io/posts/1345946501/index.html">
 <meta property="og:site_name" content="Wayne&#39;s Snippets Note">
-<meta property="og:description" content="Recording the daily code snippets produced from work and research.">
+<meta property="og:description" content="OpenRouter 是一個 LLM API 的統一轉發平台。開發者只需申請一組 API Key，就能透過與 OpenAI 相容的介面，呼叫多家供應商的模型（例如 OpenAI、Anthropic、Google、Meta），不必為每一家各申請帳號與金鑰。請求會由 OpenRouter 轉送到對應供應商，用量與費用也集中在同一個帳號管理。">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2026-09-21T01:05:30.000Z">
+<meta property="article:modified_time" content="2026-09-21T02:53:41.643Z">
 <meta property="article:author" content="Wayne Chang">
-<meta property="article:tag" content="code snippets">
+<meta property="article:tag" content="Tutorial">
+<meta property="article:tag" content="n8n">
+<meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2671,7 +2675,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3314,19 +3318,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/1017719319/">
+  <article itemscope itemtype="https://schema.org.cn/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/1345946501/">
   <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
     <meta itemprop="name" content="Wayne's Snippets Note">
   </span>
@@ -3335,687 +3329,321 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1017719319/"  itemprop="url">
-        【人工智慧雲端系統實務】 06. Django Views 解析與應用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        在 Django 架構中，View 是負責處理使用者請求並回傳對應回應的核心元件。它連接資料（Model）與畫面（Template），決定要顯示什麼內容、如何處理邏輯，以及將資料呈現給使用者的方式。
-1. 什麼是 View？Django 中的 View 負責：
+    
+      <h1 class="title" itemprop="name headline">
+        【n8n系列|初稿】 06. 申請 OpenRouter 並測試 API Key
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="https://schema.org.cn/Person">
+  <a itemprop="url" class='author' href="https://keoinn.github.io/" rel="nofollow">
+    <img itemprop="image" src="/assets/images/theme/avatar/cb_avatar.webp" class="lazyload" data-srcset="/assets/images/theme/avatar/cb_avatar.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Wayne Chang</p>
+  </a>
+</div>
 
-接收瀏覽器傳來的 HTTP Request。
-處理業務邏輯（如資料查詢、表單驗證、條件分支等）。
-回傳適當的 HTTP Respo...
-      
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/">人工智慧雲端系統實務</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/">n8n</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" itemprop="url"><span itemprop="name">人工智慧雲端系統實務</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/" itemprop="url"><span itemprop="name">n8n</span></a>
+      </span>
     
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-23T00:00:56+08:00">2025-06-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/1017719319/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
 
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-09-21T09:05:30+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>發表於：2026年9月21日</p>
+  </a>
 </div>
 
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2026-09-21T10:53:41+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新於：2026年9月21日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>OpenRouter 是一個 LLM API 的統一轉發平台。開發者只需申請一組 API Key，就能透過與 OpenAI 相容的介面，呼叫多家供應商的模型（例如 OpenAI、Anthropic、Google、Meta），不必為每一家各申請帳號與金鑰。請求會由 OpenRouter 轉送到對應供應商，用量與費用也集中在同一個帳號管理。</p>
+<span id="more"></span>
+
+<p>對學習與開發 n8n 特別方便的是，平台提供免費額度，以及一批標記為免費的模型（名稱通常帶有 <code>:free</code>）。若不指定特定免費模型，也可以使用 <code>openrouter/free</code>，讓平台自動挑選目前可用的免費模型。這樣在串接 AI Agent、Chat Model 時，能先用接近零成本的方式驗證流程，確認無誤後再視需求換成付費模型。這是繼 <a href="/posts/1382114482">02. 使用 Google Agent Stdio 取得 LLM Keys</a> 之後，另一條取得大語言模型的路徑。</p>
+<p>本章會從申請帳號、取得 API Key、搜尋合適模型，到用 cURL 測試金鑰是否可用，完成後續在 n8n 把 OpenRouter 當成 LLM Provider 的準備工作。</p>
+<h2 id="1-連上-OpenRouter-官方頁面申請帳號"><a href="#1-連上-OpenRouter-官方頁面申請帳號" class="headerlink" title="1. 連上 OpenRouter 官方頁面申請帳號"></a>1. 連上 OpenRouter 官方頁面申請帳號</h2><div class="timeline">  <div class="timenode"><div class="meta"><p><p>第 1&#x2F;11 步：連上 OpenRouter 網站，進行註冊</p>
+</p></div><div class="body"><p><a target="_blank" rel="noopener" href="https://openrouter.ai/">OpenRouter 平台頁面</a>  </p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 2&#x2F;11 步：點擊 Sign Up</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-001.png' data-fancybox='default' data-caption='點擊 Sign Up'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-001.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-001.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊 Sign Up" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊 Sign Up</span></div></div><p>① 點擊 <code>Sign Up</code> 按鈕，打開註冊對話視窗。</p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 3&#x2F;11 步：輸入基本資訊</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-002.png' data-fancybox='default' data-caption='輸入基本資訊'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-002.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-002.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="輸入基本資訊" style="width:auto;"/></a><span></span></div></div><span class="image-caption">輸入基本資訊</span></div></div><p>② <code>Email address</code> 設定登入帳號。<br>③ <code>Password</code> 設定登入密碼。<br>④ 勾選同意使用條款。<br>⑤ 點擊 <code>Continue</code>。</p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 4&#x2F;11 步：確認登入信箱是否正確</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-003.png' data-fancybox='default' data-caption='確認信箱'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-003.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-003.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="確認信箱" style="width:auto;"/></a><span></span></div></div><span class="image-caption">確認信箱</span></div></div><p>⑥ 確認信箱是否正確，可以在此修改收發啟用信的信箱。</p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 5&#x2F;11 步：到信箱內搜尋啟用信</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-004.png' data-fancybox='default' data-caption='搜尋啟用信'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-004.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-004.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="搜尋啟用信" style="width:auto;"/></a><span></span></div></div><span class="image-caption">搜尋啟用信</span></div></div><p>⑦ 搜尋 <code>OpenRouter</code> 或是主旨為 <code>Your sign up link ...</code> 等資訊。  </p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 6&#x2F;11 步：點擊信件內的啟用按鈕</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-005.png' data-fancybox='default' data-caption='點擊啟用按鈕'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-005.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-005.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊啟用按鈕" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊啟用按鈕</span></div></div><p>⑧ 點擊 <code>Sign up to OpenRouter</code> 進行帳號驗證。  </p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 7&#x2F;11 步：驗證完成，設定使用者基本資訊</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-006.png' data-fancybox='default' data-caption='設定使用者基本資訊'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-006.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-006.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="設定使用者基本資訊" style="width:auto;"/></a><span></span></div></div><span class="image-caption">設定使用者基本資訊</span></div></div><p>⑨ 選擇 <code>Individual</code> 區塊。<br>⑩ 點擊 <code>Next</code> 按鈕。  </p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 8&#x2F;11 步：記錄 API Key</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-007.png' data-fancybox='default' data-caption='記錄 API Key'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-007.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-007.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="記錄 API Key" style="width:auto;"/></a><span></span></div></div><span class="image-caption">記錄 API Key</span></div></div><p>⑪ 使用最右側的複製按鈕，記錄 <code>Your API Key</code> 的值。完整金鑰在關掉視窗後就無法再複製，請立刻另存於自己的電腦上。<br>⑫ 點擊 <code>Continue</code> 按鈕。</p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 9&#x2F;11 步：跳過綁定信用卡步驟</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-008.png' data-fancybox='default' data-caption='跳過綁定信用卡步驟'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-008.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-008.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="跳過綁定信用卡步驟" style="width:auto;"/></a><span></span></div></div><span class="image-caption">跳過綁定信用卡步驟</span></div></div><p>⑬ 點擊 <code>I&#39;ll do this later</code> 跳過綁定信用卡步驟。</p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 10&#x2F;11 步：調查表單</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-009.png' data-fancybox='default' data-caption='完成問卷調查'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-009.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-009.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="完成問卷調查" style="width:auto;"/></a><span></span></div></div><span class="image-caption">完成問卷調查</span></div></div><p>⑭ 選擇適合的選項。<br>⑮ 點擊 <code>Continue</code>。</p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 11&#x2F;11 步：完成</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-010.png' data-fancybox='default' data-caption='完成'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-010.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-010.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="完成" style="width:auto;"/></a><span></span></div></div><span class="image-caption">完成</span></div></div><p>⑯ 點擊 <code>Go to Dashboard</code> 完成註冊。  </p></div></div>
+</div>
+
+<h2 id="2-如果忘記-API-Key-或者需要新增時"><a href="#2-如果忘記-API-Key-或者需要新增時" class="headerlink" title="2. 如果忘記 API Key 或者需要新增時"></a>2. 如果忘記 API Key 或者需要新增時</h2><p>當 API Key 無法連線或是忘記時，完整金鑰無法再查看，只能刪除舊的並新增一把。</p>
+<div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-011.png' data-fancybox='default' data-caption='API Keys 選單'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-011.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-011.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="API Keys 選單" style="width:auto;"/></a><span></span></div></div><span class="image-caption">API Keys 選單</span></div></div>
+
+<p>① 從側欄選擇 <code>API Keys</code> 選項。<br>② 點擊 <code>+ New Key</code> 可以進行新增。<br>③ 下方列表只能確認有哪些 Key 還在生效（名稱與遮罩），無法再複製完整字串。</p>
+<h2 id="3-若需要尋找特定功能的模型"><a href="#3-若需要尋找特定功能的模型" class="headerlink" title="3. 若需要尋找特定功能的模型"></a>3. 若需要尋找特定功能的模型</h2><p>若需要尋找特定功能的模型，可以透過下述方式進行篩選與查看。</p>
+<div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-012.png' data-fancybox='default' data-caption='模型選擇畫面'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-012.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/saas/openrouter-apply-012.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="模型選擇畫面" style="width:auto;"/></a><span></span></div></div><span class="image-caption">模型選擇畫面</span></div></div>
+
+<p>① 標題列選擇 <code>Models</code>。<br>② 搜尋欄位可以輸入關鍵字進行搜尋。搜尋欄輸入 <code>:free</code> 可篩出免費模型。<br>③ 符合條件的模型會在下方搜尋結果區域呈現。</p>
+<h2 id="4-透過-cURL-測試-API-Key"><a href="#4-透過-cURL-測試-API-Key" class="headerlink" title="4. 透過 cURL 測試 API Key"></a>4. 透過 cURL 測試 API Key</h2><h3 id="4-1-Bash-版本"><a href="#4-1-Bash-版本" class="headerlink" title="4.1 Bash 版本"></a>4.1 Bash 版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">curl https://openrouter.ai/api/v1/chat/completions \</span><br><span class="line">  -H <span class="string">&quot;Content-Type: application/json&quot;</span> \</span><br><span class="line">  -H <span class="string">&quot;Authorization: Bearer <span class="variable">$OPENROUTER_API_KEY</span>&quot;</span> \</span><br><span class="line">  -d <span class="string">&#x27;&#123;</span></span><br><span class="line"><span class="string">  &quot;model&quot;: &quot;openrouter/free&quot;,</span></span><br><span class="line"><span class="string">  &quot;messages&quot;: [</span></span><br><span class="line"><span class="string">    &#123;</span></span><br><span class="line"><span class="string">      &quot;role&quot;: &quot;user&quot;,</span></span><br><span class="line"><span class="string">      &quot;content&quot;: &quot;How many times does the letter r appear in strawberry?&quot;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  ]</span></span><br><span class="line"><span class="string">&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>$OPENROUTER_API_KEY</code> 要替換成自己的 API Key。</p>
+</blockquote>
+<h3 id="4-2-Windows-PowerShell-版本"><a href="#4-2-Windows-PowerShell-版本" class="headerlink" title="4.2 Windows PowerShell 版本"></a>4.2 Windows PowerShell 版本</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">curl.exe https://openrouter.ai/api/v1/chat/completions <span class="literal">-H</span> <span class="string">&quot;Content-Type: application/json&quot;</span> <span class="literal">-H</span> <span class="string">&quot;Authorization: Bearer <span class="variable">$env:OPENROUTER_API_KEY</span>&quot;</span> <span class="literal">-d</span> <span class="string">@&#x27;</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">  &quot;model&quot;: &quot;openrouter/free&quot;,</span></span><br><span class="line"><span class="string">  &quot;messages&quot;: [</span></span><br><span class="line"><span class="string">    &#123;</span></span><br><span class="line"><span class="string">      &quot;role&quot;: &quot;user&quot;,</span></span><br><span class="line"><span class="string">      &quot;content&quot;: &quot;How many times does the letter r appear in strawberry?&quot;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  ]</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#x27;@</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>$env:OPENROUTER_API_KEY</code> 要替換成自己的 API Key。PowerShell 必須使用 <code>curl.exe</code>，直接打 <code>curl</code> 會變成 <code>Invoke-WebRequest</code>，無法沿用上述參數。</p>
+</blockquote>
+<h3 id="4-3-如何判斷測試是否成功"><a href="#4-3-如何判斷測試是否成功" class="headerlink" title="4.3 如何判斷測試是否成功"></a>4.3 如何判斷測試是否成功</h3><p>成功時 HTTP 狀態為 <code>200</code>，回應會包含 <code>choices</code>；模型回覆在 <code>choices[0].message.content</code>。</p>
+<details ><summary> 成功回應範例 </summary>
+              <div class='content'>
+              <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gen-xxxxxxxx&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;model&quot;</span><span class="punctuation">:</span> <span class="string">&quot;meta-llama/llama-3.3-70b-instruct:free&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;object&quot;</span><span class="punctuation">:</span> <span class="string">&quot;chat.completion&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;choices&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;index&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;role&quot;</span><span class="punctuation">:</span> <span class="string">&quot;assistant&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;content&quot;</span><span class="punctuation">:</span> <span class="string">&quot;The letter r appears 3 times in the word strawberry.&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;finish_reason&quot;</span><span class="punctuation">:</span> <span class="string">&quot;stop&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
+
+<p>失敗時請看 HTTP 狀態碼與 <code>error.message</code>：</p>
+<div class="note warning yellow"><p><strong>常見錯誤</strong></p><p>① <code>401</code>：API Key 無效、漏填，或環境變數沒有正確替換。請回到第 2 節新增一把 Key 再測。</p><p>② <code>402</code>：帳號或這把 Key 額度不足。免費模型在帳戶餘額為負時也可能失敗，請到 Credits 頁面確認：<code>https://openrouter.ai/credits</code>。</p></div>
+
+<details ><summary> 401 回應範例 </summary>
+              <div class='content'>
+              <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;error&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">401</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Missing Authentication header&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
+
+<details ><summary> 402 回應範例 </summary>
+              <div class='content'>
+              <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;error&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">402</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Insufficient credits. Add more using https://openrouter.ai/credits&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  <p>文章內容遵循 姓名標示-非商業性-相同方式分享 4.0 國際 (CC BY-NC-SA 4.0) 協議</p>
+
+                
+              
+                
+                  <p>本文章永久網址為：<a href="https://keoinn.github.io/posts/1345946501/">https://keoinn.github.io/posts/1345946501/</a></p>
+                
+              
+            </blockquote>
           </div>
         
       
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/2524955884/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
+          
   
   
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Tutorial/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Tutorial</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/n8n/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>n8n</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AI/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AI</p></a></div>
+  <span hidden itemprop="keywords">Tutorial n8n AI</span>
+  
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+<section class="custom-donate">
+  <div class='content' style="display: flex; align-items: center; justify-content: center; ">
+        <a href="https://www.buymeacoffee.com/keoinn" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" class="lazyload" data-srcset="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+        <!-- <div class="likecoin-embed likecoin-button" data-liker-id="keoinn582" data-href="https://keoinn.github.io/"></div>
+        <script src="https://static.like.co/sdk/v1/button.js"></script> -->
+        <div>
+          <script type="text/javascript">
+            document.write(
+              "<iframe scrolling='no' frameborder='0' sandbox='allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation' style='height: 150px; width: 100%; background: transparent;' src='https://button.like.co/in/embed/keoinn582/button?referrer=" +
+              encodeURIComponent(location.href.split("?")[0].split("#")[0]) + "'></iframe>");
+          </script>
+        <div>
+        
+
+  </div>
+</section>
+
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/2096344818/'>
+          <p class='title'>【n8n系列|初稿】 05. workflow 讀取 Google Sheet 資料<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>延續上一章，完成 Google 相關服務的憑證申請與設定後，就能在 workflow 中讀取、寫入 Google Sheets。
+簡單的讀取 Google Sheet 範例
+
+
+
+1. 建立工作...</p>
+        </a>
+      
+    </div>
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/posts/1345946501/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comment'></i> 留言</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/2524955884/"  itemprop="url">
-        【人工智慧雲端系統實務】 05. Django Models 解析與應用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>在 Django 框架中，Model 是用來表示資料庫資料的 Python 類別，透過 ORM（物件關聯對應）技術，讓開發者可以用 Python 語法操作資料表。每個 Model 對應一張資料表，類別屬性對應欄位，欄位可設定型別與限制，如 CharField、IntegerField、max_length、null 等。Django 支援資料表之間的關聯，例如一對多（ForeignKey）、一對一（OneToOneField）、多對多（ManyToManyField），讓資料關聯清晰易懂。開發者可以透過 ORM 提供的 API 來新增、查詢、更新、刪除資料，無需寫 SQL。當模型變更時，Django 提供 Migrations 機制來同步資料庫結構。Models 也可以自定義方法、屬性，或透過 Meta 類別設定排序與表名等細節。只要註冊 Model 到 Django 管理後台，就能快速產生完整的資料管理介面。綜合上述，Django 的 Model 系統以簡潔、可讀性高且功能強大的設計，提供開發者一套有效率且穩定的資料庫操作方式。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-19T21:56:31+08:00">2025-06-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/2524955884/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/1675475486/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1675475486/"  itemprop="url">
-        【人工智慧雲端系統實務】 04. Django MVT 與 MVC 架構
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;在 Djnago 專案採用 MVT (Model-View-Template) 架構模式進行開發與維護，而 MVT 架構屬於 MVC (Model-View-Controller) Pattern 的變形。目的是為了降低專案複雜度，將程式碼依照功能獨立，提升開發效率，透過 MVC 設計模式 (Design Pattern) 實現鬆耦合相依性 (loosely coupled dependencies)。接下來我們來說明 MVC 與 Djagno 的 MVT 架構間的特色。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-10T04:20:09+08:00">2025-06-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/1675475486/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/1886582005/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1886582005/"  itemprop="url">
-        【人工智慧雲端系統實務】 00. 安裝 VSCode 常用 Extensions
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Visual Studio Code 最出名的特色就是具有豐富與強大的延伸模組 (Extensions)，也因為過於豐富時常讓初學者不知道要安裝哪些延伸模組，因此筆者將自己實務開發所使用的延伸模組打包成檔案，按照下列的步驟就可以完成安裝。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-07T04:12:33+08:00">2025-06-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/">人工智慧雲端系統實務</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" itemprop="url"><span itemprop="name">人工智慧雲端系統實務</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/1886582005/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/4221818720/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/4221818720/"  itemprop="url">
-        【人工智慧雲端系統實務】 03.GPC 部署 Django 專案
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        本教學部分畫面是 2020 ~ 2023 年的畫面，GCP UI 有些許不一致，但功能名稱基本上不會變，再斟酌一下，另外開設虛擬機的費用也會根據 GCP 的行銷策略會有些微調整。
-
-軟體需求MobaXTerm
-
-1. 建立 GCP 專案
-第 1&#x2F;3 步： 建立專案選擇視窗 ➡︎ 新增專案
-
-
-第 2&#x2F;3 步： 填寫新專案的名稱
-注意專案名稱使用 django-server...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-17T17:01:22+08:00">2024-05-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/4221818720/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/717918013/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/717918013/"  itemprop="url">
-        【人工智慧雲端系統實務】 02.Django 4 快速搭建網站
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        這篇教學透過 Django 實作建立一個陽春部落格。透過 Django Framework 指令快速構建網站框架。透過簡單的專案體驗 Django 的基本功能。
-
-版本需求Python 3.12Django 4.2 LTSConda 24.5.0
-
-1. 建立虛擬環境
-第 1&#x2F;3 步： 更新 conda 套件
-1conda update conda小提示當然也可使用 conda u...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-16T17:01:22+08:00">2024-05-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/717918013/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/3498009603/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/3498009603/"  itemprop="url">
-        【人工智慧雲端系統實務 | 內容撰寫中】 01.開發環境與Web架站前備知識
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        無論哪一門技術相關的課程開頭，都是以最基本的環境架設為出發點1。
-1. 開發環境安裝
-Anaconda 安裝與設定
-Visual Studio Code 安裝與設定
-Git 安裝與設定
-
-內容待更新
-施工中...
+  </article>
 
 
 
 
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-16T17:00:20+08:00">2024-05-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/">人工智慧雲端系統實務</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" itemprop="url"><span itemprop="name">人工智慧雲端系統實務</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/3498009603/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/4109934626/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/4109934626/"  itemprop="url">
-        【人工智慧雲端系統實務】 00.開發環境安裝-Git
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Git 是一套由 Linus 做為主要開發人員的分散式版本控制系統，分散式指的是開發人員再取得程式碼版本資訊時不用位於相同的網路環境下，可以單獨儲存在自己的開發環境上。當然也可以透過 Github、Gitlab、Bucket 將程式碼版本資訊同步到公開伺服器上，Git 被廣泛使用於各種系統核心的開發流程中。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-03T06:53:24+08:00">2024-05-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/">人工智慧雲端系統實務</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" itemprop="url"><span itemprop="name">人工智慧雲端系統實務</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/4109934626/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/3905719239/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/3905719239/"  itemprop="url">
-        【人工智慧雲端系統實務】 00.開發環境安裝-VSCode
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Visual Studio Code (後面以 VSCode 代稱) 是 2023 年[<a target="_blank" rel="noopener" href="https://survey.stackoverflow.co/2023/#section-learning-to-code-learning-how-to-code" title="Stackoverflow Survey:2023">1</a>] 最受程式設計師歡迎的編輯器，受惠於它的多樣化的套件，內建 Git 版本控制、 IntelliSense、命令執行列工具也整和 GitHub 整個生態系，如: Github Repo、GitHub Copilot、Gist，做為學習程式語言、軟體開發工作人員是需要熟悉的工具之一。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-02T06:44:46+08:00">2024-05-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/">人工智慧雲端系統實務</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" itemprop="url"><span itemprop="name">人工智慧雲端系統實務</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/3905719239/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/1864811267/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1864811267/"  itemprop="url">
-        【人工智慧雲端系統實務】 00.開發環境安裝-Anaconda
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Django 主要的開發程式語言為 Python，因此採用 Ananconda 做為主要 Python 發行版。<br>這邊紀錄安裝過程與設定的注意事項。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-01T05:59:42+08:00">2024-05-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/">人工智慧雲端系統實務</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" itemprop="url"><span itemprop="name">人工智慧雲端系統實務</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/1864811267/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/tags/Tutorial/">
-            <section class="post prev white-box shadow floatable blur" >
-              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>&nbsp;上一頁&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          2 / 2
-        </p>
-        
-      </div>
-    
-  
 
 
-    
-  
 </div>
 <aside id='l_side' itemscope itemtype="https://schema.org.cn/WPSideBar">
   
@@ -4024,140 +3652,31 @@ Git 安裝與設定
     
     
       
-<section class="widget blogger desktop mobile ">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://cdn.synet-app.com/assets/images/theme/avatar/jellyfish.jpg'/>
-        </a>
-      
-    
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:keoinn@gmail.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/keoinn/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分類</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Google-Cloud-Platform/" href="/categories/Google-Cloud-Platform/"
-            active-action="action-categoriesGoogle-Cloud-Platform"
-            ><div class='name'>Google Cloud Platform</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/"
-            active-action="action-categoriesE4BABAE5B7A5E699BAE685A7E99BB2E7ABAFE7B3BBE7B5B1E5AFA6E58B99"
-            ><div class='name'>人工智慧雲端系統實務</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/"
-            active-action="action-categoriesE5ADB8E7BF92E7AD86E8A898"
-            ><div class='name'>學習筆記</div><div class='badge'>(20)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/"
-            active-action="action-categoriesE5ADB8E7BF92E7AD86E8A898E4BABAE5B7A5E699BAE685A7E99BB2E7ABAFE7B3BBE7B5B1E5AFA6E58B99"
-            ><div class='name'>人工智慧雲端系統實務</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/"
-            active-action="action-categoriesE5ADB8E7BF92E7AD86E8A898E4BABAE5B7A5E699BAE685A7E99BB2E7ABAFE7B3BBE7B5B1E5AFA6E58B99n8n"
-            ><div class='name'>n8n</div><div class='badge'>(6)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>熱門標籤</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AI/" style="font-size: 19px; color: #777">AI</a> <a href="/tags/Dev-Env/" style="font-size: 14px; color: #999">Dev Env</a> <a href="/tags/Django/" style="font-size: 21.5px; color: #666">Django</a> <a href="/tags/GCP/" style="font-size: 14px; color: #999">GCP</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 14px; color: #999">Google Cloud Platform</a> <a href="/tags/Mac/" style="font-size: 14px; color: #999">Mac</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Tutorial/" style="font-size: 24px; color: #555">Tutorial</a> <a href="/tags/VSCode/" style="font-size: 16.5px; color: #888">VSCode</a> <a href="/tags/django/" style="font-size: 16.5px; color: #888">django</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/n8n/" style="font-size: 19px; color: #777">n8n</a> <a href="/tags/%E5%85%A7%E5%AE%B9%E7%B7%A8%E8%BC%AF%E4%B8%AD/" style="font-size: 14px; color: #999">內容編輯中</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky">
+
+  
+  
+
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>文章目錄</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%80%A3%E4%B8%8A-OpenRouter-%E5%AE%98%E6%96%B9%E9%A0%81%E9%9D%A2%E7%94%B3%E8%AB%8B%E5%B8%B3%E8%99%9F"><span class="toc-text">1. 連上 OpenRouter 官方頁面申請帳號</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A6%82%E6%9E%9C%E5%BF%98%E8%A8%98-API-Key-%E6%88%96%E8%80%85%E9%9C%80%E8%A6%81%E6%96%B0%E5%A2%9E%E6%99%82"><span class="toc-text">2. 如果忘記 API Key 或者需要新增時</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%8B%A5%E9%9C%80%E8%A6%81%E5%B0%8B%E6%89%BE%E7%89%B9%E5%AE%9A%E5%8A%9F%E8%83%BD%E7%9A%84%E6%A8%A1%E5%9E%8B"><span class="toc-text">3. 若需要尋找特定功能的模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%80%8F%E9%81%8E-cURL-%E6%B8%AC%E8%A9%A6-API-Key"><span class="toc-text">4. 透過 cURL 測試 API Key</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Bash-%E7%89%88%E6%9C%AC"><span class="toc-text">4.1 Bash 版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Windows-PowerShell-%E7%89%88%E6%9C%AC"><span class="toc-text">4.2 Windows PowerShell 版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%B7%E6%B8%AC%E8%A9%A6%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-text">4.3 如何判斷測試是否成功</span></a></li></ol></li></ol>
+  </div>
+</section>
+
+  
 
 </div>
 
@@ -4165,6 +3684,7 @@ Git 安裝與設定
   
   <!-- Custom Files side end -->
 </aside>
+
 
 
         </div>
@@ -5025,7 +4545,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/tags/Tutorial/","name":"Tutorial"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","description":"Recording the daily code snippets produced from work and research.","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/","name":"學習筆記"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/","name":"人工智慧雲端系統實務"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/n8n/","name":"n8n"}},{"@type":"ListItem","position":3,"item":{"@id":"https://keoinn.github.io/posts/1345946501/","name":"【n8n系列|初稿】 06. 申請 OpenRouter 並測試 API Key"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"【n8n系列|初稿】 06. 申請 OpenRouter 並測試 API Key","description":"OpenRouter 是一個 LLM API 的統一轉發平台。開發者只需申請一組 API Key，就能透過與 OpenAI 相容的介面，呼叫多家供應商的模型（例如 OpenAI、Anthropic、Google、Meta），不必為每一家各申請帳號與金鑰。請求會由 OpenRouter 轉送到對應供應商，用量與費用也集中在同一個帳號管理。","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/posts/1345946501/"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/posts/1345946501/","wordCount":169,"datePublished":"2026-09-21T01:05:30.000Z","dateModified":"2026-09-21T02:53:41.643Z","articleSection":"學習筆記","keywords":"Tutorial,n8n,AI","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

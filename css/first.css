@@ -1794,6 +1794,29 @@ ul.list-v >li>a:hover {
     max-width: 65vw;
   }
 }
+#l_main.no_sidebar {
+  max-width: 100% !important;
+}
+@media screen and (min-width: 2048px) {
+  #l_main.no_sidebar {
+    max-width: 100% !important;
+  }
+}
+@media screen and (min-width: 769px) {
+  #l_main.no_sidebar ~#l_side {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none !important;
+  }
+}
+.body-wrapper:has(#l_main.no_sidebar) {
+  max-width: 1112px;
+}
+@media screen and (min-width: 2048px) {
+  .body-wrapper:has(#l_main.no_sidebar) {
+    max-width: 65vw;
+  }
+}
 hr {
   margin: 1.25em 0;
   height: 0;
