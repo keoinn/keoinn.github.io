@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://keoinn.github.io/archives/2025/"/>
+  
+  <link rel="canonical" href="https://keoinn.github.io/posts/3309271612/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,24 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>歸檔：2025 - Wayne's Snippets Note</title>
-  <meta name="keywords" content="code snippets">
-  <meta desc name="description" content="Recording the daily code snippets produced from work and research. - Wayne Chang - Wayne's Snippets Note">
+  <title>【n8n系列|初稿】 08. Gmail 使用 SMTP 進行寄送電子郵件 - Wayne's Snippets Note</title>
+  <meta name="keywords" content="Tutorial,n8n,AI,code snippets">
+  <meta desc name="description" content="在 n8n 寄送電子郵件時，除了透過 Google API 搭配 OAuth2 連上 Gmail、直接呼叫信箱 API 之外，也可以不走 API，改以應用程式密碼登入 Gmail 的 SMTP 伺服器來寄出信件。
+應用程式密碼是 Google 另外產生的一組 16 碼密碼，專門給 n8n 這類程式登入，用來代替帳... - Wayne Chang - Wayne's Snippets Note">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wayne&#39;s Snippets Note">
-<meta property="og:url" content="https://keoinn.github.io/archives/2025/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【n8n系列|初稿】 08. Gmail 使用 SMTP 進行寄送電子郵件">
+<meta property="og:url" content="https://keoinn.github.io/posts/3309271612/index.html">
 <meta property="og:site_name" content="Wayne&#39;s Snippets Note">
-<meta property="og:description" content="Recording the daily code snippets produced from work and research.">
+<meta property="og:description" content="在 n8n 寄送電子郵件時，除了透過 Google API 搭配 OAuth2 連上 Gmail、直接呼叫信箱 API 之外，也可以不走 API，改以應用程式密碼登入 Gmail 的 SMTP 伺服器來寄出信件。 應用程式密碼是 Google 另外產生的一組 16 碼密碼，專門給 n8n 這類程式登入，用來代替帳戶本身的登入密碼。帳戶必須先開啟兩步驟驗證，才能建立這組密碼。本章先走建立密碼的流程；">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2026-10-02T14:47:28.000Z">
+<meta property="article:modified_time" content="2026-10-04T14:58:09.625Z">
 <meta property="article:author" content="Wayne Chang">
-<meta property="article:tag" content="code snippets">
+<meta property="article:tag" content="Tutorial">
+<meta property="article:tag" content="n8n">
+<meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2671,7 +2676,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2991,7 +2996,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <!-- Custom Files bodyBegin end-->
     
-<header itemscope itemtype="https://schema.org.cn/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+<header itemscope itemtype="https://schema.org.cn/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -3309,111 +3314,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div id="l_body">
       <div id="l_cover">
   
-    
-      <div class="cover-wrapper  dock" id='half'>
-        
-  <div class='cover-bg lazyload placeholder' data-bg="https://cdn.synet-app.com/assets/images/theme/background/wallpaper01.min.webp"></div>
-
-<div class='cover-body'>
-  <div class='top'>
-    
-    
-      <p class="title">Wayne's Notebook</p>
-    
-    
-      <p class="subtitle">Notebook for ideas and coding.</p>
-    
-  </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
-        
-          
-            <a href="/archives/"
-              
-              
-              active-action="action-archives">
-              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f5c3.svg'><p>歸檔</p>
-            </a>
-          
-            <a href="/course/"
-              
-              
-              active-action="action-course">
-              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f516.svg'><p>課程</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f396.svg'><p>標籤</p>
-            </a>
-          
-            <a href="/mylist/"
-              
-              
-              active-action="action-mylist">
-              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f389.svg'><p>清單</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              active-action="action-archives">
-              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4f0.svg'><p>部落格</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://github.com/keoinn"
-              
-              
-              active-action="action-https:githubcomkeoinn">
-              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f9ec.svg'><p>原始碼</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-  
 </div>
 
       <div id="safearea">
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/719597628/">
+  <article itemscope itemtype="https://schema.org.cn/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/3309271612/">
   <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
     <meta itemprop="name" content="Wayne's Snippets Note">
   </span>
@@ -3422,432 +3330,283 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/719597628/"  itemprop="url">
-        【人工智慧雲端系統實務】 09. Django Forms 應用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>在 Django 中，Form (表單) 是處理使用者輸入資料的關鍵元件。無論是註冊、登入、留言、商品建立等功能，都會涉及表單的建立、顯示與驗證。</p>
+    
+      <h1 class="title" itemprop="name headline">
+        【n8n系列|初稿】 08. Gmail 使用 SMTP 進行寄送電子郵件
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="https://schema.org.cn/Person">
+  <a itemprop="url" class='author' href="https://keoinn.github.io/" rel="nofollow">
+    <img itemprop="image" src="/assets/images/theme/avatar/cb_avatar.webp" class="lazyload" data-srcset="/assets/images/theme/avatar/cb_avatar.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Wayne Chang</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/">人工智慧雲端系統實務</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/">n8n</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" itemprop="url"><span itemprop="name">人工智慧雲端系統實務</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/" itemprop="url"><span itemprop="name">n8n</span></a>
+      </span>
     
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-26T23:17:06+08:00">2025-06-26</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/719597628/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
 
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-10-02T22:47:28+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>發表於：2026年10月2日</p>
+  </a>
 </div>
 
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2026-10-04T22:58:09+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新於：2026年10月4日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>在 n8n 寄送電子郵件時，除了透過 Google API 搭配 OAuth2 連上 Gmail、直接呼叫信箱 API 之外，也可以不走 API，改以應用程式密碼登入 Gmail 的 SMTP 伺服器來寄出信件。</p>
+<p>應用程式密碼是 Google 另外產生的一組 16 碼密碼，專門給 n8n 這類程式登入，用來代替帳戶本身的登入密碼。帳戶必須先開啟兩步驟驗證，才能建立這組密碼。本章先走建立密碼的流程；若設定頁顯示無法使用，再依第 2 節開啟兩步驟驗證，完成後回到第 1 節。</p>
+<span id="more"></span>
+
+<h2 id="1-建立應用程式密碼"><a href="#1-建立應用程式密碼" class="headerlink" title="1. 建立應用程式密碼"></a>1. 建立應用程式密碼</h2><div class="timeline">  <div class="timenode"><div class="meta"><p><p>第 1&#x2F;4 步：開啟應用程式密碼頁面</p>
+</p></div><div class="body"><p>開啟 <a target="_blank" rel="noopener" href="https://myaccount.google.com/apppasswords">應用程式密碼</a> 設定頁。</p><p>若出現以下畫面，表示這個 Google 帳戶尚未開啟兩步驟驗證。請先完成第 2 節，再回到這個頁面。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-001.png' data-fancybox='default' data-caption='帳戶尚未開啟兩步驟驗證，無法使用應用程式密碼'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-001.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-001.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="帳戶尚未開啟兩步驟驗證，無法使用應用程式密碼" style="width:auto;"/></a><span></span></div></div><span class="image-caption">帳戶尚未開啟兩步驟驗證，無法使用應用程式密碼</span></div></div>  </div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 2&#x2F;4 步：再次驗證身分</p>
+</p></div><div class="body"><p>進入頁面後，Google 會要求再次確認身分。輸入這個 Google 帳戶的密碼，通過後才能繼續。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-002.png' data-fancybox='default' data-caption='輸入 Google 帳戶密碼'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-002.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-002.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="輸入 Google 帳戶密碼" style="width:auto;"/></a><span></span></div></div><span class="image-caption">輸入 Google 帳戶密碼</span></div></div>  </div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 3&#x2F;4 步：輸入應用程式密碼的名稱</p>
+</p></div><div class="body"><p>為這組密碼取一個看得出用途的名稱，例如 <code>n8n SMTP</code>，再點擊「建立」。名稱只供自己辨識，之後可以從清單看出它是給哪個程式用的。這裡輸入的是名稱，密碼會由 Google 在下一步產生。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-003.png' data-fancybox='default' data-caption='輸入應用程式密碼的名稱'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-003.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-003.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="輸入應用程式密碼的名稱" style="width:auto;"/></a><span></span></div></div><span class="image-caption">輸入應用程式密碼的名稱</span></div></div>  </div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 4&#x2F;4 步：複製應用程式密碼</p>
+</p></div><div class="body"><p>畫面上會顯示一組 16 碼的應用程式密碼。立刻複製並另外保存。關閉視窗之後就無法再查看，遺失時只能刪除這筆紀錄、重新建立一組。</p><p>這組密碼之後會填進 n8n 的 SMTP 憑證，用來登入 Gmail 的 SMTP 伺服器寄信。它不是 Gmail 的登入密碼，請把它當成密碼保管，不要貼到公開的筆記或聊天室。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-004.png' data-fancybox='default' data-caption='複製應用程式密碼'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-004.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/google-apppwd-004.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="複製應用程式密碼" style="width:auto;"/></a><span></span></div></div><span class="image-caption">複製應用程式密碼</span></div></div>  </div></div>
+</div>
+
+<h2 id="2-為-Google-帳戶開啟兩步驟驗證"><a href="#2-為-Google-帳戶開啟兩步驟驗證" class="headerlink" title="2. 為 Google 帳戶開啟兩步驟驗證"></a>2. 為 Google 帳戶開啟兩步驟驗證</h2><p>若應用程式密碼頁面顯示「您的帳戶無法使用這項設定」，代表兩步驟驗證還沒開啟。依下列步驟開啟後，再回到第 1 節建立密碼。</p>
+<div class="timeline">  <div class="timenode"><div class="meta"><p><p>第 1&#x2F;8 步：開啟兩步驟驗證頁面</p>
+</p></div><div class="body"><p>開啟 <a target="_blank" rel="noopener" href="https://myaccount.google.com/signinoptions/twosv">兩步驟驗證</a> 設定頁。  </p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 2&#x2F;8 步：點擊新增驗證器應用程式</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-001.png' data-fancybox='default' data-caption='點擊新增驗證器應用程式'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-001.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-001.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊新增驗證器應用程式" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊新增驗證器應用程式</span></div></div><p>① 點擊「新增驗證器應用程式」。  </p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 3&#x2F;8 步：進入 Authenticator 設定畫面</p>
+</p></div><div class="body"><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-002.png' data-fancybox='default' data-caption='點擊設定驗證器'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-002.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-002.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊設定驗證器" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊設定驗證器</span></div></div><p>② 點擊「+ 設定驗證器」。</p><blockquote><p>驗證器 App 會在手機上產生動態驗證碼，之後登入這個帳戶時，除了密碼還要輸入這組驗證碼。請先在手機安裝 Google Authenticator。</p><p>Android：<a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=zh_TW">Google Authenticator for Android</a></p><p>iPhone：<a target="_blank" rel="noopener" href="https://apps.apple.com/tw/app/google-authenticator/id388497605">Google Authenticator for iOS</a>  </p></blockquote></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 4&#x2F;8 步：用手機掃描 QR Code</p>
+</p></div><div class="body"><p>③ 在手機安裝並開啟 Google Authenticator，點選「新增動態密碼」，掃描電腦畫面上的 QR Code。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-004.png' data-fancybox='default' data-caption='在 Google Authenticator 點擊新增動態密碼'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-004.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-004.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="在 Google Authenticator 點擊新增動態密碼" style="width:auto;"/></a><span></span></div></div><span class="image-caption">在 Google Authenticator 點擊新增動態密碼</span></div></div><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-003.png' data-fancybox='default' data-caption='用手機掃描 QR Code 後點擊繼續'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-003.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-003.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="用手機掃描 QR Code 後點擊繼續" style="width:auto;"/></a><span></span></div></div><span class="image-caption">用手機掃描 QR Code 後點擊繼續</span></div></div><p>④ 掃描完成後，回到電腦點擊「繼續」。  </p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 5&#x2F;8 步：輸入動態驗證碼</p>
+</p></div><div class="body"><p>掃描完成後，Authenticator 主畫面會多出這個帳戶的動態驗證碼。把畫面上目前顯示的驗證碼輸入到電腦。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-005.png' data-fancybox='default' data-caption='手機上的動態驗證碼'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-005.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-005.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="手機上的動態驗證碼" style="width:auto;"/></a><span></span></div></div><span class="image-caption">手機上的動態驗證碼</span></div></div><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-006.png' data-fancybox='default' data-caption='輸入動態驗證碼並點擊驗證'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-006.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-006.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="輸入動態驗證碼並點擊驗證" style="width:auto;"/></a><span></span></div></div><span class="image-caption">輸入動態驗證碼並點擊驗證</span></div></div><p>⑤ 把手機上的動態驗證碼輸入到欄位中。<br>⑥ 點擊「驗證」。</p><blockquote><p>驗證碼約每 30 秒更新一次。畫面跳號後，舊的驗證碼會失效，請改輸入新的一組。  </p></blockquote></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 6&#x2F;8 步：完成 Authenticator 設定</p>
+</p></div><div class="body"><p>驗證通過後，這個驗證器就已加入帳戶。接著回到兩步驟驗證頁面，把功能打開。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-007.png' data-fancybox='default' data-caption='完成 Authenticator 設定'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-007.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-007.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="完成 Authenticator 設定" style="width:auto;"/></a><span></span></div></div><span class="image-caption">完成 Authenticator 設定</span></div></div>  </div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 7&#x2F;8 步：啟用兩步驟驗證</p>
+</p></div><div class="body"><p>回到上一頁，或重新開啟 <a target="_blank" rel="noopener" href="https://myaccount.google.com/signinoptions/twosv">兩步驟驗證</a> 設定頁。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-008.png' data-fancybox='default' data-caption='點擊啟用兩步驟驗證'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-008.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-008.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="點擊啟用兩步驟驗證" style="width:auto;"/></a><span></span></div></div><span class="image-caption">點擊啟用兩步驟驗證</span></div></div><p>⑦ 點擊「啟用兩步驟驗證」。  </p></div></div>
+
+  <div class="timenode"><div class="meta"><p><p>第 8&#x2F;8 步：確認兩步驟驗證已啟用</p>
+</p></div><div class="body"><p>畫面上顯示已啟用後，兩步驟驗證就完成了。回到第 1 節，重新開啟應用程式密碼頁面，即可建立密碼。</p><div galleryFlag itemscope itemtype="https://schema.org.cn/ImageGallery" class="gallery " data-group='default'><div class="img-wrap"><div class="img-bg"><div class='fancybox'><a class='fancybox' itemscope itemtype="https://schema.org.cn/ImageObject" itemprop="url" target="_blank" rel="noopener" href='https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-009.png' data-fancybox='default' data-caption='兩步驟驗證已啟用'><img fancybox itemprop="contentUrl" class="img lazyload" src="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-009.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/keoinn/personalcdn/images/course/n8n/gmail-2fa-009.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="兩步驟驗證已啟用" style="width:auto;"/></a><span></span></div></div><span class="image-caption">兩步驟驗證已啟用</span></div></div>  </div></div>
+</div>
+
+<h2 id="接下來"><a href="#接下來" class="headerlink" title="接下來"></a>接下來</h2><p>應用程式密碼備妥後，到 n8n 新增 <code>Send Email</code> 節點，並建立一組 SMTP 憑證。主機填 <code>smtp.gmail.com</code>，連接埠填 <code>465</code>，並開啟 SSL&#x2F;TLS。使用者填完整的 Gmail 地址，密碼填第 1 節複製的 16 碼應用程式密碼，畫面上的空白可以保留，也可以去掉。寄件者請用同一個 Gmail 地址。</p>
+<p>若這一章只完成兩步驟驗證、還沒看到那組 16 碼密碼，先回到第 1 節建立應用程式密碼，再進 n8n。</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  <p>文章內容遵循 姓名標示-非商業性-相同方式分享 4.0 國際 (CC BY-NC-SA 4.0) 協議</p>
+
+                
+              
+                
+                  <p>本文章永久網址為：<a href="https://keoinn.github.io/posts/3309271612/">https://keoinn.github.io/posts/3309271612/</a></p>
+                
+              
+            </blockquote>
           </div>
         
       
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/3528055548/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
+          
   
   
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Tutorial/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Tutorial</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/n8n/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>n8n</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AI/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AI</p></a></div>
+  <span hidden itemprop="keywords">Tutorial n8n AI</span>
+  
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+<section class="custom-donate">
+  <div class='content' style="display: flex; align-items: center; justify-content: center; ">
+        <a href="https://www.buymeacoffee.com/keoinn" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" class="lazyload" data-srcset="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+        <!-- <div class="likecoin-embed likecoin-button" data-liker-id="keoinn582" data-href="https://keoinn.github.io/"></div>
+        <script src="https://static.like.co/sdk/v1/button.js"></script> -->
+        <div>
+          <script type="text/javascript">
+            document.write(
+              "<iframe scrolling='no' frameborder='0' sandbox='allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation' style='height: 150px; width: 100%; background: transparent;' src='https://button.like.co/in/embed/keoinn582/button?referrer=" +
+              encodeURIComponent(location.href.split("?")[0].split("#")[0]) + "'></iframe>");
+          </script>
+        <div>
+        
+
+  </div>
+</section>
+
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/1447707314/'>
+          <p class='title'>【n8n系列|初稿】 07. 申請內網穿透工具 ngrok<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>ngrok 是一套內網穿透（tunnel）服務。本機或內網的程式，預設只能在內部存取，外部服務（例如 LINE、Telegram、Google）打不進來。啟動 ngrok 之後，它會配發一組公開...</p>
+        </a>
+      
+    </div>
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/posts/3309271612/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comment'></i> 留言</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/3528055548/"  itemprop="url">
-        【人工智慧雲端系統實務】 08. Django URLs  解析與應用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>在 Django 中，urls.py 是「網址路由系統」的核心，負責將網站中的每個網址（URL）對應到一個特定的 View。它就像一張地圖，決定使用者請求的網址該交由哪個處理函式來處理。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-25T02:18:18+08:00">2025-06-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/3528055548/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/218334082/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/218334082/"  itemprop="url">
-        【人工智慧雲端系統實務】 07. Django Templates 解析與應用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>在 Django 的 MVC 架構中，Template (模板) 是負責「View」層的畫面顯示部分。它將後端傳遞來的資料以 HTML 形式渲染，讓使用者看到結構化、有樣式的頁面。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-24T00:02:07+08:00">2025-06-24</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/218334082/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/1017719319/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1017719319/"  itemprop="url">
-        【人工智慧雲端系統實務】 06. Django Views 解析與應用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        在 Django 架構中，View 是負責處理使用者請求並回傳對應回應的核心元件。它連接資料（Model）與畫面（Template），決定要顯示什麼內容、如何處理邏輯，以及將資料呈現給使用者的方式。
-1. 什麼是 View？Django 中的 View 負責：
-
-接收瀏覽器傳來的 HTTP Request。
-處理業務邏輯（如資料查詢、表單驗證、條件分支等）。
-回傳適當的 HTTP Respo...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-23T00:00:56+08:00">2025-06-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/1017719319/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/2524955884/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/2524955884/"  itemprop="url">
-        【人工智慧雲端系統實務】 05. Django Models 解析與應用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>在 Django 框架中，Model 是用來表示資料庫資料的 Python 類別，透過 ORM（物件關聯對應）技術，讓開發者可以用 Python 語法操作資料表。每個 Model 對應一張資料表，類別屬性對應欄位，欄位可設定型別與限制，如 CharField、IntegerField、max_length、null 等。Django 支援資料表之間的關聯，例如一對多（ForeignKey）、一對一（OneToOneField）、多對多（ManyToManyField），讓資料關聯清晰易懂。開發者可以透過 ORM 提供的 API 來新增、查詢、更新、刪除資料，無需寫 SQL。當模型變更時，Django 提供 Migrations 機制來同步資料庫結構。Models 也可以自定義方法、屬性，或透過 Meta 類別設定排序與表名等細節。只要註冊 Model 到 Django 管理後台，就能快速產生完整的資料管理介面。綜合上述，Django 的 Model 系統以簡潔、可讀性高且功能強大的設計，提供開發者一套有效率且穩定的資料庫操作方式。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-19T21:56:31+08:00">2025-06-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/2524955884/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/1675475486/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1675475486/"  itemprop="url">
-        【人工智慧雲端系統實務】 04. Django MVT 與 MVC 架構
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;在 Djnago 專案採用 MVT (Model-View-Template) 架構模式進行開發與維護，而 MVT 架構屬於 MVC (Model-View-Controller) Pattern 的變形。目的是為了降低專案複雜度，將程式碼依照功能獨立，提升開發效率，透過 MVC 設計模式 (Design Pattern) 實現鬆耦合相依性 (loosely coupled dependencies)。接下來我們來說明 MVC 與 Djagno 的 MVT 架構間的特色。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-10T04:20:09+08:00">2025-06-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/1675475486/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://keoinn.github.io/posts/1886582005/">
-  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
-    <meta itemprop="name" content="Wayne's Snippets Note">
-    <meta itemprop="description" content="Recording the daily code snippets produced from work and research.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1886582005/"  itemprop="url">
-        【人工智慧雲端系統實務】 00. 安裝 VSCode 常用 Extensions
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Visual Studio Code 最出名的特色就是具有豐富與強大的延伸模組 (Extensions)，也因為過於豐富時常讓初學者不知道要安裝哪些延伸模組，因此筆者將自己實務開發所使用的延伸模組打包成檔案，按照下列的步驟就可以完成安裝。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-06-07T04:12:33+08:00">2025-06-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/">學習筆記</a><span class="sep"></span><a class="category-link" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/">人工智慧雲端系統實務</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" itemprop="url"><span itemprop="name">學習筆記</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
-              <a href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" itemprop="url"><span itemprop="name">人工智慧雲端系統實務</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/1886582005/' itemprop="url">
-            閱讀全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="https://schema.org.cn/WPSideBar">
   
@@ -3856,140 +3615,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile ">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://cdn.synet-app.com/assets/images/theme/avatar/jellyfish.jpg'/>
-        </a>
-      
-    
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:keoinn@gmail.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/keoinn/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分類</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Google-Cloud-Platform/" href="/categories/Google-Cloud-Platform/"
-            active-action="action-categoriesGoogle-Cloud-Platform"
-            ><div class='name'>Google Cloud Platform</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/"
-            active-action="action-categoriesE4BABAE5B7A5E699BAE685A7E99BB2E7ABAFE7B3BBE7B5B1E5AFA6E58B99"
-            ><div class='name'>人工智慧雲端系統實務</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/"
-            active-action="action-categoriesE5ADB8E7BF92E7AD86E8A898"
-            ><div class='name'>學習筆記</div><div class='badge'>(22)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/"
-            active-action="action-categoriesE5ADB8E7BF92E7AD86E8A898E4BABAE5B7A5E699BAE685A7E99BB2E7ABAFE7B3BBE7B5B1E5AFA6E58B99"
-            ><div class='name'>人工智慧雲端系統實務</div><div class='badge'>(13)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/" href="/categories/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E9%9B%B2%E7%AB%AF%E7%B3%BB%E7%B5%B1%E5%AF%A6%E5%8B%99/n8n/"
-            active-action="action-categoriesE5ADB8E7BF92E7AD86E8A898E4BABAE5B7A5E699BAE685A7E99BB2E7ABAFE7B3BBE7B5B1E5AFA6E58B99n8n"
-            ><div class='name'>n8n</div><div class='badge'>(8)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>熱門標籤</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AI/" style="font-size: 19px; color: #777">AI</a> <a href="/tags/Dev-Env/" style="font-size: 14px; color: #999">Dev Env</a> <a href="/tags/Django/" style="font-size: 21.5px; color: #666">Django</a> <a href="/tags/GCP/" style="font-size: 14px; color: #999">GCP</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 14px; color: #999">Google Cloud Platform</a> <a href="/tags/Mac/" style="font-size: 14px; color: #999">Mac</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Tutorial/" style="font-size: 24px; color: #555">Tutorial</a> <a href="/tags/VSCode/" style="font-size: 16.5px; color: #888">VSCode</a> <a href="/tags/django/" style="font-size: 16.5px; color: #888">django</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/n8n/" style="font-size: 19px; color: #777">n8n</a> <a href="/tags/%E5%85%A7%E5%AE%B9%E7%B7%A8%E8%BC%AF%E4%B8%AD/" style="font-size: 14px; color: #999">內容編輯中</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky">
+
+  
+  
+
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>文章目錄</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%BB%BA%E7%AB%8B%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F%E5%AF%86%E7%A2%BC"><span class="toc-text">1. 建立應用程式密碼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%82%BA-Google-%E5%B8%B3%E6%88%B6%E9%96%8B%E5%95%9F%E5%85%A9%E6%AD%A5%E9%A9%9F%E9%A9%97%E8%AD%89"><span class="toc-text">2. 為 Google 帳戶開啟兩步驟驗證</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E4%B8%8B%E4%BE%86"><span class="toc-text">接下來</span></a></li></ol>
+  </div>
+</section>
+
+  
 
 </div>
 
@@ -3997,6 +3647,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <!-- Custom Files side end -->
 </aside>
+
 
 
         </div>
@@ -4857,7 +4508,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://keoinn.github.io/archives/2025/","name":"2025年"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","description":"Recording the daily code snippets produced from work and research.","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Recording the daily code snippets produced from work and research."},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://keoinn.github.io/","name":"Wayne's Snippets Note"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/","name":"學習筆記"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/","name":"人工智慧雲端系統實務"}},{"@type":"ListItem","position":2,"item":{"@id":"https://keoinn.github.io/categories/學習筆記/人工智慧雲端系統實務/n8n/","name":"n8n"}},{"@type":"ListItem","position":3,"item":{"@id":"https://keoinn.github.io/posts/3309271612/","name":"【n8n系列|初稿】 08. Gmail 使用 SMTP 進行寄送電子郵件"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","keywords":"code snippets","description":"Recording the daily code snippets produced from work and research.","author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/","description":"Recording the daily code snippets produced from work and research."},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","url":"https://keoinn.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://keoinn.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"【n8n系列|初稿】 08. Gmail 使用 SMTP 進行寄送電子郵件","description":"在 n8n 寄送電子郵件時，除了透過 Google API 搭配 OAuth2 連上 Gmail、直接呼叫信箱 API 之外，也可以不走 API，改以應用程式密碼登入 Gmail 的 SMTP 伺服器來寄出信件。\n應用程式密碼是 Google 另外產生的一組 16 碼密碼，專門給 n8n 這類程式登入，用來代替帳戶本身的登入密碼。帳戶必須先開啟兩步驟驗證，才能建立這組密碼。本章先走建立密碼的流程；若設定頁顯示無法使用，再依第 2 節開啟兩步驟驗證，完成後回到第 1 節。","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://keoinn.github.io/posts/3309271612/"},"author":{"@type":"Person","name":"Wayne Chang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://keoinn.github.io/"},"publisher":{"@type":"Organization","name":"Wayne's Snippets Note","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://keoinn.github.io/posts/3309271612/","wordCount":237,"datePublished":"2026-10-02T14:47:28.000Z","dateModified":"2026-10-04T14:58:09.625Z","articleSection":"學習筆記","keywords":"Tutorial,n8n,AI","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
