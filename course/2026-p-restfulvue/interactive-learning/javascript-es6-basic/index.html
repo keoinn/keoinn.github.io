@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JavaScript ES6+ 互動式學習講義｜10 章實作</title><style>
+:root{color-scheme:light;--bg:#f3f6fc;--ink:#17243c;--muted:#64748b;--line:#dbe4f0;--blue:#2563eb;--soft:#eff6ff;--panel:#fff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;line-height:1.65}main{max-width:1040px;margin:auto;padding:30px 18px 90px}.hero{background:linear-gradient(125deg,#102b58,#275fc7);color:white;border-radius:22px;padding:32px;margin-bottom:22px}.hero h1{font-size:clamp(1.6rem,4vw,2.5rem);margin:8px 0}.hero p{color:#e1ebff;margin:0}.eyebrow{font-size:.8rem;letter-spacing:.13em;font-weight:700;color:#bcd5ff}.hero-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}.back{display:inline-flex;align-items:center;border-radius:9px;background:rgba(255,255,255,.16);color:#fff;text-decoration:none;font-size:.9rem;font-weight:650;padding:6px 12px}.back:hover{background:rgba(255,255,255,.28)}.toolbar{background:white;border:1px solid var(--line);border-radius:16px;padding:17px;margin-bottom:18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}.progress-wrap{flex:1;min-width:210px}.progress-label{font-size:.9rem;font-weight:700;margin-bottom:6px}.bar{height:10px;background:#e7eefb;border-radius:100px;overflow:hidden}.fill{height:100%;width:0;background:#2563eb;transition:width .25s}.actions{display:flex;gap:8px;flex-wrap:wrap}button{border:0;background:var(--blue);color:white;padding:10px 15px;border-radius:9px;font:inherit;font-weight:650;cursor:pointer}button:hover{filter:brightness(.93)}button.secondary{background:#eaf1ff;color:#194a9c}button.ghost{background:#f1f5f9;color:#334155}.chapter{background:white;border:1px solid var(--line);border-radius:15px;margin:13px 0;overflow:hidden;box-shadow:0 2px 8px #19335b08}.chapter[open]{border-color:#9dbbf7}.chapter summary{cursor:pointer;list-style:none;display:flex;gap:13px;align-items:center;padding:19px 20px}.chapter summary::-webkit-details-marker{display:none}.number{background:#eaf1ff;color:#2056b4;border-radius:11px;min-width:43px;height:43px;display:grid;place-items:center;font-weight:800}.heading{flex:1}.heading strong{display:block;font-size:1.08rem}.heading small{color:var(--muted)}.chevron{font-size:1.2rem;transition:transform .2s}.chapter[open] .chevron{transform:rotate(180deg)}.content{border-top:1px solid var(--line);padding:22px}.objective{background:#f2f7ff;border-left:4px solid #3975e4;padding:12px 15px;border-radius:6px}.content h3{font-size:1rem;margin:24px 0 8px}.editor{width:100%;min-height:170px;resize:vertical;border:1px solid #34445e;border-radius:11px;background:#101b2d;color:#e7f0ff;padding:17px;font:13.5px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2;outline-offset:3px}.output{background:#101b2d;color:#d1fae5;border-radius:10px;padding:15px;min-height:75px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 ui-monospace,monospace}.output.error{color:#fecaca}.runbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:11px 0}.hint{background:#f7fafc;border-left:4px solid #10b981;padding:12px 15px;border-radius:5px;margin-top:18px}.complete{display:flex;gap:9px;align-items:center;margin-top:20px;font-weight:650}.complete input{width:18px;height:18px;accent-color:#2563eb}.intro{margin-bottom:14px;color:var(--muted)}footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:35px}@media(max-width:600px){.hero{padding:23px}.content{padding:16px}.chapter summary{padding:15px}.heading strong{font-size:.98rem}}
+/* Highlight.js editor overlay */
+.code-shell{position:relative;min-height:170px;border:1px solid #34445e;border-radius:11px;background:#101b2d;overflow:hidden}
+.code-shell:focus-within{outline:2px solid #60a5fa;outline-offset:2px}
+.code-shell .editor,.code-shell .code-highlight{box-sizing:border-box;margin:0;border:0;border-radius:0;padding:17px;width:100%;min-height:170px;font:13.5px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:normal;tab-size:2;white-space:pre;overflow:auto;overflow-wrap:normal}
+.code-shell .code-highlight{position:absolute;inset:0;pointer-events:none;color:#e7f0ff;z-index:1}
+.code-shell .code-highlight code{font:inherit;white-space:inherit;display:block;min-width:max-content;background:transparent;padding:0}
+.code-shell .editor{position:relative;z-index:2;display:block;resize:vertical;background:transparent;color:transparent;-webkit-text-fill-color:transparent;caret-color:#fff;outline:none}
+.code-shell .editor::selection{background:rgba(96,165,250,.35);-webkit-text-fill-color:transparent}
+.hljs-keyword,.hljs-selector-tag,.hljs-literal{color:#c792ea}.hljs-string,.hljs-template-tag,.hljs-template-variable{color:#c3e88d}.hljs-number{color:#f78c6c}.hljs-comment{color:#788aa8;font-style:italic}.hljs-title,.hljs-title.function_{color:#82aaff}.hljs-built_in,.hljs-type{color:#ffcb6b}.hljs-params,.hljs-variable{color:#e7f0ff}.hljs-operator,.hljs-punctuation{color:#89ddff}
+</style></head><body><main><header class="hero"><div class="hero-top"><div class="eyebrow">INTERACTIVE JAVASCRIPT LAB · ES6+</div><a class="back" href="/course/2026-p-restfulvue/">回課程頁面</a></div><h1>JavaScript 核心語法｜互動式學習講義</h1><p>10 個可折疊章節 · 可編輯程式碼 · 即時執行結果 · 學習進度</p></header><section class="toolbar" aria-label="學習工具列"><div class="progress-wrap"><div id="progressLabel" class="progress-label">已完成 0 / 10 章（0%）</div><div class="bar"><div class="fill" id="progressFill"></div></div></div><div class="actions"><button id="expand" class="secondary">全部展開</button><button id="collapse" class="ghost">全部收合</button></div></section><p class="intro">點選章節標題展開教學。每章皆可修改程式碼並執行；勾選「已學會本章」追蹤目前進度。程式執行於你的瀏覽器，請勿貼上來源不明的程式碼。</p><details class="chapter" id="chapter1"><summary><span class="number">01</span><span class="heading"><strong>變數宣告</strong><small>const、let</small></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="content"><div class="objective"><strong>學習目標：</strong>理解不可重新賦值與可重新賦值的變數。</div><h3>觀念與實作</h3><p>閱讀下方程式碼，觀察語法的使用方式；可直接修改變數或條件，再比較執行結果。</p><h3>互動程式碼編輯區</h3><textarea class="editor" id="code1" spellcheck="false" aria-label="第1章程式碼">const apiUrl = &quot;https://api.example.com&quot;;
+let count = 0;
+count = 1;
+console.log({ apiUrl, count });</textarea><script type="text/plain" id="original1">const apiUrl = "https://api.example.com";
+let count = 0;
+count = 1;
+console.log({ apiUrl, count });</script><div class="runbar"><button id="run1" data-run="1">▶ 執行程式</button><button class="secondary" data-reset="1">還原範例</button></div><h3>執行輸出</h3><div class="output" id="out1" role="status" aria-live="polite">尚未執行，按下「執行程式」查看結果。</div><div class="hint"><strong>💡 學習提醒：</strong>const 無法重新指定變數，但若其值為物件，物件內部屬性仍可修改。</div><label class="complete"><input type="checkbox" aria-label="第1章已完成">我已學會本章</label></div></details><details class="chapter" id="chapter2"><summary><span class="number">02</span><span class="heading"><strong>基本資料型別與模板字串</strong><small>String、Number、Boolean、null、undefined、Array、Object</small></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="content"><div class="objective"><strong>學習目標：</strong>認識常用資料型別，並利用模板字串組合訊息。</div><h3>觀念與實作</h3><p>閱讀下方程式碼，觀察語法的使用方式；可直接修改變數或條件，再比較執行結果。</p><h3>互動程式碼編輯區</h3><textarea class="editor" id="code2" spellcheck="false" aria-label="第2章程式碼">const str = &quot;Vue 3&quot;;
+const num = 3.14;
+const isActive = true;
+const emptyValue = null;
+let notDefined;
+const list = [1, 2, 3];
+const sampleObj = { id: 1, title: &quot;寫程式&quot;, done: false };
+const userName = &quot;Alex&quot;;
+console.log(`你好，${userName}！歡迎學習 ${str}。`);
+console.log({ str, num, isActive, emptyValue, notDefined, list, sampleObj });</textarea><script type="text/plain" id="original2">const str = "Vue 3";
+const num = 3.14;
+const isActive = true;
+const emptyValue = null;
+let notDefined;
+const list = [1, 2, 3];
+const sampleObj = { id: 1, title: "寫程式", done: false };
+const userName = "Alex";
+console.log(`你好，${userName}！歡迎學習 ${str}。`);
+console.log({ str, num, isActive, emptyValue, notDefined, list, sampleObj });</script><div class="runbar"><button id="run2" data-run="2">▶ 執行程式</button><button class="secondary" data-reset="2">還原範例</button></div><h3>執行輸出</h3><div class="output" id="out2" role="status" aria-live="polite">尚未執行，按下「執行程式」查看結果。</div><div class="hint"><strong>💡 學習提醒：</strong>null 代表刻意指定空值；undefined 通常表示尚未賦值。陣列與物件屬於參考型別。</div><label class="complete"><input type="checkbox" aria-label="第2章已完成">我已學會本章</label></div></details><details class="chapter" id="chapter3"><summary><span class="number">03</span><span class="heading"><strong>控制台除錯輸出</strong><small>console.log、warn、error、table</small></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="content"><div class="objective"><strong>學習目標：</strong>依照不同用途輸出訊息與表格。</div><h3>觀念與實作</h3><p>閱讀下方程式碼，觀察語法的使用方式；可直接修改變數或條件，再比較執行結果。</p><h3>互動程式碼編輯區</h3><textarea class="editor" id="code3" spellcheck="false" aria-label="第3章程式碼">const userId = 101;
+const isLogin = true;
+console.log(&quot;一般訊息：&quot;, { userId, isLogin });
+console.warn(&quot;警告：Token 即將過期&quot;);
+console.error(&quot;錯誤示範：模擬 API 請求失敗&quot;);
+console.table([{ id: 1, name: &quot;Alex&quot; }, { id: 2, name: &quot;Alice&quot; }]);</textarea><script type="text/plain" id="original3">const userId = 101;
+const isLogin = true;
+console.log("一般訊息：", { userId, isLogin });
+console.warn("警告：Token 即將過期");
+console.error("錯誤示範：模擬 API 請求失敗");
+console.table([{ id: 1, name: "Alex" }, { id: 2, name: "Alice" }]);</script><div class="runbar"><button id="run3" data-run="3">▶ 執行程式</button><button class="secondary" data-reset="3">還原範例</button></div><h3>執行輸出</h3><div class="output" id="out3" role="status" aria-live="polite">尚未執行，按下「執行程式」查看結果。</div><div class="hint"><strong>💡 學習提醒：</strong>console.error 只是輸出錯誤訊息，不一定代表程式真的拋出例外。</div><label class="complete"><input type="checkbox" aria-label="第3章已完成">我已學會本章</label></div></details><details class="chapter" id="chapter4"><summary><span class="number">04</span><span class="heading"><strong>運算子與防呆比較</strong><small>===、!==、&amp;&amp;、||、?.、??</small></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="content"><div class="objective"><strong>學習目標：</strong>使用嚴格比較、邏輯運算與安全存取。</div><h3>觀念與實作</h3><p>閱讀下方程式碼，觀察語法的使用方式；可直接修改變數或條件，再比較執行結果。</p><h3>互動程式碼編輯區</h3><textarea class="editor" id="code4" spellcheck="false" aria-label="第4章程式碼">console.log(1 === 1, 1 === &quot;1&quot;, 1 !== &quot;1&quot;);
+console.log(true &amp;&amp; false, true || false);
+const userProfile = { nickname: null };
+const city = userProfile?.address?.city;
+const displayName = userProfile.nickname ?? &quot;訪客&quot;;
+console.log({ city, displayName });</textarea><script type="text/plain" id="original4">console.log(1 === 1, 1 === "1", 1 !== "1");
+console.log(true && false, true || false);
+const userProfile = { nickname: null };
+const city = userProfile?.address?.city;
+const displayName = userProfile.nickname ?? "訪客";
+console.log({ city, displayName });</script><div class="runbar"><button id="run4" data-run="4">▶ 執行程式</button><button class="secondary" data-reset="4">還原範例</button></div><h3>執行輸出</h3><div class="output" id="out4" role="status" aria-live="polite">尚未執行，按下「執行程式」查看結果。</div><div class="hint"><strong>💡 學習提醒：</strong>?? 只在 null 或 undefined 時使用預設值；|| 也會將 0、false、空字串視為假值。</div><label class="complete"><input type="checkbox" aria-label="第4章已完成">我已學會本章</label></div></details><details class="chapter" id="chapter5"><summary><span class="number">05</span><span class="heading"><strong>流程控制</strong><small>if / else、三元運算子、for...of</small></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="content"><div class="objective"><strong>學習目標：</strong>根據條件決策並逐項走訪陣列。</div><h3>觀念與實作</h3><p>閱讀下方程式碼，觀察語法的使用方式；可直接修改變數或條件，再比較執行結果。</p><h3>互動程式碼編輯區</h3><textarea class="editor" id="code5" spellcheck="false" aria-label="第5章程式碼">const score = 85;
+if (score &gt;= 60) {
+  console.log(`分數 ${score}：及格`);
+} else {
+  console.log(`分數 ${score}：不及格`);
+}
+const isDone = true;
+console.log(isDone ? &quot;已完成&quot; : &quot;進行中&quot;);
+for (const fruit of [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橘子&quot;]) {
+  console.log(&quot;水果：&quot;, fruit);
+}</textarea><script type="text/plain" id="original5">const score = 85;
+if (score >= 60) {
+  console.log(`分數 ${score}：及格`);
+} else {
+  console.log(`分數 ${score}：不及格`);
+}
+const isDone = true;
+console.log(isDone ? "已完成" : "進行中");
+for (const fruit of ["蘋果", "香蕉", "橘子"]) {
+  console.log("水果：", fruit);
+}</script><div class="runbar"><button id="run5" data-run="5">▶ 執行程式</button><button class="secondary" data-reset="5">還原範例</button></div><h3>執行輸出</h3><div class="output" id="out5" role="status" aria-live="polite">尚未執行，按下「執行程式」查看結果。</div><div class="hint"><strong>💡 學習提醒：</strong>for...of 取得陣列元素值；若需要索引，可搭配 entries()。</div><label class="complete"><input type="checkbox" aria-label="第5章已完成">我已學會本章</label></div></details><details class="chapter" id="chapter6"><summary><span class="number">06</span><span class="heading"><strong>函式與箭頭函式</strong><small>function、=&gt;、return</small></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="content"><div class="objective"><strong>學習目標：</strong>練習傳統函式與箭頭函式的宣告方式。</div><h3>觀念與實作</h3><p>閱讀下方程式碼，觀察語法的使用方式；可直接修改變數或條件，再比較執行結果。</p><h3>互動程式碼編輯區</h3><textarea class="editor" id="code6" spellcheck="false" aria-label="第6章程式碼">function add(a, b) { return a + b; }
+const multiply = (a, b) =&gt; { return a * b; };
+const double = n =&gt; n * 2;
+console.log(&quot;add(3, 4) =&quot;, add(3, 4));
+console.log(&quot;multiply(3, 4) =&quot;, multiply(3, 4));
+console.log(&quot;double(6) =&quot;, double(6));</textarea><script type="text/plain" id="original6">function add(a, b) { return a + b; }
+const multiply = (a, b) => { return a * b; };
+const double = n => n * 2;
+console.log("add(3, 4) =", add(3, 4));
+console.log("multiply(3, 4) =", multiply(3, 4));
+console.log("double(6) =", double(6));</script><div class="runbar"><button id="run6" data-run="6">▶ 執行程式</button><button class="secondary" data-reset="6">還原範例</button></div><h3>執行輸出</h3><div class="output" id="out6" role="status" aria-live="polite">尚未執行，按下「執行程式」查看結果。</div><div class="hint"><strong>💡 學習提醒：</strong>箭頭函式沒有自己的 this；單行運算式可省略 return。</div><label class="complete"><input type="checkbox" aria-label="第6章已完成">我已學會本章</label></div></details><details class="chapter" id="chapter7"><summary><span class="number">07</span><span class="heading"><strong>陣列高階方法</strong><small>filter、map、find、forEach</small></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="content"><div class="objective"><strong>學習目標：</strong>依照需求篩選、轉換、尋找與走訪資料。</div><h3>觀念與實作</h3><p>閱讀下方程式碼，觀察語法的使用方式；可直接修改變數或條件，再比較執行結果。</p><h3>互動程式碼編輯區</h3><textarea class="editor" id="code7" spellcheck="false" aria-label="第7章程式碼">const tasks = [
+  { id: 1, title: &quot;買牛奶&quot;, done: true },
+  { id: 2, title: &quot;寫報告&quot;, done: false },
+  { id: 3, title: &quot;運動&quot;, done: false }
+];
+console.table(tasks);
+console.log(&quot;filter:&quot;, tasks.filter(t =&gt; !t.done));
+console.log(&quot;map:&quot;, tasks.map(t =&gt; t.title));
+console.log(&quot;find:&quot;, tasks.find(t =&gt; t.id === 2));
+tasks.forEach(t =&gt; console.log(`#${t.id} ${t.title}`));</textarea><script type="text/plain" id="original7">const tasks = [
+  { id: 1, title: "買牛奶", done: true },
+  { id: 2, title: "寫報告", done: false },
+  { id: 3, title: "運動", done: false }
+];
+console.table(tasks);
+console.log("filter:", tasks.filter(t => !t.done));
+console.log("map:", tasks.map(t => t.title));
+console.log("find:", tasks.find(t => t.id === 2));
+tasks.forEach(t => console.log(`#${t.id} ${t.title}`));</script><div class="runbar"><button id="run7" data-run="7">▶ 執行程式</button><button class="secondary" data-reset="7">還原範例</button></div><h3>執行輸出</h3><div class="output" id="out7" role="status" aria-live="polite">尚未執行，按下「執行程式」查看結果。</div><div class="hint"><strong>💡 學習提醒：</strong>filter 與 map 回傳新陣列；find 回傳第一個符合條件的元素，找不到時為 undefined。</div><label class="complete"><input type="checkbox" aria-label="第7章已完成">我已學會本章</label></div></details><details class="chapter" id="chapter8"><summary><span class="number">08</span><span class="heading"><strong>解構賦值與展開運算子</strong><small>解構、...</small></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="content"><div class="objective"><strong>學習目標：</strong>從物件取出屬性，並建立陣列或物件的淺層複本。</div><h3>觀念與實作</h3><p>閱讀下方程式碼，觀察語法的使用方式；可直接修改變數或條件，再比較執行結果。</p><h3>互動程式碼編輯區</h3><textarea class="editor" id="code8" spellcheck="false" aria-label="第8章程式碼">const user = { id: 101, username: &quot;Alice&quot;, role: &quot;admin&quot; };
+const { username, role } = user;
+console.log({ username, role });
+const oldList = [1, 2];
+const newList = [...oldList, 3];
+const updatedUser = { ...user, role: &quot;editor&quot; };
+console.log({ newList, updatedUser });</textarea><script type="text/plain" id="original8">const user = { id: 101, username: "Alice", role: "admin" };
+const { username, role } = user;
+console.log({ username, role });
+const oldList = [1, 2];
+const newList = [...oldList, 3];
+const updatedUser = { ...user, role: "editor" };
+console.log({ newList, updatedUser });</script><div class="runbar"><button id="run8" data-run="8">▶ 執行程式</button><button class="secondary" data-reset="8">還原範例</button></div><h3>執行輸出</h3><div class="output" id="out8" role="status" aria-live="polite">尚未執行，按下「執行程式」查看結果。</div><div class="hint"><strong>💡 學習提醒：</strong>展開運算子只進行淺層複製，巢狀物件仍可能共用參考。</div><label class="complete"><input type="checkbox" aria-label="第8章已完成">我已學會本章</label></div></details><details class="chapter" id="chapter9"><summary><span class="number">09</span><span class="heading"><strong>非同步處理</strong><small>async / await、try / catch、fetch</small></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="content"><div class="objective"><strong>學習目標：</strong>了解 Promise、等待非同步結果及錯誤處理。</div><h3>觀念與實作</h3><p>閱讀下方程式碼，觀察語法的使用方式；可直接修改變數或條件，再比較執行結果。</p><h3>互動程式碼編輯區</h3><textarea class="editor" id="code9" spellcheck="false" aria-label="第9章程式碼">// 可替換的公開 Demo API（取消註解其中一個 fetch URL 即可測試）：
+// JSONPlaceholder — TODO 資料：
+// https://jsonplaceholder.typicode.com/todos/1
+// DummyJSON — 商品資料：
+// https://dummyjson.com/products/1
+// PokéAPI — Pokémon 資料：
+// https://pokeapi.co/api/v2/pokemon/ditto
+// Open-Meteo — 即時天氣資料：
+// https://api.open-meteo.com/v1/forecast?latitude=24.15&longitude=120.67&current=temperature_2m
+// 提醒：直接以 file:// 開啟 HTML 時，能否讀取 API 回應取決於伺服器的 CORS 設定。
+
+async function fetchTasks() {
+  try {
+    const response = await fetch(&quot;https://jsonplaceholder.typicode.com/todos?_limit=2&quot;);
+    if (!response.ok) throw new Error(`HTTP 狀態碼：${response.status}`);
+    const data = await response.json();
+    console.log(&quot;取得資料：&quot;, data);
+  } catch (error) {
+    console.error(&quot;請求失敗：&quot;, error.message);
+  }
+}
+await fetchTasks();</textarea><script type="text/plain" id="original9">// 可替換的公開 Demo API（取消註解其中一個 fetch URL 即可測試）：
+// JSONPlaceholder — TODO 資料：
+// https://jsonplaceholder.typicode.com/todos/1
+// DummyJSON — 商品資料：
+// https://dummyjson.com/products/1
+// PokéAPI — Pokémon 資料：
+// https://pokeapi.co/api/v2/pokemon/ditto
+// Open-Meteo — 即時天氣資料：
+// https://api.open-meteo.com/v1/forecast?latitude=24.15&longitude=120.67&current=temperature_2m
+// 提醒：直接以 file:// 開啟 HTML 時，能否讀取 API 回應取決於伺服器的 CORS 設定。
+
+async function fetchTasks() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos?_limit=2");
+    if (!response.ok) throw new Error(`HTTP 狀態碼：${response.status}`);
+    const data = await response.json();
+    console.log("取得資料：", data);
+  } catch (error) {
+    console.error("請求失敗：", error.message);
+  }
+}
+await fetchTasks();</script><div class="runbar"><button id="run9" data-run="9">▶ 執行程式</button><button class="secondary" data-reset="9">還原範例</button></div><h3>執行輸出</h3><div class="output" id="out9" role="status" aria-live="polite">尚未執行，按下「執行程式」查看結果。</div><div class="hint"><strong>💡 學習提醒：</strong>此範例需連線至公開測試 API；若離線或遭瀏覽器政策限制，會進入 catch。</div><p><strong>離線練習：</strong>將編輯區程式碼改為 <code>await new Promise(resolve =&gt; setTimeout(resolve, 500)); console.log("等待完成");</code>，即可不連網練習 await。</p><label class="complete"><input type="checkbox" aria-label="第9章已完成">我已學會本章</label></div></details><details class="chapter" id="chapter10"><summary><span class="number">10</span><span class="heading"><strong>模組化語法</strong><small>export / import、ES Modules</small></span><span class="chevron" aria-hidden="true">⌄</span></summary><div class="content"><div class="objective"><strong>學習目標：</strong>理解具名匯出、預設匯出與模組匯入。</div><h3>觀念與實作</h3><p>閱讀下方程式碼，觀察語法的使用方式；可直接修改變數或條件，再比較執行結果。</p><h3>互動程式碼編輯區</h3><textarea class="editor" id="code10" spellcheck="false" aria-label="第10章程式碼">// math.js
+// export const PI = 3.14;
+// export function sum(a, b) { return a + b; }
+// export default function mainHelper() {}
+
+// app.js
+// import mainHelper, { PI, sum } from &quot;./math.js&quot;;
+
+// 本單檔講義以動態模組示範相同概念：
+const source = &quot;export const PI = 3.14; export const sum = (a,b) =&gt; a+b;&quot;;
+const url = URL.createObjectURL(new Blob([source], { type: &quot;text/javascript&quot; }));
+try {
+  const math = await import(url);
+  console.log(&quot;PI:&quot;, math.PI, &quot;sum(3,4):&quot;, math.sum(3,4));
+} finally { URL.revokeObjectURL(url); }</textarea><script type="text/plain" id="original10">// math.js
+// export const PI = 3.14;
+// export function sum(a, b) { return a + b; }
+// export default function mainHelper() {}
+
+// app.js
+// import mainHelper, { PI, sum } from "./math.js";
+
+// 本單檔講義以動態模組示範相同概念：
+const source = "export const PI = 3.14; export const sum = (a,b) => a+b;";
+const url = URL.createObjectURL(new Blob([source], { type: "text/javascript" }));
+try {
+  const math = await import(url);
+  console.log("PI:", math.PI, "sum(3,4):", math.sum(3,4));
+} finally { URL.revokeObjectURL(url); }</script><div class="runbar"><button id="run10" data-run="10">▶ 執行程式</button><button class="secondary" data-reset="10">還原範例</button></div><h3>執行輸出</h3><div class="output" id="out10" role="status" aria-live="polite">尚未執行，按下「執行程式」查看結果。</div><div class="hint"><strong>💡 學習提醒：</strong>正式專案通常使用獨立的 .js 模組檔案；本頁使用 Blob URL 示範，部分瀏覽器或安全政策可能限制動態匯入。</div><p><strong>模組說明：</strong>實際專案可將匯出與匯入程式分別放在 <code>math.js</code>、<code>app.js</code>，並以 <code>&lt;script type="module" src="app.js"&gt;&lt;/script&gt;</code> 載入。建議透過本機 HTTP 伺服器執行；此單檔版本以動態匯入展示。</p><label class="complete"><input type="checkbox" aria-label="第10章已完成">我已學會本章</label></div></details><footer>JavaScript ES6+ 互動式講義 · 單一 HTML 檔案 · 不需安裝框架 · 語法高亮使用 highlight.js CDN（需網路）<br>註：學習進度僅保留於目前頁面，重新整理後會重設。</footer></main><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script><script defer>
+const editors = [...document.querySelectorAll('textarea.editor')];
+function paintEditor(editor){
+  const layer=editor.parentElement.querySelector('.code-highlight code');
+  if(!layer)return;
+  const code=editor.value;
+  layer.innerHTML=window.hljs ? hljs.highlight(code,{language:'javascript',ignoreIllegals:true}).value : escapeEditor(code);
+  // A trailing newline needs an extra line to match textarea rendering.
+  if(code.endsWith('\n'))layer.innerHTML+='\n';
+}
+function escapeEditor(str){return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+editors.forEach(editor=>{
+  const shell=document.createElement('div');shell.className='code-shell';
+  const pre=document.createElement('pre');pre.className='code-highlight';pre.setAttribute('aria-hidden','true');
+  const code=document.createElement('code');code.className='language-javascript';pre.appendChild(code);
+  editor.parentNode.insertBefore(shell,editor);shell.appendChild(pre);shell.appendChild(editor);
+  editor.addEventListener('input',()=>paintEditor(editor));
+  editor.addEventListener('scroll',()=>{pre.scrollTop=editor.scrollTop;pre.scrollLeft=editor.scrollLeft});
+  editor.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();const a=editor.selectionStart,b=editor.selectionEnd;editor.setRangeText('  ',a,b,'end');paintEditor(editor)}});
+  paintEditor(editor);
+});
+window.addEventListener('load',()=>editors.forEach(paintEditor));
+const all = [...document.querySelectorAll('.chapter')];
+const checks = [...document.querySelectorAll('.complete input')];
+function refreshProgress(){const done=checks.filter(c=>c.checked).length;document.getElementById('progressLabel').textContent=`已完成 ${done} / 10 章（${done*10}%）`;document.getElementById('progressFill').style.width=`${done*10}%`}
+checks.forEach(c=>c.addEventListener('change',()=>{
+  refreshProgress();
+  if(c.checked){
+    const chapter=c.closest('details.chapter');
+    if(chapter)chapter.open=false;
+  }
+}));refreshProgress();
+document.getElementById('expand').onclick=()=>all.forEach(d=>d.open=true);
+document.getElementById('collapse').onclick=()=>all.forEach(d=>d.open=false);
+function display(value){if(typeof value==='string')return value;if(value===undefined)return 'undefined';if(value instanceof Error)return value.message;try{return JSON.stringify(value,(k,v)=>typeof v==='bigint'?String(v)+'n':v,2)??String(value)}catch{return String(value)}}
+async function runChapter(n){const editor=document.getElementById('code'+n),out=document.getElementById('out'+n),btn=document.getElementById('run'+n);out.classList.remove('error');out.textContent='執行中…';btn.disabled=true;const lines=[];const capture={log:(...v)=>lines.push(v.map(display).join(' ')),warn:(...v)=>lines.push('⚠ '+v.map(display).join(' ')),error:(...v)=>lines.push('✖ '+v.map(display).join(' ')),table:(v)=>lines.push('表格資料：\n'+display(v))};try{const fn=new AsyncFunction('console',editor.value);await fn(capture);out.textContent=lines.join('\n')||'（程式執行完成，沒有輸出）'}catch(err){out.classList.add('error');out.textContent=lines.join('\n')+(lines.length?'\n':'')+'執行錯誤：'+err.message}finally{btn.disabled=false}}
+const AsyncFunction=Object.getPrototypeOf(async function(){}).constructor;
+document.querySelectorAll('[data-run]').forEach(b=>b.addEventListener('click',()=>runChapter(Number(b.dataset.run))));
+document.querySelectorAll('[data-reset]').forEach(b=>b.addEventListener('click',()=>{const n=b.dataset.reset;document.getElementById('code'+n).value=document.getElementById('original'+n).textContent;paintEditor(document.getElementById('code'+n));document.getElementById('out'+n).textContent='尚未執行，按下「執行程式」查看結果。'}));
+</script></body></html>
